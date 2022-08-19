@@ -1,0 +1,1765 @@
+0	Date	0	0	64	0	3	1	0	4	-1	-1	-1	
+1	Time	0	0	64	0	3	1	0	5	-1	-1	-1	
+2	* Immobilisation	0	0	1	0	0	1	0	0	3	-1	-1	
+822	* Last version msg age	0	0	1	0	0	1	0	0	3	-1	-1	
+826	* Version report	0	0	1	0	0	1	0	0	3	-1	-1	
+784	* LC dtb valid	0	0	1	0	0	1	0	0	3	-1	-1	
+7	* Driver presence	0	0	1	0	0	1	0	0	3	-1	-1	
+1752	* Base Unit Location	0	0	1	0	0	1	0	0	3	-1	-1	
+1749	* Sweeping	0	0	1	0	0	1	0	0	3	-1	-1	
+767	* Version mngt	0	0	1	0	0	1	0	0	3	-1	-1	
+735	* ZC - CC Line sect2	0	0	1	0	0	1	0	0	3	-1	-1	
+12	* RM over-speed	0	0	1	0	0	1	0	0	3	-1	-1	
+1704	* Distance Limit Sanction 3	0	0	1	0	0	1	0	0	3	-1	-1	
+1691	* Distance Limit Sanction 2	0	0	1	0	0	1	0	0	3	-1	-1	
+15	* Energy	0	0	1	0	0	1	0	0	3	-1	-1	
+1678	* Distance Limit Sanction 1	0	0	1	0	0	1	0	0	3	-1	-1	
+1659	* Speed limit sanction	0	0	1	0	0	1	0	0	3	-1	-1	
+703	* ZC - CC Line sect1 	0	0	1	0	0	1	0	0	3	-1	-1	
+686	* ZC - CC EOA 	0	0	1	0	0	1	0	0	3	-1	-1	
+20	* Exceeded VSL	0	0	1	0	0	1	0	0	3	-1	-1	
+1642	* Loc Train formation	0	0	1	0	0	1	0	0	3	-1	-1	
+669	*ZC-CC Train Situation	0	0	1	0	0	1	0	0	3	-1	-1	
+665	* Last synchro msg age	0	0	1	0	0	1	0	0	3	-1	-1	
+1614	* Coupling data	0	0	1	0	0	1	0	0	3	-1	-1	
+1608	* Stop Assured	0	0	1	0	0	1	0	0	3	-1	-1	
+660	* Date Synchro report	0	0	1	0	0	1	0	0	3	-1	-1	
+1558	* No danger / sanction	0	0	1	0	0	1	0	0	3	-1	-1	
+1555	* MINABIS Zone	0	0	1	0	0	1	0	0	3	-1	-1	
+29	* EBR to EBA delta	0	0	1	0	0	1	0	0	3	-1	-1	
+1550	* Crossing signal	0	0	1	0	0	1	0	0	3	-1	-1	
+1542	* TFE localisation	0	0	1	0	0	1	0	0	3	-1	-1	
+1538	* Block mode initialisation	0	0	1	0	0	1	0	0	3	-1	-1	
+1534	* Approach Locking Zone	0	0	1	0	0	1	0	0	3	-1	-1	
+34	* Front / rear ends	0	0	1	0	0	1	0	0	3	-1	-1	
+653	* LC Synchro mngt	0	0	1	0	0	1	0	0	3	-1	-1	
+1526	* Not Rest Log Input	0	0	1	0	0	1	0	0	3	-1	-1	
+580	* CC - ZC Loc report	0	0	1	0	0	1	0	0	3	-1	-1	
+576	Equipment Id	0	0	8	0	0	1	0	0	21	-1	-1	
+575	* Versions	0	0	1	0	0	1	0	0	3	-1	-1	
+568	* Basic software release	0	0	1	0	0	1	0	0	3	-1	-1	
+41	TFE direction	0	0	1	0	0	1	0	0	11	-1	-1	
+564	* General	0	0	1	0	0	1	0	0	3	-1	-1	
+561	* NTP time	0	0	1	0	0	1	0	0	3	-1	-1	
+44	TRE direction	0	0	1	0	0	0.0009765625	0	0	11	-1	-1	
+1520	* Permissive Log Input	0	0	1	0	0	1	0	0	3	-1	-1	
+46	* Location	0	0	1	0	0	1	0	0	3	-1	-1	
+545	* Loop hoor VIOx	0	0	1	0	0	1	0	0	3	-1	-1	
+541	* Task duration	0	0	1	0	0	1	0	0	3	-1	-1	
+529	* HILC_2	0	0	1	0	0	1	0	0	3	-1	-1	
+521	* HILC	0	0	1	0	0	1	0	0	3	-1	-1	
+862	*WZmngt	0	0	1	0	0	1	0	0	3	-1	-1	
+871	*WZdecompacting	0	0	1	0	0	1	0	0	3	-1	-1	
+912	* MINABIS	0	0	1	0	0	1	0	0	3	-1	-1	
+1505	* Cog count debug	0	0	1	0	0	1	0	0	3	-1	-1	
+1501	* Variant coerced	0	0	1	0	0	1	0	0	3	-1	-1	
+507	* Exclusivity Outputs	0	0	1	0	0	1	0	0	3	-1	-1	
+502	* Mixed traffic	0	0	1	0	0	1	0	0	3	-1	-1	
+1492	* EOA variant debug	0	0	1	0	0	1	0	0	3	-1	-1	
+496	* BM variants	0	0	1	0	0	1	0	0	3	-1	-1	
+925	* Wheel / train kine valid	0	0	1	0	0	1	0	0	3	-1	-1	
+476	* Door	0	0	1	0	0	1	0	0	3	-1	-1	
+469	* Beacon inputs	0	0	1	0	0	1	0	0	3	-1	-1	
+930	* Axle locked	0	0	1	0	0	1	0	0	3	-1	-1	
+463	* Init 2 Static beacon	0	0	1	0	0	1	0	0	3	-1	-1	
+462	* CC beacon interface	0	0	1	0	0	1	0	0	3	-1	-1	
+418	* VIO2	0	0	1	0	0	1	0	0	3	-1	-1	
+374	* VIO1	0	0	1	0	0	1	0	0	3	-1	-1	
+936	* Odo ref0	0	0	1	0	0	1	0	0	3	-1	-1	
+1489	* Energy monitoring	0	0	1	0	0	1	0	0	3	-1	-1	
+941	* Odo ref1	0	0	1	0	0	1	0	0	3	-1	-1	
+950	* Odo ref2	0	0	1	0	0	1	0	0	3	-1	-1	
+959	*  EOA(CBTC/Virt)	0	0	1	0	0	1	0	0	3	-1	-1	
+962	* BM EOA	0	0	1	0	0	1	0	0	3	-1	-1	
+964	* CBTC EOA	0	0	1	0	0	1	0	0	3	-1	-1	
+972	* Moral time	0	0	1	0	0	1	0	0	3	-1	-1	
+337	* VIO discrepancy	0	0	1	0	0	1	0	0	3	-1	-1	
+982	* Evac	0	0	1	0	0	1	0	0	3	-1	-1	
+988	* Passenger exchange	0	0	1	0	0	1	0	0	3	-1	-1	
+1016	* CC - CC Redundancy	0	0	1	0	0	1	0	0	3	-1	-1	
+1017	* Distant to Local report	0	0	1	0	0	1	0	0	3	-1	-1	
+1083	* CC - CC Redundancy	0	0	1	0	0	1	0	0	3	-1	-1	
+1084	* Local to Distant report	0	0	1	0	0	1	0	0	3	-1	-1	
+1148	* Distant session loop hour	0	0	1	0	0	1	0	0	3	-1	-1	
+1151	* Local session loop hour	0	0	1	0	0	1	0	0	3	-1	-1	
+1154	* Session	0	0	1	0	0	1	0	0	3	-1	-1	
+1158	* Memorised Location	0	0	1	0	0	1	0	0	3	-1	-1	
+1193	* Combined tests	0	0	1	0	0	1	0	0	3	-1	-1	
+1197	* Traction auth. inh.	0	0	1	0	0	1	0	0	3	-1	-1	
+89	* Functional input	0	0	1	0	0	1	0	0	3	-1	-1	
+1200	* Door enable bypass	0	0	1	0	0	1	0	0	3	-1	-1	
+1203	* Overlap release zone	0	0	1	0	0	1	0	0	3	-1	-1	
+1208	* CC CBI interface	0	0	1	0	0	1	0	0	3	-1	-1	
+1209	* Decompacting Status	0	0	1	0	0	1	0	0	3	-1	-1	
+1212	* Previous functional output	0	0	1	0	0	1	0	0	3	-1	-1	
+1243	* CBI validity	0	0	1	0	0	1	0	0	3	-1	-1	
+1320	* CBI lh msg	0	0	1	0	0	1	0	0	3	-1	-1	
+1325	* CBI variants msg	0	0	1	0	0	1	0	0	3	-1	-1	
+1394	* Funct duration	0	0	1	0	0	1	0	0	3	-1	-1	
+194	* Inputs from NV	0	0	1	0	0	1	0	0	3	-1	-1	
+1421	* FSFB2 errors report	0	0	1	0	0	1	0	0	3	-1	-1	
+1445	* FSFB2 Future BSD dtb	0	0	1	0	0	1	0	0	3	-1	-1	
+125	* Kinematics	0	0	1	0	0	1	0	0	3	-1	-1	
+1468	* Slipe Slide	0	0	1	0	0	1	0	0	3	-1	-1	
+168	* Odometer inputs	0	0	1	0	0	1	0	0	3	-1	-1	
+150	* Calibration	0	0	1	0	0	1	0	0	3	-1	-1	
+1460	* Kinematics	0	0	1	0	0	1	0	0	3	-1	-1	
+1473	* Slipe Slide On Min Motion	0	0	1	0	0	1	0	0	3	-1	-1	
+1480	* Slipe Slide On Max Motion	0	0	1	0	0	1	0	0	3	-1	-1	
+577	Equipment version	0	8	8	1	1	1	0	1	-1	-1	-1	
+18	Immo for overenergy	0	16	1	2	2	1	0	0	0	-1	-1	
+969	TFE in SMIZ	0	18	1	2	2	1	0	0	0	-1	-1	
+19	VSL not exceeded	0	19	1	2	2	1	0	0	0	-1	-1	
+1582	NoDa ForSpLmExcUpToTrainStop	0	19	1	2	2	1	0	0	0	-1	-1	
+97	Traction inhibited	0	20	1	2	2	1	0	0	0	-1	-1	
+10	UDR risk no NUD	0	22	1	2	2	1	0	0	0	-1	-1	
+11	UDR risk excd motion	0	23	1	2	2	1	0	0	0	-1	-1	
+42	TRE block	0	24	16	3	4	1	0	2	-1	-1	-1	
+43	TRE abscissa	1	40	24	5	7	0.0009765625	0	2	-1	3	m	
+39	TFE block	0	64	16	8	9	1	0	2	-1	-1	-1	
+40	TFE abscissa	1	80	24	10	12	0.0009765625	0	2	-1	3	m	
+37	TFE max speed	0	104	24	13	15	0.017578125	0	2	-1	3	km/h	
+477	DE side A	0	128	1	16	16	1	0	0	0	-1	-1	
+478	DE side B	0	129	1	16	16	1	0	0	0	-1	-1	
+481	Hold door closed A	0	130	1	16	16	1	0	0	0	-1	-1	
+482	Hold door closed B	0	131	1	16	16	1	0	0	0	-1	-1	
+483	Evac forbid on side A	0	132	1	16	16	1	0	0	0	-1	-1	
+484	Evac forbid on side B	0	133	1	16	16	1	0	0	0	-1	-1	
+480	Train safely immo.	0	135	1	16	16	1	0	0	0	-1	-1	
+49	Loc permanent failure	0	136	1	17	17	1	0	0	0	-1	-1	
+47	Loc available	0	137	1	17	17	1	0	0	0	-1	-1	
+38	TFE located	0	137	1	17	17	1	0	0	0	-1	-1	
+68	Antenna direction	0	138	2	17	17	1	0	0	2	-1	-1	
+487	PSD in vpez on side A	0	140	1	17	17	1	0	0	0	-1	-1	
+488	PSD in vpez on side B	0	141	1	17	17	1	0	0	0	-1	-1	
+485	Vpez on side A	0	142	1	17	17	1	0	0	0	-1	-1	
+486	Vpez on side B	0	143	1	17	17	1	0	0	0	-1	-1	
+48	Loc uncertainty	0	144	24	18	20	0.0009765625	0	2	-1	3	m	
+88	Loc Uncertainty Evol	0	168	24	21	23	0.0009765625	0	2	-1	3	m	
+50	End1 ext block	0	192	16	24	25	1	0	2	-1	-1	-1	
+51	End1 ext abscissa	1	208	24	26	28	0.0009765625	0	2	-1	3	m	
+62	End2 ext block	0	232	16	29	30	1	0	2	-1	-1	-1	
+63	End2 ext abscissa	1	248	24	31	33	0.0009765625	0	2	-1	3	m	
+64	End2 ext direction	0	272	2	34	34	1	0	0	2	-1	-1	
+60	End2 int direction	0	274	2	34	34	1	0	0	2	-1	-1	
+56	End1 int direction	0	276	2	34	34	1	0	0	2	-1	-1	
+52	End1 ext direction	0	278	2	34	34	1	0	0	2	-1	-1	
+65	End2 ext not standard	0	280	1	35	35	1	0	0	0	-1	-1	
+61	End2 int not standard	0	281	1	35	35	1	0	0	0	-1	-1	
+57	End1 int not standard	0	282	1	35	35	1	0	0	0	-1	-1	
+53	End1 ext not standard	0	283	1	35	35	1	0	0	0	-1	-1	
+75	Loc uncert excess	0	284	1	35	35	1	0	0	0	-1	-1	
+76	Incoherent loc means	0	285	1	35	35	1	0	0	0	-1	-1	
+77	M since lat reloc exc	0	286	1	35	35	1	0	0	0	-1	-1	
+78	Train Loc Way	0	288	8	36	36	1	0	0	24	-1	-1	
+79	Location by Other ATP	0	296	1	37	37	1	0	0	0	-1	-1	
+80	Variant Used For Location	0	297	1	37	37	1	0	0	0	-1	-1	
+81	Location by Beacon	0	298	1	37	37	1	0	0	0	-1	-1	
+82	AllowLocOnKwnPth	0	299	1	37	37	1	0	0	0	-1	-1	
+83	TrainLocOnKwnPath	0	300	1	37	37	1	0	0	0	-1	-1	
+84	LocConsideredAvai	0	301	1	37	37	1	0	0	0	-1	-1	
+961	EOA Valid for TE for SABI	0	304	1	38	38	1	0	0	0	-1	-1	
+685	ZC loc ready	0	305	1	38	38	1	0	0	0	-1	-1	
+74	ZC loc currently in use	0	306	1	38	38	1	0	0	0	-1	-1	
+66	Antenna block	0	312	16	39	40	1	0	2	-1	-1	-1	
+67	Antenna abscissa	1	328	24	41	43	0.0009765625	0	2	-1	3	m	
+85	Previous DB id	0	352	16	44	45	1	0	2	-1	-1	-1	
+86	Motion since latest DB	1	368	24	46	48	0.25	0	2	-1	3	m	
+87	M since latest reloc	1	392	24	49	51	0.0009765625	0	2	-1	3	m	
+91	Driver in cab 2	0	416	1	52	52	1	0	0	0	-1	-1	
+90	Driver in cab 1	0	417	1	52	52	1	0	0	0	-1	-1	
+92	Motion Protection Inhib	0	418	1	52	52	1	0	0	0	-1	-1	
+93	AM selected	0	420	1	52	52	1	0	0	0	-1	-1	
+95	TDCL	0	421	1	52	52	1	0	0	0	-1	-1	
+102	Train integrity	0	422	1	52	52	1	0	0	0	-1	-1	
+96	Odometer braked	0	423	1	52	52	1	0	0	0	-1	-1	
+98	Coupled by end 1	0	424	1	53	53	1	0	0	0	-1	-1	
+1625	Coupled by end 1	0	424	1	53	53	1	0	0	0	-1	-1	
+99	Coupled by end 2	0	425	1	53	53	1	0	0	0	-1	-1	
+1626	Coupled by end 2	0	425	1	53	53	1	0	0	0	-1	-1	
+105	PB applied	0	426	1	53	53	1	0	0	0	-1	-1	
+103	EB applied	0	427	1	53	53	1	0	0	0	-1	-1	
+104	EB not applied	0	428	1	53	53	1	0	0	0	-1	-1	
+35	TFE id	0	429	2	53	53	1	0	2	-1	-1	-1	
+101	MemLocAuthorized	0	431	1	53	53	1	0	0	0	-1	-1	
+146	kine_maxCogsRunInCycleExceeded	0	432	1	54	54	1	0	0	0	-1	-1	
+127	Kin permanent failure	0	433	1	54	54	1	0	0	0	-1	-1	
+147	Kine_wheelKinInvForCogCountRes	0	433	1	54	54	1	0	0	0	-1	-1	
+130	Wheel filtered stop	0	434	1	54	54	1	0	0	0	-1	-1	
+131	Wheel complete stop	0	435	1	54	54	1	0	0	0	-1	-1	
+132	Train filtered stop	0	436	1	54	54	1	0	0	0	-1	-1	
+133	Train complete stop	0	437	1	54	54	1	0	0	0	-1	-1	
+179	No com. With odom.	0	438	1	54	54	1	0	0	0	-1	-1	
+180	Sensor test cont.	0	439	1	54	54	1	0	0	0	-1	-1	
+148	kine_odometerMotionOnLastATPCy	0	440	24	55	57	0.0009765625	0	2	-1	3	-1	
+128	Min motion	1	464	32	58	61	3.814697265625E-06	0	2	-1	3	m	
+129	Max motion	1	496	32	62	65	3.814697265625E-06	0	2	-1	3	m	
+138	Max slide model valid	0	528	1	66	66	1	0	0	0	-1	-1	
+137	Max motion SS state	0	529	3	66	66	1	0	0	8	-1	-1	
+135	Min slide model valid	0	532	1	66	66	1	0	0	0	-1	-1	
+134	Min motion SS state	0	533	3	66	66	1	0	0	9	-1	-1	
+145	Odometer init timer	0	536	8	67	67	0.2	0	2	-1	1	s	
+139	Max slide model fault	0	544	2	68	68	1	0	0	13	-1	-1	
+136	Min slide model fault	0	546	2	68	68	1	0	0	14	-1	-1	
+1487	Max motion odo sign changed	0	548	1	68	68	1	0	0	0	-1	-1	
+1478	Min motion odo sign changed	0	549	1	68	68	1	0	0	0	-1	-1	
+140	Min odometer motion	1	552	32	69	72	3.814697265625E-06	0	2	-1	3	m	
+141	Max odometer motion	1	584	32	73	76	3.814697265625E-06	0	2	-1	3	m	
+142	Acceleration	1	616	32	77	80	9.5367431640625E-05	0	2	-1	3	m/s2	
+143	Acceleration mean	1	648	32	81	84	9.5367431640625E-05	0	2	-1	3	m/s2	
+144	Odometer status	0	680	4	85	85	1	0	0	7	-1	-1	
+153	Calib process state	0	688	2	86	86	1	0	0	6	-1	-1	
+928	Unexpected dec.	0	690	1	86	86	1	0	0	0	-1	-1	
+126	Kin available	0	691	1	86	86	1	0	0	0	-1	-1	
+926	Train Kin available	0	691	1	86	86	1	0	0	0	-1	-1	
+927	Wheel Kin available	0	692	1	86	86	1	0	0	0	-1	-1	
+929	Wheel Train Kin available	0	693	1	86	86	1	0	0	0	-1	-1	
+152	Max calibration	0	696	24	87	89	0.003814697265625	0	2	-1	3	mm	
+151	Min calibration	0	720	24	90	92	0.003814697265625	0	2	-1	3	mm	
+155	Max calib to valid	0	744	24	93	95	0.003814697265625	0	2	-1	3	mm	
+154	Min calib to valid	0	768	24	96	98	0.003814697265625	0	2	-1	3	mm	
+165	Meas calib beac id	0	792	16	99	100	1	0	2	-1	-1	-1	
+158	Valid calib beac id	0	808	16	101	102	1	0	2	-1	-1	-1	
+166	Meas calib B pos BTL	1	824	24	103	105	1	0	2	-1	-1	cg	
+167	Meas calib B pos ATL	1	848	24	106	108	1	0	2	-1	-1	cg	
+159	Valid calib B pos BTL	1	872	24	109	111	1	0	2	-1	-1	cg	
+160	Valid calib B pos ATL	1	896	24	112	114	1	0	2	-1	-1	cg	
+162	Measured max calib	0	920	24	115	117	0.9765625	0	2	-1	3	mm	
+161	Measured min calib	0	944	24	118	120	0.9765625	0	2	-1	3	mm	
+163	Meas calib min dist	0	968	24	121	123	1	0	2	-1	-1	cg	
+164	Meas calib max dist	0	992	24	124	126	1	0	2	-1	-1	cg	
+156	Valid calib min dist	0	1016	24	127	129	0.0009765625	0	2	-1	3	m	
+157	Valid calib max dist	0	1040	24	130	132	0.0009765625	0	2	-1	3	m	
+169	Odometer ready	0	1064	1	133	133	1	0	0	0	-1	-1	
+173	Sensor Test Done	0	1065	1	133	133	1	0	0	0	-1	-1	
+174	Sensors Unconsistant	0	1066	1	133	133	1	0	0	0	-1	-1	
+176	Sensor C1	0	1067	1	133	133	1	0	0	0	-1	-1	
+177	Sensor C2	0	1068	1	133	133	1	0	0	0	-1	-1	
+178	Sensor C3	0	1069	1	133	133	1	0	0	0	-1	-1	
+934	axleLocked Kine Valid	0	1070	1	133	133	1	0	0	0	-1	-1	
+935	axleLockedDet. Available	0	1071	1	133	133	1	0	0	0	-1	-1	
+170	Cog count	1	1072	32	134	137	1	0	2	-1	-1	-1	
+171	Cog count before TL	1	1104	32	138	141	1	0	2	-1	-1	-1	
+172	Cog count after TL	1	1136	32	142	145	1	0	2	-1	-1	-1	
+497	BM beacon id	0	1168	16	146	147	1	0	2	-1	-1	-1	
+499	BM var [1 - 8]	0	1184	8	148	148	1	0	3	-1	-1	-1	
+500	BM var [9 - 16]	0	1192	8	149	149	1	0	3	-1	-1	-1	
+501	BM var remain time	1	1200	16	150	151	0.2	0	2	-1	1	s	
+195	NV inputs refreshed	0	1216	1	152	152	1	0	0	0	-1	-1	
+107	Pass hdle not pulled E1	0	1217	1	152	152	1	0	0	0	-1	-1	
+108	Pass hdle not pulled E2	0	1218	1	152	152	1	0	0	0	-1	-1	
+503	BMVValidUpToTemp	0	1219	1	152	152	1	0	0	0	-1	-1	
+504	RoutSetNotNSendab	0	1220	1	152	152	1	0	0	0	-1	-1	
+109	TSR control inhibition	0	1221	1	152	152	1	0	0	0	-1	-1	
+110	PSD control inhibition	0	1222	1	152	152	1	0	0	0	-1	-1	
+505	Not BM on train	0	1223	1	152	152	1	0	0	0	-1	-1	
+111	DP Inhib for TD not CL	0	1224	1	153	153	1	0	0	0	-1	-1	
+112	DP Inhib for evac rq without train stpd	0	1225	1	153	153	1	0	0	0	-1	-1	
+113	DP Inhib for evac rq in sanction dist	0	1226	1	153	153	1	0	0	0	-1	-1	
+983	TrainDockedInStation	0	1227	1	153	153	1	0	0	0	-1	-1	
+984	TrainLeavingStation	0	1228	1	153	153	1	0	0	0	-1	-1	
+114	Opening Order Sendable	0	1229	1	153	153	1	0	0	0	-1	-1	
+106	Pass hdle not pulled side	0	1231	1	153	153	1	0	0	0	-1	-1	
+100	Signal Override	0	1234	1	154	154	1	0	0	0	-1	-1	
+1194	Train in SZ	0	1235	1	154	154	1	0	0	0	-1	-1	
+1195	Train in SZ and DAZ	0	1236	1	154	154	1	0	0	0	-1	-1	
+1201	DE bypass A	0	1237	1	154	154	1	0	0	0	-1	-1	
+1202	DE bypass B	0	1238	1	154	154	1	0	0	0	-1	-1	
+1196	Sleeping Zone Id	0	1240	16	155	156	1	0	2	-1	-1	-1	
+3	Inhibit EB	0	1256	1	157	157	1	0	0	0	-1	-1	
+4	Inhibit PB	0	1257	1	157	157	1	0	0	0	-1	-1	
+5	No Train em. brake req	0	1259	1	157	157	1	0	0	0	-1	-1	
+6	No Train parking brake req	0	1260	1	157	157	1	0	0	0	-1	-1	
+471	Beacon id	0	1264	16	158	159	1	0	2	-1	-1	-1	
+472	Beacon var [1 - 8]	0	1280	8	160	160	1	0	3	-1	-1	-1	
+473	Beacon var [9 - 16]	0	1288	8	161	161	1	0	3	-1	-1	-1	
+470	Beacon code ok	0	1312	1	164	164	1	0	0	0	-1	-1	
+474	Beacon var available	0	1313	1	164	164	1	0	0	0	-1	-1	
+475	Beacon def msg	0	1314	1	164	164	1	0	0	0	-1	-1	
+376	VIO1 DSI1 1	0	1320	1	165	165	1	0	2	-1	-1	-1	
+377	VIO1 DSI1 2	0	1321	1	165	165	1	0	2	-1	-1	-1	
+378	VIO1 DSI1 3	0	1322	1	165	165	1	0	2	-1	-1	-1	
+379	VIO1 DSI1 4 	0	1323	1	165	165	1	0	2	-1	-1	-1	
+380	VIO1 DSI1 5	0	1324	1	165	165	1	0	2	-1	-1	-1	
+381	VIO1 DSI1 6	0	1325	1	165	165	1	0	2	-1	-1	-1	
+382	VIO1 DSI1 7	0	1326	1	165	165	1	0	2	-1	-1	-1	
+383	VIO1 DSI1 8 	0	1327	1	165	165	1	0	2	-1	-1	-1	
+384	VIO1 DSI1 9	0	1328	1	166	166	1	0	2	-1	-1	-1	
+385	VIO1 DSI1 10	0	1329	1	166	166	1	0	2	-1	-1	-1	
+386	VIO1 DSI1 11	0	1330	1	166	166	1	0	2	-1	-1	-1	
+387	VIO1 DSI1 12	0	1331	1	166	166	1	0	2	-1	-1	-1	
+388	VIO1 DSI2 1	0	1336	1	167	167	1	0	2	-1	-1	-1	
+389	VIO1 DSI2 2	0	1337	1	167	167	1	0	2	-1	-1	-1	
+390	VIO1 DSI2 3	0	1338	1	167	167	1	0	2	-1	-1	-1	
+391	VIO1 DSI2 4 	0	1339	1	167	167	1	0	2	-1	-1	-1	
+392	VIO1 DSI2 5	0	1340	1	167	167	1	0	2	-1	-1	-1	
+393	VIO1 DSI2 6	0	1341	1	167	167	1	0	2	-1	-1	-1	
+394	VIO1 DSI2 7	0	1342	1	167	167	1	0	2	-1	-1	-1	
+395	VIO1 DSI2 8 	0	1343	1	167	167	1	0	2	-1	-1	-1	
+396	VIO1 DSI2 9	0	1344	1	168	168	1	0	2	-1	-1	-1	
+397	VIO1 DSI2 10	0	1345	1	168	168	1	0	2	-1	-1	-1	
+398	VIO1 DSI2 11	0	1346	1	168	168	1	0	2	-1	-1	-1	
+399	VIO1 DSI2 12	0	1347	1	168	168	1	0	2	-1	-1	-1	
+375	VIO1 Available	0	1348	1	168	168	1	0	2	-1	-1	-1	
+420	VIO2 DSI1 1	0	1352	1	169	169	1	0	2	-1	-1	-1	
+421	VIO2 DSI1 2	0	1353	1	169	169	1	0	2	-1	-1	-1	
+422	VIO2 DSI1 3	0	1354	1	169	169	1	0	2	-1	-1	-1	
+423	VIO2 DSI1 4 	0	1355	1	169	169	1	0	2	-1	-1	-1	
+424	VIO2 DSI1 5	0	1356	1	169	169	1	0	2	-1	-1	-1	
+425	VIO2 DSI1 6	0	1357	1	169	169	1	0	2	-1	-1	-1	
+426	VIO2 DSI1 7	0	1358	1	169	169	1	0	2	-1	-1	-1	
+427	VIO2 DSI1 8 	0	1359	1	169	169	1	0	2	-1	-1	-1	
+428	VIO2 DSI1 9	0	1360	1	170	170	1	0	2	-1	-1	-1	
+429	VIO2 DSI1 10	0	1361	1	170	170	1	0	2	-1	-1	-1	
+430	VIO2 DSI1 11	0	1362	1	170	170	1	0	2	-1	-1	-1	
+431	VIO2 DSI1 12	0	1363	1	170	170	1	0	2	-1	-1	-1	
+432	VIO2 DSI2 1	0	1368	1	171	171	1	0	2	-1	-1	-1	
+433	VIO2 DSI2 2	0	1369	1	171	171	1	0	2	-1	-1	-1	
+434	VIO2 DSI2 3	0	1370	1	171	171	1	0	2	-1	-1	-1	
+435	VIO2 DSI2 4 	0	1371	1	171	171	1	0	2	-1	-1	-1	
+436	VIO2 DSI2 5	0	1372	1	171	171	1	0	2	-1	-1	-1	
+437	VIO2 DSI2 6	0	1373	1	171	171	1	0	2	-1	-1	-1	
+438	VIO2 DSI2 7	0	1374	1	171	171	1	0	2	-1	-1	-1	
+439	VIO2 DSI2 8 	0	1375	1	171	171	1	0	2	-1	-1	-1	
+440	VIO2 DSI2 9	0	1376	1	172	172	1	0	2	-1	-1	-1	
+441	VIO2 DSI2 10	0	1377	1	172	172	1	0	2	-1	-1	-1	
+442	VIO2 DSI2 11	0	1378	1	172	172	1	0	2	-1	-1	-1	
+443	VIO2 DSI2 12	0	1379	1	172	172	1	0	2	-1	-1	-1	
+419	VIO2 Available	0	1380	1	172	172	1	0	2	-1	-1	-1	
+400	VIO1 PSO 1	0	1384	1	173	173	1	0	2	-1	-1	-1	
+401	VIO1 PSO 2	0	1385	1	173	173	1	0	2	-1	-1	-1	
+444	VIO2 PSO 1	0	1386	1	173	173	1	0	2	-1	-1	-1	
+445	VIO2 PSO 2	0	1387	1	173	173	1	0	2	-1	-1	-1	
+402	VIO1 DSO1 1	0	1392	1	174	174	1	0	2	-1	-1	-1	
+403	VIO1 DSO1 2	0	1393	1	174	174	1	0	2	-1	-1	-1	
+404	VIO1 DSO1 3	0	1394	1	174	174	1	0	2	-1	-1	-1	
+405	VIO1 DSO1 4 	0	1395	1	174	174	1	0	2	-1	-1	-1	
+406	VIO1 DSO1 5	0	1396	1	174	174	1	0	2	-1	-1	-1	
+407	VIO1 DSO1 6	0	1397	1	174	174	1	0	2	-1	-1	-1	
+408	VIO1 DSO1 7	0	1398	1	174	174	1	0	2	-1	-1	-1	
+409	VIO1 DSO1 8 	0	1399	1	174	174	1	0	2	-1	-1	-1	
+410	VIO1 DSO2 1	0	1400	1	175	175	1	0	2	-1	-1	-1	
+411	VIO1 DSO2 2	0	1401	1	175	175	1	0	2	-1	-1	-1	
+412	VIO1 DSO2 3	0	1402	1	175	175	1	0	2	-1	-1	-1	
+413	VIO1 DSO2 4 	0	1403	1	175	175	1	0	2	-1	-1	-1	
+414	VIO1 DSO2 5	0	1404	1	175	175	1	0	2	-1	-1	-1	
+415	VIO1 DSO2 6	0	1405	1	175	175	1	0	2	-1	-1	-1	
+416	VIO1 DSO2 7	0	1406	1	175	175	1	0	2	-1	-1	-1	
+417	VIO1 DSO2 8 	0	1407	1	175	175	1	0	2	-1	-1	-1	
+446	VIO2 DSO1 1	0	1408	1	176	176	1	0	2	-1	-1	-1	
+447	VIO2 DSO1 2	0	1409	1	176	176	1	0	2	-1	-1	-1	
+448	VIO2 DSO1 3	0	1410	1	176	176	1	0	2	-1	-1	-1	
+449	VIO2 DSO1 4 	0	1411	1	176	176	1	0	2	-1	-1	-1	
+450	VIO2 DSO1 5	0	1412	1	176	176	1	0	2	-1	-1	-1	
+451	VIO2 DSO1 6	0	1413	1	176	176	1	0	2	-1	-1	-1	
+452	VIO2 DSO1 7	0	1414	1	176	176	1	0	2	-1	-1	-1	
+453	VIO2 DSO1 8 	0	1415	1	176	176	1	0	2	-1	-1	-1	
+454	VIO2 DSO2 1	0	1416	1	177	177	1	0	2	-1	-1	-1	
+455	VIO2 DSO2 2	0	1417	1	177	177	1	0	2	-1	-1	-1	
+456	VIO2 DSO2 3	0	1418	1	177	177	1	0	2	-1	-1	-1	
+457	VIO2 DSO2 4 	0	1419	1	177	177	1	0	2	-1	-1	-1	
+458	VIO2 DSO2 5	0	1420	1	177	177	1	0	2	-1	-1	-1	
+459	VIO2 DSO2 6	0	1421	1	177	177	1	0	2	-1	-1	-1	
+460	VIO2 DSO2 7	0	1422	1	177	177	1	0	2	-1	-1	-1	
+461	VIO2 DSO2 8 	0	1423	1	177	177	1	0	2	-1	-1	-1	
+542	Cyclic task duration	0	1424	8	178	178	1	12	2	-1	-1	ms	
+1395	Cyclic task duration	0	1424	8	178	178	1	12	2	-1	-1	ms	
+543	Max task duration	0	1432	8	179	179	1	12	2	-1	-1	ms	
+1420	Max task duration	0	1432	8	179	179	1	12	2	-1	-1	ms	
+566	VES code OK	0	1441	1	180	180	1	0	0	0	-1	-1	
+565	VIO code OK	0	1443	1	180	180	1	0	0	0	-1	-1	
+567	FPGA code OK	0	1444	1	180	180	1	0	0	0	-1	-1	
+1152	Local loop hour	0	1450	30	181	184	1	0	2	-1	-1	-1	
+581	Train unit id	0	1480	16	185	186	1	0	2	-1	-1	-1	
+582	Train unit type id	0	1496	16	187	188	1	0	2	-1	-1	-1	
+583	TU Integrity	0	1519	1	189	189	1	0	0	0	-1	-1	
+584	TU Active	0	1527	1	190	190	1	0	0	0	-1	-1	
+585	Head cab id	0	1528	8	191	191	1	0	2	-1	-1	-1	
+586	Head loc orientation	0	1536	8	192	192	1	0	0	15	-1	-1	
+587	Head loc block	0	1544	16	193	194	1	0	2	-1	-1	-1	
+588	Head Loc min abs	0	1560	16	195	196	0.5	0	2	-1	2	-1	
+589	Head coupled status	0	1583	1	197	197	1	0	0	0	-1	-1	
+590	Head not coupled status	0	1591	1	198	198	1	0	0	0	-1	-1	
+591	Tail cab id	0	1592	8	199	199	1	0	2	-1	-1	-1	
+592	Tail loc orientation	0	1600	8	200	200	1	0	0	15	-1	-1	
+593	Tail loc block	0	1608	16	201	202	1	0	2	-1	-1	-1	
+594	Tail Loc min abs	0	1624	16	203	204	0.5	0	2	-1	2	-1	
+595	Tail coupled status	0	1647	1	205	205	1	0	0	0	-1	-1	
+596	Tail not coupled status	0	1655	1	206	206	1	0	0	0	-1	-1	
+597	Loc Rep Uncertainty	0	1656	16	207	208	0.5	0	2	-1	2	-1	
+598	Localized status	0	1679	1	209	209	1	0	0	0	-1	-1	
+599	Confirmed Localization	0	1687	1	210	210	1	0	0	0	-1	-1	
+600	Train Unit Immo Status	0	1695	1	211	211	1	0	0	0	-1	-1	
+601	Vital route set not needed	0	1703	1	212	212	1	0	0	0	-1	-1	
+602	Train Unit Correct Docking	0	1711	1	213	213	1	0	0	0	-1	-1	
+603	Speed	0	1712	8	214	214	1	0	2	-1	-1	-1	
+604	Monitoring mode	0	1720	8	215	215	1	0	2	-1	-1	-1	
+605	Loc rep Signal override	0	1728	8	216	216	1	0	2	-1	-1	-1	
+606	Loc_Rep ATC Controlled Train	0	1743	1	217	217	1	0	0	0	-1	-1	
+607	ZC01 area authorised 	0	1744	1	218	218	1	0	0	0	-1	-1	
+608	ZC02 area authorised 	0	1745	1	218	218	1	0	0	0	-1	-1	
+609	ZC03 area authorised 	0	1746	1	218	218	1	0	0	0	-1	-1	
+610	ZC04 area authorised 	0	1747	1	218	218	1	0	0	0	-1	-1	
+611	ZC05 area authorised 	0	1748	1	218	218	1	0	0	0	-1	-1	
+612	ZC06 area authorised 	0	1749	1	218	218	1	0	0	0	-1	-1	
+613	ZC07 area authorised 	0	1750	1	218	218	1	0	0	0	-1	-1	
+614	ZC08 area authorised 	0	1751	1	218	218	1	0	0	0	-1	-1	
+615	ZC09 area authorised 	0	1752	1	219	219	1	0	0	0	-1	-1	
+616	ZC10 area authorised 	0	1753	1	219	219	1	0	0	0	-1	-1	
+617	ZC11 area authorised 	0	1754	1	219	219	1	0	0	0	-1	-1	
+618	ZC12 area authorised 	0	1755	1	219	219	1	0	0	0	-1	-1	
+619	ZC13 area authorised 	0	1756	1	219	219	1	0	0	0	-1	-1	
+620	ZC14 area authorised 	0	1757	1	219	219	1	0	0	0	-1	-1	
+621	ZC15 area authorised 	0	1758	1	219	219	1	0	0	0	-1	-1	
+622	ZC16 area authorised 	0	1759	1	219	219	1	0	0	0	-1	-1	
+626	ZC output 01	0	1760	1	220	220	1	0	0	0	-1	-1	
+627	ZC output 02	0	1761	1	220	220	1	0	0	0	-1	-1	
+628	ZC output 03	0	1762	1	220	220	1	0	0	0	-1	-1	
+629	ZC output 04	0	1763	1	220	220	1	0	0	0	-1	-1	
+630	ZC output 05	0	1764	1	220	220	1	0	0	0	-1	-1	
+631	ZC output 06	0	1765	1	220	220	1	0	0	0	-1	-1	
+632	ZC output 07	0	1766	1	220	220	1	0	0	0	-1	-1	
+633	ZC output 08	0	1767	1	220	220	1	0	0	0	-1	-1	
+634	ZC output 09	0	1768	1	221	221	1	0	0	0	-1	-1	
+635	ZC output 10	0	1769	1	221	221	1	0	0	0	-1	-1	
+636	ZC output 11	0	1770	1	221	221	1	0	0	0	-1	-1	
+637	ZC output 12	0	1771	1	221	221	1	0	0	0	-1	-1	
+638	ZC output 13	0	1772	1	221	221	1	0	0	0	-1	-1	
+639	ZC output 14	0	1773	1	221	221	1	0	0	0	-1	-1	
+640	ZC output 15	0	1774	1	221	221	1	0	0	0	-1	-1	
+641	ZC output 16	0	1775	1	221	221	1	0	0	0	-1	-1	
+623	EOA Prod LoopHour	0	1776	32	222	225	1	0	2	-1	-1	-1	
+624	CC Loop hour loc rep	0	1810	30	226	229	1	0	2	-1	-1	-1	
+625	Synchro date	1	1840	32	230	233	1	0	2	-1	-1	-1	
+642	LR Vital checksum S1	0	1872	24	234	236	1	0	1	-1	-1	-1	
+643	LR Vital checksum S2	0	1896	24	237	239	1	0	1	-1	-1	-1	
+644	NV_Ext_Block_End_1	0	1920	16	240	241	1	0	2	-1	-1	-1	
+645	NV_Ext_Abs_End_1	0	1936	16	242	243	1	0	2	-1	-1	-1	
+646	NV_Ext_Block_End_2	0	1952	16	244	245	1	0	2	-1	-1	-1	
+647	NV_Ext_Abs_End_2	0	1968	16	246	247	1	0	2	-1	-1	-1	
+648	Mission Security Distance	0	1984	16	248	249	1	0	2	-1	-1	-1	
+650	Version av for head ZC	0	2000	1	250	250	1	0	0	0	-1	-1	
+649	ZC id under train head	0	2002	6	250	250	1	0	2	-1	-1	-1	
+652	Version av for tail ZC	0	2008	1	251	251	1	0	0	0	-1	-1	
+651	ZC id under train tail	0	2010	6	251	251	1	0	2	-1	-1	-1	
+688	EOA train front end	0	2016	8	252	252	1	0	0	18	-1	-1	
+689	EOA wi sp type	0	2024	8	253	253	1	0	0	18	-1	-1	
+690	EOA wi sp block id	0	2032	16	254	255	1	0	2	-1	-1	-1	
+691	EOA wi sp absc	0	2048	16	256	257	0.5	0	2	-1	3	m	
+692	EOA wo sp type	0	2064	8	258	258	1	0	0	18	-1	-1	
+693	EOA wo sp block id 	0	2072	16	259	260	1	0	2	-1	-1	-1	
+694	EOA wo sp absc	0	2088	16	261	262	0.5	0	2	-1	3	m	
+695	EOA loop hour	0	2106	30	263	266	1	0	2	-1	-1	-1	
+697	EOA wi sp syn	0	2136	16	267	268	1	0	2	-1	-1	-1	
+696	EOA data syn	0	2152	16	269	270	1	0	2	-1	-1	-1	
+698	EOA wo sp syn	0	2168	16	271	272	1	0	2	-1	-1	-1	
+670	Head Id	0	2184	8	273	273	1	0	2	-1	-1	-1	
+672	Ext2 Block Id	0	2192	16	274	275	1	0	2	-1	-1	-1	
+673	Ext2 Absc	1	2208	32	276	279	3.814697265625E-06	0	2	-1	3	m	
+674	Tail Id	0	2240	8	280	280	1	0	2	-1	-1	-1	
+676	Ext1 Block Id	0	2248	16	281	282	1	0	2	-1	-1	-1	
+677	Ext1 Absc	1	2264	32	283	286	3.814697265625E-06	0	2	-1	3	m	
+678	TSR Loc Uncertainty	1	2296	32	287	290	3.814697265625E-06	0	2	-1	3	m	
+679	TF Id	0	2328	16	291	292	1	0	0	18	-1	-1	
+682	CC LH	0	2344	32	293	296	1	0	2	-1	-1	-1	
+683	Creation time	0	2376	32	297	300	1	0	2	-1	-1	-1	
+680	TF confirmed	0	2408	1	301	301	1	0	0	0	-1	-1	
+681	Train Situ TF Integrity	0	2409	1	301	301	1	0	0	0	-1	-1	
+675	Ext1 Dir	0	2410	2	301	301	1	0	0	2	-1	-1	
+671	Ext2 Dir	0	2412	2	301	301	1	0	0	2	-1	-1	
+702	Confirmed Train Formation	0	2416	1	302	302	1	0	0	0	-1	-1	
+701	Train Formation Integrity	0	2417	1	302	302	1	0	0	0	-1	-1	
+699	EOA CHK C1	0	2424	24	303	305	1	0	1	-1	-1	-1	
+700	EOA CHK C2	0	2448	24	306	308	1	0	1	-1	-1	-1	
+707	LS1 var [1 - 8]	0	2472	8	309	309	1	0	3	-1	-1	-1	
+708	LS1 var [9 - 16]	0	2480	8	310	310	1	0	3	-1	-1	-1	
+709	LS1 var [17 - 24]	0	2488	8	311	311	1	0	3	-1	-1	-1	
+710	LS1 var [25 - 32]	0	2496	8	312	312	1	0	3	-1	-1	-1	
+711	LS1 var [33 - 40]	0	2504	8	313	313	1	0	3	-1	-1	-1	
+712	LS1 var [41 - 48]	0	2512	8	314	314	1	0	3	-1	-1	-1	
+713	LS1 var [49 - 56]	0	2520	8	315	315	1	0	3	-1	-1	-1	
+714	LS1 var [57 - 64]	0	2528	8	316	316	1	0	3	-1	-1	-1	
+715	LS1 var [65 - 72]	0	2536	8	317	317	1	0	3	-1	-1	-1	
+716	LS1 var [73 - 80]	0	2544	8	318	318	1	0	3	-1	-1	-1	
+717	LS1 var [81 - 88]	0	2552	8	319	319	1	0	3	-1	-1	-1	
+718	LS1 var [89 - 96]	0	2560	8	320	320	1	0	3	-1	-1	-1	
+719	LS1 var [97 - 104]	0	2568	8	321	321	1	0	3	-1	-1	-1	
+720	LS1 var [105 - 112]	0	2576	8	322	322	1	0	3	-1	-1	-1	
+721	LS1 var [113 - 120]	0	2584	8	323	323	1	0	3	-1	-1	-1	
+722	LS1 var [121 - 128]	0	2592	8	324	324	1	0	3	-1	-1	-1	
+723	LS1 var [129 - 136]	0	2600	8	325	325	1	0	3	-1	-1	-1	
+724	LS1 var [137 - 144]	0	2608	8	326	326	1	0	3	-1	-1	-1	
+725	LS1 var [145 - 152]	0	2616	8	327	327	1	0	3	-1	-1	-1	
+726	LS1 var [153 - 160]	0	2624	8	328	328	1	0	3	-1	-1	-1	
+727	LS1 var [161 - 168]	0	2632	8	329	329	1	0	3	-1	-1	-1	
+728	LS1 var [169 - 176]	0	2640	8	330	330	1	0	3	-1	-1	-1	
+729	LS1 var [177 - 184]	0	2648	8	331	331	1	0	3	-1	-1	-1	
+730	LS1 var [185 - 192]	0	2656	8	332	332	1	0	3	-1	-1	-1	
+731	LS1 var [193 - 200]	0	2664	8	333	333	1	0	3	-1	-1	-1	
+732	LS1 var [201 - 208]	0	2672	8	334	334	1	0	3	-1	-1	-1	
+733	LS1 var [209 - 216]	0	2680	8	335	335	1	0	3	-1	-1	-1	
+734	LS1 var [217 - 224]	0	2688	8	336	336	1	0	3	-1	-1	-1	
+739	LS2 var [1 - 8]	0	2696	8	337	337	1	0	3	-1	-1	-1	
+740	LS2 var [9 - 16]	0	2704	8	338	338	1	0	3	-1	-1	-1	
+741	LS2 var [17 - 24]	0	2712	8	339	339	1	0	3	-1	-1	-1	
+742	LS2 var [25 - 32]	0	2720	8	340	340	1	0	3	-1	-1	-1	
+743	LS2 var [33 - 40]	0	2728	8	341	341	1	0	3	-1	-1	-1	
+744	LS2 var [41 - 48]	0	2736	8	342	342	1	0	3	-1	-1	-1	
+745	LS2 var [49 - 56]	0	2744	8	343	343	1	0	3	-1	-1	-1	
+746	LS2 var [57 - 64]	0	2752	8	344	344	1	0	3	-1	-1	-1	
+747	LS2 var [65 - 72]	0	2760	8	345	345	1	0	3	-1	-1	-1	
+748	LS2 var [73 - 80]	0	2768	8	346	346	1	0	3	-1	-1	-1	
+749	LS2 var [81 - 88]	0	2776	8	347	347	1	0	3	-1	-1	-1	
+750	LS2 var [89 - 96]	0	2784	8	348	348	1	0	3	-1	-1	-1	
+751	LS2 var [97 - 104]	0	2792	8	349	349	1	0	3	-1	-1	-1	
+752	LS2 var [105 - 112]	0	2800	8	350	350	1	0	3	-1	-1	-1	
+753	LS2 var [113 - 120]	0	2808	8	351	351	1	0	3	-1	-1	-1	
+754	LS2 var [121 - 128]	0	2816	8	352	352	1	0	3	-1	-1	-1	
+755	LS2 var [129 - 136]	0	2824	8	353	353	1	0	3	-1	-1	-1	
+756	LS2 var [137 - 144]	0	2832	8	354	354	1	0	3	-1	-1	-1	
+757	LS2 var [145 - 152]	0	2840	8	355	355	1	0	3	-1	-1	-1	
+758	LS2 var [153 - 160]	0	2848	8	356	356	1	0	3	-1	-1	-1	
+759	LS2 var [161 - 168]	0	2856	8	357	357	1	0	3	-1	-1	-1	
+760	LS2 var [169 - 176]	0	2864	8	358	358	1	0	3	-1	-1	-1	
+761	LS2 var [177 - 184]	0	2872	8	359	359	1	0	3	-1	-1	-1	
+762	LS2 var [185 - 192]	0	2880	8	360	360	1	0	3	-1	-1	-1	
+763	LS2 var [193 - 200]	0	2888	8	361	361	1	0	3	-1	-1	-1	
+764	LS2 var [201 - 208]	0	2896	8	362	362	1	0	3	-1	-1	-1	
+765	LS2 var [209 - 216]	0	2904	8	363	363	1	0	3	-1	-1	-1	
+766	LS2 var [217 - 224]	0	2912	8	364	364	1	0	3	-1	-1	-1	
+661	SynchroDate	0	2920	16	365	366	1	0	2	-1	-1	-1	
+662	CC_Loop_Hour	0	2936	16	367	368	1	0	2	-1	-1	-1	
+663	SR Vital checksum S1	0	2952	24	369	371	1	0	2	-1	-1	-1	
+664	SR Vital checksum S2	0	2976	24	372	374	1	0	2	-1	-1	-1	
+1465	WheelAvgAcc(16)	1	3000	32	375	378	9.5367431640625E-05	0	2	-1	3	m/s2	
+1462	MinDepSinceTL	1	3032	32	379	382	3.814697265625E-06	0	2	-1	3	m	
+1463	MaxDepSinceTL	1	3064	32	383	386	3.814697265625E-06	0	2	-1	3	m	
+1466	MinDeBeforeTL	1	3096	32	387	390	3.814697265625E-06	0	2	-1	3	m	
+1467	MaxDepBeforeTL	1	3128	32	391	394	3.814697265625E-06	0	2	-1	3	m	
+1461	OdoOk(n)	0	3160	1	395	395	1	0	0	0	-1	-1	
+1469	SlipeSlideDetected	0	3161	1	395	395	1	0	0	0	-1	-1	
+1470	SlipeSlideModelInvalid	0	3162	1	395	395	1	0	0	0	-1	-1	
+1471	Slipe Slide on min movement	0	3163	1	395	395	1	0	0	0	-1	-1	
+1472	Slipe Slide on max movement	0	3164	1	395	395	1	0	0	0	-1	-1	
+1481	Start braking movement	1	3168	32	396	399	3.814697265625E-06	0	2	-1	3	m	
+1483	Start sliding movement	1	3200	32	400	403	3.814697265625E-06	0	2	-1	3	m	
+1482	Estimated max motion in sliding	1	3232	32	404	407	1.9073486328125E-05	0	2	-1	2	m/s	
+1484	Number of significative Slip acc	1	3264	8	408	408	0.2	0	2	-1	1	s	
+1485	Time elapsed in sliding	1	3272	8	409	409	0.2	0	2	-1	1	s	
+1486	Time elapsed scince last sliding	1	3280	8	410	410	0.2	0	2	-1	1	s	
+1490	l_I_y_tractionCap	1	3288	24	411	413	0.0244140625	0	2	-1	3	m/s2	
+1474	Motion Sign on Tr 0->1.4  	1	3312	24	414	416	0.0009765625	0	2	-1	3	m	
+1477	Estimated min motion in slipping	1	3336	32	417	420	0.0009765625	0	2	-1	3	m	
+1475	Number of significative Slid acc	1	3368	8	421	421	0.2	0	2	-1	1	s	
+1476	Time elapsed in slipping	1	3376	8	422	422	0.2	0	2	-1	1	s	
+939	Available ref 0	0	3384	1	423	423	1	0	0	0	-1	-1	
+940	SupAxleLock Th. Hold ref 0	0	3385	1	423	423	1	0	0	0	-1	-1	
+942	Available ref 1	0	3386	1	423	423	1	0	0	0	-1	-1	
+943	SupAxleLock Th. Hold ref 1	0	3387	1	423	423	1	0	0	0	-1	-1	
+944	OutOfOrder ref 1	0	3388	1	423	423	1	0	0	0	-1	-1	
+945	DisableInProgress ref 1	0	3389	1	423	423	1	0	0	0	-1	-1	
+947	Contradictory ref 1	0	3390	1	423	423	1	0	0	0	-1	-1	
+948	EnableInProgress ref 1	0	3391	1	423	423	1	0	0	0	-1	-1	
+931	axleLocked          	0	3392	1	424	424	1	0	0	0	-1	-1	
+932	axleLockedInProgress	0	3393	1	424	424	1	0	0	0	-1	-1	
+951	Available ref 2	0	3394	1	424	424	1	0	0	0	-1	-1	
+952	SupAxleLock Th. Hold ref 2	0	3395	1	424	424	1	0	0	0	-1	-1	
+953	OutOfOrder ref 2       	0	3396	1	424	424	1	0	0	0	-1	-1	
+954	DisableInProgress ref 2	0	3397	1	424	424	1	0	0	0	-1	-1	
+956	Contradictory ref 2	0	3398	1	424	424	1	0	0	0	-1	-1	
+957	EnableInProgress ref 2	0	3399	1	424	424	1	0	0	0	-1	-1	
+933	axleLockingLatency  	0	3400	16	425	426	0.2	0	2	-1	1	s	
+946	DisableLatency ref 1	0	3416	16	427	428	0.2	0	2	-1	1	s	
+949	EnableLatency ref 1	0	3432	16	429	430	0.2	0	2	-1	1	s	
+955	DisableLatency ref 2    	0	3448	16	431	432	0.2	0	2	-1	1	s	
+958	EnableLatency ref 2	0	3464	16	433	434	0.2	0	2	-1	1	s	
+913	SABI 1	0	3480	1	435	435	1	0	0	0	-1	-1	
+914	SABI 2	0	3481	1	435	435	1	0	0	0	-1	-1	
+94	ATC_Control_Train	0	3482	1	435	435	1	0	0	0	-1	-1	
+917	MINABIS counter 1	1	3488	24	436	438	0.0009765625	0	2	-1	3	m	
+918	MINABIS counter 2	1	3512	24	439	441	0.0009765625	0	2	-1	3	m	
+919	Dist since Inhib	1	3536	24	442	444	0.0009765625	0	2	-1	3	m	
+920	MINABIS Dist1	1	3560	24	445	447	0.0009765625	0	2	-1	-1	m	
+921	MINABIS Speed1	1	3584	24	448	450	0.017578125	0	2	-1	-1	km/h	
+922	MINABIS Dist2	1	3608	24	451	453	0.0009765625	0	2	-1	-1	m	
+923	MINABIS Speed2	1	3632	24	454	456	0.017578125	0	2	-1	-1	km/h	
+704	Line sect 1 id	0	3656	8	457	457	1	0	2	-1	-1	-1	
+705	Line sect 1 nb variant	0	3664	8	458	458	1	0	2	-1	-1	-1	
+706	Line sect 1 synchro	0	3672	32	459	462	1	0	2	-1	-1	-1	
+736	Line sect 2 id	0	3704	8	463	463	1	0	2	-1	-1	-1	
+737	Line sect 2 nb variant	0	3712	8	464	464	1	0	2	-1	-1	-1	
+738	Line sect 2 synchro	0	3720	32	465	468	1	0	2	-1	-1	-1	
+548	Receptor Id	0	3752	8	469	469	1	0	2	-1	-1	-1	
+549	Receptor LH VIO1	0	3760	24	470	472	1	0	2	-1	-1	-1	
+550	Receptor LH VIO2	0	3784	24	473	475	1	0	2	-1	-1	-1	
+551	Receptor LH CCATP	0	3808	24	476	478	1	0	2	-1	-1	-1	
+552	Emettor VIO1 Id	0	3832	8	479	479	1	0	2	-1	-1	-1	
+553	Emettor VIO1 LH VIO1	0	3840	24	480	482	1	0	2	-1	-1	-1	
+554	Emettor VIO1 LH CCATP	0	3864	24	483	485	1	0	2	-1	-1	-1	
+555	Emettor VIO2 Id	0	3888	8	486	486	1	0	2	-1	-1	-1	
+556	Emettor VIO2 LH VIO2	0	3896	24	487	489	1	0	2	-1	-1	-1	
+557	Emettor VIO2 LH CCATP	0	3920	24	490	492	1	0	2	-1	-1	-1	
+558	RAW Exclu VIO 1	0	3944	8	493	493	1	0	2	-1	-1	-1	
+559	RAW Exclu VIO 2	0	3952	8	494	494	1	0	2	-1	-1	-1	
+976	End1 not rest. area	0	3962	1	495	495	1	0	0	0	-1	-1	
+977	End2 not rest. area	0	3963	1	495	495	1	0	0	0	-1	-1	
+978	End1 route Guara.	0	3964	1	495	495	1	0	0	0	-1	-1	
+979	End2 route Guara.	0	3965	1	495	495	1	0	0	0	-1	-1	
+980	End1 moral timer	0	3968	16	496	497	1	0	2	-1	-1	-1	
+981	End2 moral timer	0	3984	16	498	499	1	0	2	-1	-1	-1	
+987	Sum min train motion	1	4000	24	500	502	0.0009765625	0	2	-1	3	m	
+522	HILC Permissive	0	4024	1	503	503	1	0	0	0	-1	-1	
+523	HILC Not Restrictive	0	4025	1	503	503	1	0	0	0	-1	-1	
+530	Filtered HILC 	0	4026	1	503	503	1	0	0	0	-1	-1	
+524	HILC mod. req.	0	4027	1	503	503	1	0	0	0	-1	-1	
+525	HILC conf. req.	0	4028	1	503	503	1	0	0	0	-1	-1	
+526	HILC data exchange	0	4029	1	503	503	1	0	0	0	-1	-1	
+527	HILC CHK	0	4030	1	503	503	1	0	0	0	-1	-1	
+531	Enable HILC	0	4031	1	503	503	1	0	0	0	-1	-1	
+532	HILC Permissive_2	0	4032	1	504	504	1	0	0	0	-1	-1	
+533	HILC Not Restrictive_2	0	4033	1	504	504	1	0	0	0	-1	-1	
+538	Filtered HILC 2	0	4034	1	504	504	1	0	0	0	-1	-1	
+534	HILC mod. req. 2	0	4035	1	504	504	1	0	0	0	-1	-1	
+535	HILC conf. req. 2	0	4036	1	504	504	1	0	0	0	-1	-1	
+536	HILC data exchange 2	0	4037	1	504	504	1	0	0	0	-1	-1	
+537	HILC CHK 2	0	4038	1	504	504	1	0	0	0	-1	-1	
+539	Enable HILC 2	0	4039	1	504	504	1	0	0	0	-1	-1	
+827	Vital Version 1	0	4040	1	505	505	1	0	0	0	-1	-1	
+828	Vital Version 2	0	4041	1	505	505	1	0	0	0	-1	-1	
+829	Vital Version 3	0	4042	1	505	505	1	0	0	0	-1	-1	
+830	Vital Version 4	0	4043	1	505	505	1	0	0	0	-1	-1	
+831	Vital Version 5	0	4044	1	505	505	1	0	0	0	-1	-1	
+832	Vital Version 6	0	4045	1	505	505	1	0	0	0	-1	-1	
+833	Vital Version 7	0	4046	1	505	505	1	0	0	0	-1	-1	
+834	Vital Version 8	0	4047	1	505	505	1	0	0	0	-1	-1	
+835	Vital Version 9	0	4048	1	506	506	1	0	0	0	-1	-1	
+836	Vital Version 10	0	4049	1	506	506	1	0	0	0	-1	-1	
+837	Vital Version 11	0	4050	1	506	506	1	0	0	0	-1	-1	
+838	Vital Version 12	0	4051	1	506	506	1	0	0	0	-1	-1	
+839	Vital Version 13	0	4052	1	506	506	1	0	0	0	-1	-1	
+840	Vital Version 14	0	4053	1	506	506	1	0	0	0	-1	-1	
+841	Vital Version 15	0	4054	1	506	506	1	0	0	0	-1	-1	
+842	Vital Version 16	0	4055	1	506	506	1	0	0	0	-1	-1	
+843	Non Vital Version 1	0	4056	1	507	507	1	0	0	0	-1	-1	
+844	Non Vital Version 2	0	4057	1	507	507	1	0	0	0	-1	-1	
+845	Non Vital Version 3	0	4058	1	507	507	1	0	0	0	-1	-1	
+846	Non Vital Version 4	0	4059	1	507	507	1	0	0	0	-1	-1	
+847	Non Vital Version 5	0	4060	1	507	507	1	0	0	0	-1	-1	
+848	Non Vital Version 6	0	4061	1	507	507	1	0	0	0	-1	-1	
+849	Non Vital Version 7	0	4062	1	507	507	1	0	0	0	-1	-1	
+850	Non Vital Version 8	0	4063	1	507	507	1	0	0	0	-1	-1	
+851	Non Vital Version 9	0	4064	1	508	508	1	0	0	0	-1	-1	
+852	Non Vital Version 10	0	4065	1	508	508	1	0	0	0	-1	-1	
+853	Non Vital Version 11	0	4066	1	508	508	1	0	0	0	-1	-1	
+854	Non Vital Version 12	0	4067	1	508	508	1	0	0	0	-1	-1	
+855	Non Vital Version 13	0	4068	1	508	508	1	0	0	0	-1	-1	
+856	Non Vital Version 14	0	4069	1	508	508	1	0	0	0	-1	-1	
+857	Non Vital Version 15	0	4070	1	508	508	1	0	0	0	-1	-1	
+858	Non Vital Version 16	0	4071	1	508	508	1	0	0	0	-1	-1	
+859	CC Loop Hour	0	4072	32	509	512	1	0	2	-1	-1	-1	
+860	VR Vital checksum S1	0	4104	24	513	515	1	0	1	-1	-1	-1	
+861	VR Vital checksum S2	0	4128	24	516	518	1	0	1	-1	-1	-1	
+783	No vital CC ZC16	0	4152	1	519	519	1	0	0	0	-1	-1	
+782	No vital CC ZC15	0	4153	1	519	519	1	0	0	0	-1	-1	
+781	No vital CC ZC14	0	4154	1	519	519	1	0	0	0	-1	-1	
+780	No vital CC ZC13	0	4155	1	519	519	1	0	0	0	-1	-1	
+779	No vital CC ZC12	0	4156	1	519	519	1	0	0	0	-1	-1	
+778	No vital CC ZC11	0	4157	1	519	519	1	0	0	0	-1	-1	
+777	No vital CC ZC10	0	4158	1	519	519	1	0	0	0	-1	-1	
+776	No vital CC ZC09	0	4159	1	519	519	1	0	0	0	-1	-1	
+775	No vital CC ZC08	0	4160	1	520	520	1	0	0	0	-1	-1	
+774	No vital CC ZC07	0	4161	1	520	520	1	0	0	0	-1	-1	
+773	No vital CC ZC06	0	4162	1	520	520	1	0	0	0	-1	-1	
+772	No vital CC ZC05	0	4163	1	520	520	1	0	0	0	-1	-1	
+771	No vital CC ZC04	0	4164	1	520	520	1	0	0	0	-1	-1	
+770	No vital CC ZC03	0	4165	1	520	520	1	0	0	0	-1	-1	
+769	No vital CC ZC02	0	4166	1	520	520	1	0	0	0	-1	-1	
+768	No vital CC ZC01	0	4167	1	520	520	1	0	0	0	-1	-1	
+569	Vio1 software	0	4168	16	521	522	1	0	2	-1	-1	-1	
+570	Vio1 conf	0	4184	16	523	524	1	0	2	-1	-1	-1	
+571	Vio1 version	0	4200	16	525	526	1	0	2	-1	-1	-1	
+572	Vio2 software	0	4216	16	527	528	1	0	2	-1	-1	-1	
+573	Vio2 conf	0	4232	16	529	530	1	0	2	-1	-1	-1	
+574	Vio2 version	0	4248	16	531	532	1	0	2	-1	-1	-1	
+965	CBTC EOA block	0	4272	16	534	535	1	0	2	-1	-1	-1	
+971	CBTC EOA block nrg	0	4288	16	536	537	1	0	2	-1	-1	-1	
+966	CBTC EOA absc	0	4304	24	538	540	0.0009765625	0	2	-1	3	m	
+967	EOA data age	0	4328	16	541	542	0.2	0	2	-1	1	s	
+968	EOA Min Converted	0	4344	16	543	544	1	0	2	-1	-1	-1	
+578	VES format version	0	4360	8	545	545	1	0	2	-1	-1	-1	
+579	Vital setting version	0	4368	8	546	546	1	0	2	-1	-1	-1	
+1020	Rep D->L sender	0	4376	16	547	548	1	0	2	-1	-1	-1	
+1021	Rep D->L receiver	0	4392	16	549	550	1	0	2	-1	-1	-1	
+1022	Rep D->L request LH	0	4408	32	551	554	1	0	2	-1	-1	-1	
+1023	Rep D->L report LH	0	4440	32	555	558	1	0	2	-1	-1	-1	
+1024	Rep D->L Psd Id Sidea	0	4472	16	559	560	1	0	2	-1	-1	-1	
+1026	Rep D->L Psd Validity Sidea	0	4488	16	561	562	1	0	2	-1	-1	-1	
+1027	Rep D->L Psd Id Sideb	0	4504	16	563	564	1	0	2	-1	-1	-1	
+1029	Rep D->L Psd Validity Sideb	0	4520	16	565	566	1	0	2	-1	-1	-1	
+1030	Rep D->L Beacon Id	0	4536	16	567	568	1	0	2	-1	-1	-1	
+1031	Rep D->L HILC LH	0	4552	24	569	571	1	0	2	-1	-1	-1	
+1032	Rep D->L HILC 2 LH	0	4576	24	572	574	1	0	2	-1	-1	-1	
+1033	Rep D->L Vital Setting	0	4600	16	575	576	1	0	2	-1	-1	-1	
+1034	Rep D->L Vital Software	0	4616	16	577	578	1	0	2	-1	-1	-1	
+1036	Rep D->L ZC2 version	0	4632	16	579	580	1	0	2	-1	-1	-1	
+1035	Rep D->L ZC1 version	0	4648	16	581	582	1	0	2	-1	-1	-1	
+1038	Rep D->L ZC4 version	0	4664	16	583	584	1	0	2	-1	-1	-1	
+1037	Rep D->L ZC3 version	0	4680	16	585	586	1	0	2	-1	-1	-1	
+1040	Rep D->L ZC6 version	0	4696	16	587	588	1	0	2	-1	-1	-1	
+1039	Rep D->L ZC5 version	0	4712	16	589	590	1	0	2	-1	-1	-1	
+1042	Rep D->L ZC8 version	0	4728	16	591	592	1	0	2	-1	-1	-1	
+1041	Rep D->L ZC7 version	0	4744	16	593	594	1	0	2	-1	-1	-1	
+1044	Rep D->L ZC10 version	0	4760	16	595	596	1	0	2	-1	-1	-1	
+1043	Rep D->L ZC9 version	0	4776	16	597	598	1	0	2	-1	-1	-1	
+1046	Rep D->L ZC12 version	0	4792	16	599	600	1	0	2	-1	-1	-1	
+1045	Rep D->L ZC11 version	0	4808	16	601	602	1	0	2	-1	-1	-1	
+1048	Rep D->L ZC14 version	0	4824	16	603	604	1	0	2	-1	-1	-1	
+1047	Rep D->L ZC13 version	0	4840	16	605	606	1	0	2	-1	-1	-1	
+1050	Rep D->L ZC16 version	0	4856	16	607	608	1	0	2	-1	-1	-1	
+1049	Rep D->L ZC15 version	0	4872	16	609	610	1	0	2	-1	-1	-1	
+1055	Rep D->L Loc_ext2Abs	0	4888	24	611	613	1	0	2	-1	-1	-1	
+1056	Rep D->L Loc_ext2Block	0	4912	16	614	615	1	0	2	-1	-1	-1	
+1058	Rep D->L Loc_uncertainty	0	4928	24	616	618	1	0	2	-1	-1	-1	
+1059	Rep D->L Loc_uncertaincy_evol	0	4952	24	619	621	1	0	2	-1	-1	-1	
+1060	Rep D->L Loc_MemSleepingId	0	4976	8	622	622	1	0	2	-1	-1	-1	
+1061	Rep D->L Loc_MemSleepingVer	0	4984	8	623	623	1	0	2	-1	-1	-1	
+1062	Rep D->L Loc_MovSceLastReloc	0	4998	2	624	624	1	0	2	-1	-1	-1	
+1063	Rep D->L Loc_DistWithMemLo	0	5014	2	626	626	1	0	2	-1	-1	-1	
+1018	Rep D->L MINABIS Ext 1	0	5024	8	628	628	1	0	2	-1	-1	-1	
+1019	Rep D->L MINABIS Ext 2	0	5032	8	629	629	1	0	2	-1	-1	-1	
+1065	Rep D->L Cons Delay App End 1	0	5040	16	630	631	1	0	2	-1	-1	-1	
+1066	Rep D->L End Eng LH 1	0	5056	16	632	633	1	0	2	-1	-1	-1	
+1067	Rep D->L Cons Delay App End 2	0	5072	16	634	635	1	0	2	-1	-1	-1	
+1068	Rep D->L End Eng LH 2	0	5088	16	636	637	1	0	2	-1	-1	-1	
+1069	Rep D->L Cons Delay App End 3	0	5104	16	638	639	1	0	2	-1	-1	-1	
+1070	Rep D->L End Eng LH 3	0	5120	16	640	641	1	0	2	-1	-1	-1	
+1071	Rep D->L Cons Delay App End 4	0	5136	16	642	643	1	0	2	-1	-1	-1	
+1072	Rep D->L End Eng LH 4	0	5152	16	644	645	1	0	2	-1	-1	-1	
+1073	Rep D->L EOA Prod LH	0	5168	32	646	649	1	0	2	-1	-1	-1	
+1074	Rep D->L Loc Memo Ext2Abs	0	5200	32	650	653	1	0	2	-1	-1	-1	
+1075	Rep D->L Loc Memo Ext2BAD	0	5232	32	654	657	1	0	2	-1	-1	-1	
+1076	Rep D->L Loc_Memo_Uncertaincy	0	5264	32	658	661	1	0	2	-1	-1	-1	
+1077	Rep D->L Session	0	5296	32	662	665	1	0	2	-1	-1	-1	
+1078	Rep D->L Session Req	0	5328	32	666	669	1	0	2	-1	-1	-1	
+1080	Rep D->L Estimated Other Max CC LH	0	5360	32	670	673	1	0	2	-1	-1	-1	
+1025	Rep D->L Psd Closed Sidea	0	5392	1	674	674	1	0	0	0	-1	-1	
+1028	Rep D->L Psd Closed Sideb	0	5393	1	674	674	1	0	0	0	-1	-1	
+1051	Rep D->L PSDOpenCom	0	5394	1	674	674	1	0	0	0	-1	-1	
+1052	Rep D->L TI request	0	5395	1	674	674	1	0	0	0	-1	-1	
+1053	Rep D->L TrainLocOnKnownPath	0	5396	1	674	674	1	0	0	0	-1	-1	
+1054	Rep D->L TrainLocWithMemLoc	0	5397	1	674	674	1	0	0	0	-1	-1	
+1057	Rep D->L Loc_ext2Dir	0	5398	2	674	674	1	0	2	-1	-1	-1	
+1064	Rep D->L Location available	0	5400	1	675	675	1	0	0	0	-1	-1	
+1079	Rep D->L Confirmed Session	0	5401	1	675	675	1	0	0	0	-1	-1	
+1087	Rep L->D sender	0	5408	16	676	677	1	0	2	-1	-1	-1	
+1088	Rep L->D receiver	0	5424	16	678	679	1	0	2	-1	-1	-1	
+1089	Rep L->D request LH	0	5440	32	680	683	1	0	2	-1	-1	-1	
+1090	Rep L->D report LH	0	5472	32	684	687	1	0	2	-1	-1	-1	
+1091	Rep L->D Psd Id Sidea	0	5504	16	688	689	1	0	2	-1	-1	-1	
+1093	Rep L->D Psd Validity Sidea	0	5520	16	690	691	1	0	2	-1	-1	-1	
+1094	Rep L->D Psd Id Sideb	0	5536	16	692	693	1	0	2	-1	-1	-1	
+1096	Rep L->D Psd Validity Sideb	0	5552	16	694	695	1	0	2	-1	-1	-1	
+1097	Rep L->D Beacon Id	0	5568	16	696	697	1	0	2	-1	-1	-1	
+1098	Rep L->D HILC LH	0	5584	24	698	700	1	0	2	-1	-1	-1	
+1099	Rep L->D HILC 2 LH	0	5608	24	701	703	1	0	2	-1	-1	-1	
+1127	Rep L->D Loc_MemSleepingId	0	5632	8	704	704	1	0	2	-1	-1	-1	
+1128	Rep L->D Loc_MemSleepingVer	0	5640	8	705	705	1	0	2	-1	-1	-1	
+1129	Rep L->D Loc_MovSceLastReloc	0	5654	2	706	706	1	0	2	-1	-1	-1	
+1130	Rep L->D Loc_DistWithMemLo	0	5670	2	708	708	1	0	2	-1	-1	-1	
+1085	Rep L->D MINABIS Ext 1	0	5680	8	710	710	1	0	2	-1	-1	-1	
+1086	Rep L->D MINABIS Ext 2	0	5688	8	711	711	1	0	2	-1	-1	-1	
+1140	Rep L->D EOA Prod LH	0	5696	32	712	715	1	0	2	-1	-1	-1	
+1144	Rep L->D Session	0	5728	32	716	719	1	0	2	-1	-1	-1	
+1145	Rep L->D Session Req	0	5760	32	720	723	1	0	2	-1	-1	-1	
+1147	Rep L->D Estimated Other Max CC LH	0	5792	32	724	727	1	0	2	-1	-1	-1	
+1092	Rep L->D Psd Closed Sidea	0	5824	1	728	728	1	0	0	0	-1	-1	
+1095	Rep L->D Psd Closed Sideb	0	5825	1	728	728	1	0	0	0	-1	-1	
+1118	Rep L->D PSDOpenCom	0	5826	1	728	728	1	0	0	0	-1	-1	
+1119	Rep L->D TI request	0	5827	1	728	728	1	0	0	0	-1	-1	
+1120	Rep L->D TrainLocOnKnownPath	0	5828	1	728	728	1	0	0	0	-1	-1	
+1121	Rep L->D TrainLocWithMemLoc	0	5829	1	728	728	1	0	0	0	-1	-1	
+1124	Rep L->D Loc_ext2Dir	0	5830	2	728	728	1	0	2	-1	-1	-1	
+1131	Rep L->D Location available	0	5832	1	729	729	1	0	0	0	-1	-1	
+1146	Rep L->D Confirmed Session	0	5833	1	729	729	1	0	0	0	-1	-1	
+1153	CC time shift	0	5840	32	730	733	1	0	2	-1	-1	-1	
+1149	Min Distant CC loop hour	0	5874	30	734	737	1	0	2	-1	-1	-1	
+1150	Max Distant CC loop hour	0	5906	30	738	741	1	0	2	-1	-1	-1	
+196	NV PB not requested	0	5936	1	742	742	1	0	0	0	-1	-1	
+198	NV TFE2	0	5937	1	742	742	1	0	0	0	-1	-1	
+197	NV TFE1	0	5938	1	742	742	1	0	0	0	-1	-1	
+199	NV ITAMA	0	5939	1	742	742	1	0	0	0	-1	-1	
+200	NV cancel signal	0	5940	1	742	742	1	0	0	0	-1	-1	
+201	NV odo ref1 available	0	5941	1	742	742	1	0	0	0	-1	-1	
+202	NV odo ref1	0	5942	1	742	742	1	0	0	0	-1	-1	
+203	NV odo ref2 available	0	5943	1	742	742	1	0	0	0	-1	-1	
+204	NV odo ref2	0	5944	1	743	743	1	0	0	0	-1	-1	
+205	NV EB not request	0	5945	1	743	743	1	0	0	0	-1	-1	
+206	NV master CC core	0	5946	1	743	743	1	0	0	0	-1	-1	
+207	NVTINR	0	5947	1	743	743	1	0	0	0	-1	-1	
+208	NV route set not needed	0	5948	1	743	743	1	0	0	0	-1	-1	
+209	NV DEA	0	5949	1	743	743	1	0	0	0	-1	-1	
+210	NV DEB	0	5950	1	743	743	1	0	0	0	-1	-1	
+211	NV PSD 1 Id	0	5952	14	744	745	1	0	2	-1	-1	-1	
+212	NV PSD 1 open req	0	5966	1	745	745	1	0	0	0	-1	-1	
+213	NV PSD 1 close req	0	5967	1	745	745	1	0	0	0	-1	-1	
+215	NV PSD 2 id	0	5968	14	746	747	1	0	2	-1	-1	-1	
+216	NV PSD 2 open req	0	5982	1	747	747	1	0	0	0	-1	-1	
+217	NV PSD 2 close req	0	5983	1	747	747	1	0	0	0	-1	-1	
+219	NV VIO1 PSO1 1	0	5984	1	748	748	1	0	0	0	-1	-1	
+220	NV VIO1 PSO1 2	0	5985	1	748	748	1	0	0	0	-1	-1	
+221	NV VIO1 DSO1 1	0	5986	1	748	748	1	0	0	0	-1	-1	
+222	NV VIO1 DSO1 2	0	5987	1	748	748	1	0	0	0	-1	-1	
+223	NV VIO1 DSO1 3	0	5988	1	748	748	1	0	0	0	-1	-1	
+224	NV VIO1 DSO1 4	0	5989	1	748	748	1	0	0	0	-1	-1	
+225	NV VIO1 DSO1 5	0	5990	1	748	748	1	0	0	0	-1	-1	
+226	NV VIO1 DSO1 6	0	5991	1	748	748	1	0	0	0	-1	-1	
+227	NV VIO1 DSO1 7	0	5992	1	749	749	1	0	0	0	-1	-1	
+228	NV VIO1 DSO1 8	0	5993	1	749	749	1	0	0	0	-1	-1	
+229	NV VIO1 DSO2 1	0	5994	1	749	749	1	0	0	0	-1	-1	
+230	NV VIO1 DSO2 2	0	5995	1	749	749	1	0	0	0	-1	-1	
+231	NV VIO1 DSO2 3	0	5996	1	749	749	1	0	0	0	-1	-1	
+232	NV VIO1 DSO2 4	0	5997	1	749	749	1	0	0	0	-1	-1	
+233	NV VIO1 DSO2 5	0	5998	1	749	749	1	0	0	0	-1	-1	
+234	NV VIO1 DSO2 6	0	5999	1	749	749	1	0	0	0	-1	-1	
+235	NV VIO1 DSO2 7	0	6000	1	750	750	1	0	0	0	-1	-1	
+236	NV VIO1 DSO2 8	0	6001	1	750	750	1	0	0	0	-1	-1	
+237	NV VIO2 PSO1 1	0	6002	1	750	750	1	0	0	0	-1	-1	
+238	NV VIO2 PSO1 2	0	6003	1	750	750	1	0	0	0	-1	-1	
+239	NV VIO2 DSO1 1	0	6004	1	750	750	1	0	0	0	-1	-1	
+240	NV VIO2 DSO1 2	0	6005	1	750	750	1	0	0	0	-1	-1	
+241	NV VIO2 DSO1 3	0	6006	1	750	750	1	0	0	0	-1	-1	
+242	NV VIO2 DSO1 4	0	6007	1	750	750	1	0	0	0	-1	-1	
+243	NV VIO2 DSO1 5	0	6008	1	751	751	1	0	0	0	-1	-1	
+244	NV VIO2 DSO1 6	0	6009	1	751	751	1	0	0	0	-1	-1	
+245	NV VIO2 DSO1 7	0	6010	1	751	751	1	0	0	0	-1	-1	
+246	NV VIO2 DSO1 8	0	6011	1	751	751	1	0	0	0	-1	-1	
+247	NV VIO2 DSO2 1	0	6012	1	751	751	1	0	0	0	-1	-1	
+248	NV VIO2 DSO2 2	0	6013	1	751	751	1	0	0	0	-1	-1	
+249	NV VIO2 DSO2 3	0	6014	1	751	751	1	0	0	0	-1	-1	
+250	NV VIO2 DSO2 4	0	6015	1	751	751	1	0	0	0	-1	-1	
+251	NV VIO2 DSO2 5	0	6016	1	752	752	1	0	0	0	-1	-1	
+252	NV VIO2 DSO2 6	0	6017	1	752	752	1	0	0	0	-1	-1	
+253	NV VIO2 DSO2 7	0	6018	1	752	752	1	0	0	0	-1	-1	
+254	NV VIO2 DSO2 8	0	6019	1	752	752	1	0	0	0	-1	-1	
+255	NV ID1	0	6024	1	753	753	1	0	0	0	-1	-1	
+256	NV ID2	0	6025	1	753	753	1	0	0	0	-1	-1	
+257	NV ID3	0	6026	1	753	753	1	0	0	0	-1	-1	
+258	NV ID4	0	6027	1	753	753	1	0	0	0	-1	-1	
+259	NV ID5	0	6028	1	753	753	1	0	0	0	-1	-1	
+260	NV ID6	0	6029	1	753	753	1	0	0	0	-1	-1	
+261	NV ID7	0	6030	1	753	753	1	0	0	0	-1	-1	
+262	NV ID8	0	6031	1	753	753	1	0	0	0	-1	-1	
+263	NV ID9	0	6032	1	754	754	1	0	0	0	-1	-1	
+264	NV ID10	0	6033	1	754	754	1	0	0	0	-1	-1	
+265	NV ID11	0	6034	1	754	754	1	0	0	0	-1	-1	
+266	NV ID12	0	6035	1	754	754	1	0	0	0	-1	-1	
+267	NV ID13	0	6036	1	754	754	1	0	0	0	-1	-1	
+268	NV ID14	0	6037	1	754	754	1	0	0	0	-1	-1	
+269	NV ID15	0	6038	1	754	754	1	0	0	0	-1	-1	
+270	NV ID16	0	6039	1	754	754	1	0	0	0	-1	-1	
+271	NV ID17	0	6040	1	755	755	1	0	0	0	-1	-1	
+272	NV ID18	0	6041	1	755	755	1	0	0	0	-1	-1	
+273	NV ID19	0	6042	1	755	755	1	0	0	0	-1	-1	
+274	NV ID20	0	6043	1	755	755	1	0	0	0	-1	-1	
+275	NV ID21	0	6044	1	755	755	1	0	0	0	-1	-1	
+276	NV ID22	0	6045	1	755	755	1	0	0	0	-1	-1	
+277	NV ID23	0	6046	1	755	755	1	0	0	0	-1	-1	
+278	NV ID24	0	6047	1	755	755	1	0	0	0	-1	-1	
+279	NV ID25	0	6048	1	756	756	1	0	0	0	-1	-1	
+280	NV ID26	0	6049	1	756	756	1	0	0	0	-1	-1	
+281	NV ID27	0	6050	1	756	756	1	0	0	0	-1	-1	
+282	NV ID28	0	6051	1	756	756	1	0	0	0	-1	-1	
+283	NV ID29	0	6052	1	756	756	1	0	0	0	-1	-1	
+284	NV ID30	0	6053	1	756	756	1	0	0	0	-1	-1	
+285	NV ID31	0	6054	1	756	756	1	0	0	0	-1	-1	
+286	NV ID32	0	6055	1	756	756	1	0	0	0	-1	-1	
+287	NV ID33	0	6056	1	757	757	1	0	0	0	-1	-1	
+288	NV ID34	0	6057	1	757	757	1	0	0	0	-1	-1	
+289	NV ID35	0	6058	1	757	757	1	0	0	0	-1	-1	
+290	NV ID36	0	6059	1	757	757	1	0	0	0	-1	-1	
+291	NV ID37	0	6060	1	757	757	1	0	0	0	-1	-1	
+292	NV ID38	0	6061	1	757	757	1	0	0	0	-1	-1	
+293	NV ID39	0	6062	1	757	757	1	0	0	0	-1	-1	
+294	NV ID40	0	6063	1	757	757	1	0	0	0	-1	-1	
+295	NV not EB coerced	0	6064	1	758	758	1	0	0	0	-1	-1	
+296	NV not EB value	0	6065	1	758	758	1	0	0	0	-1	-1	
+297	NV not PB coerced	0	6066	1	758	758	1	0	0	0	-1	-1	
+298	NV not PB value	0	6067	1	758	758	1	0	0	0	-1	-1	
+299	NV DEA coerced	0	6068	1	758	758	1	0	0	0	-1	-1	
+300	NV DEA value	0	6069	1	758	758	1	0	0	0	-1	-1	
+301	NV DEB coerced	0	6070	1	758	758	1	0	0	0	-1	-1	
+302	NV DEB value	0	6071	1	758	758	1	0	0	0	-1	-1	
+303	NV HDCA coerced	0	6072	1	759	759	1	0	0	0	-1	-1	
+304	NV HDCA value	0	6073	1	759	759	1	0	0	0	-1	-1	
+305	NV HDCB coerced	0	6074	1	759	759	1	0	0	0	-1	-1	
+306	NV HDCB value	0	6075	1	759	759	1	0	0	0	-1	-1	
+307	NV HDC1 coerced	0	6076	1	759	759	1	0	0	0	-1	-1	
+308	NV HDC1 value	0	6077	1	759	759	1	0	0	0	-1	-1	
+309	NV HDC2 coerced	0	6078	1	759	759	1	0	0	0	-1	-1	
+310	NV HDC2 value	0	6079	1	759	759	1	0	0	0	-1	-1	
+311	NV memo loc S1	0	6088	24	761	763	1	0	1	-1	-1	-1	
+312	NV memo loc S2	0	6112	24	764	766	1	0	1	-1	-1	-1	
+562	NTP time Date	0	6136	64	767	774	1	0	4	-1	-1	-1	
+313	NV NTP H	0	6136	32	767	770	1	0	4	-1	-1	-1	
+563	NTP time Time	0	6136	64	767	774	1	0	5	-1	-1	-1	
+314	NV NTP L	0	6168	32	771	774	1	0	5	-1	-1	-1	
+315	NV Ext Block 1	0	6208	16	776	777	1	0	2	-1	-1	-1	
+316	NV Ext Block 2	0	6224	16	778	779	1	0	2	-1	-1	-1	
+317	NV Ext Abs 1	0	6240	16	780	781	1	0	2	-1	-1	-1	
+318	NV Ext Abs 2	0	6256	16	782	783	1	0	2	-1	-1	-1	
+319	NV Ext Dir 1	0	6272	2	784	784	1	0	2	-1	-1	-1	
+320	NV Ext Dir 2	0	6274	2	784	784	1	0	2	-1	-1	-1	
+321	Requested visibility	0	6280	16	785	786	1	0	2	-1	-1	-1	
+322	CBI Id to request	0	6296	8	787	787	1	0	2	-1	-1	-1	
+323	CBI Id 1 to unpack	0	6304	8	788	788	1	0	2	-1	-1	-1	
+324	CBI Id 2 to unpack	0	6312	8	789	789	1	0	2	-1	-1	-1	
+325	CBI Id 3 to unpack	0	6320	8	790	790	1	0	2	-1	-1	-1	
+326	Overlap release	0	6328	1	791	791	1	0	0	0	-1	-1	
+327	Engage Request 1	0	6329	1	791	791	1	0	0	0	-1	-1	
+328	Engage Request 2	0	6330	1	791	791	1	0	0	0	-1	-1	
+329	Engage Request 3	0	6331	1	791	791	1	0	0	0	-1	-1	
+330	Engage Request 4	0	6332	1	791	791	1	0	0	0	-1	-1	
+331	LC id to unpack 1	0	6336	8	792	792	1	0	2	-1	-1	-1	
+332	LC id to unpack 2	0	6344	8	793	793	1	0	2	-1	-1	-1	
+333	LC id to unpack 3	0	6352	8	794	794	1	0	2	-1	-1	-1	
+334	Workzone Id 1	0	6360	8	795	795	1	0	2	-1	-1	-1	
+335	Workzone Id 2	0	6368	8	796	796	1	0	2	-1	-1	-1	
+336	Workzone Id 3	0	6376	8	797	797	1	0	2	-1	-1	-1	
+1627	NV Requested TF	0	6384	8	798	798	1	0	2	-1	-1	-1	
+1632	NV Usable TF data	0	6392	1	799	799	1	0	0	0	-1	-1	
+214	NV ZC Head	0	6400	8	800	800	1	0	2	-1	-1	-1	
+218	NV ZC Tail	0	6408	8	801	801	1	0	2	-1	-1	-1	
+991	PSD Platform SideA id	0	6416	16	802	803	1	0	2	-1	-1	-1	
+992	PSD Platform SideB id	0	6432	16	804	805	1	0	2	-1	-1	-1	
+993	dgd_OpenPSDPlatfA	0	6448	1	806	806	1	0	0	0	-1	-1	
+994	dgd_OpenPSDPlatfB	0	6449	1	806	806	1	0	0	0	-1	-1	
+995	dgd_ClosePSDPlatfA	0	6450	1	806	806	1	0	0	0	-1	-1	
+996	dgd_ClosePSDPlatfB	0	6451	1	806	806	1	0	0	0	-1	-1	
+997	dgd_PSDClosedA	0	6452	1	806	806	1	0	0	0	-1	-1	
+998	dgd_PSDClosedB	0	6453	1	806	806	1	0	0	0	-1	-1	
+1000	All doors closed	0	6454	1	806	806	1	0	0	0	-1	-1	
+1001	Train on PSD com. Zone	0	6455	1	806	806	1	0	0	0	-1	-1	
+1002	dgd_PSDClosedValA	0	6456	16	807	808	1	0	2	-1	-1	-1	
+1003	dgd_PSDClosedValB	0	6472	16	809	810	1	0	2	-1	-1	-1	
+1004	dgd_OpenOrderValA	0	6488	16	811	812	1	0	2	-1	-1	-1	
+1005	dgd_OpenOrderValB	0	6504	16	813	814	1	0	2	-1	-1	-1	
+989	Align Status A	0	6520	4	815	815	1	0	0	19	-1	-1	
+990	Align Status B	0	6524	4	815	815	1	0	0	19	-1	-1	
+1159	Loc memo version read	0	6528	16	816	817	1	0	2	-1	-1	-1	
+1160	ZC area Id read	0	6544	16	818	819	1	0	2	-1	-1	-1	
+1161	Zc area version read	0	6560	16	820	821	1	0	2	-1	-1	-1	
+1162	TrainLength read	0	6576	24	822	824	0.0009765625	0	2	-1	3	m	
+1163	Train unit type read	0	6600	8	825	825	1	0	2	-1	-1	-1	
+1164	Train unit Id read	0	6608	16	826	827	1	0	2	-1	-1	-1	
+1166	End2 ext abscissa read	1	6624	24	828	830	0.0009765625	0	2	-1	3	m	
+1165	End2 ext block read	0	6648	16	831	832	1	0	2	-1	-1	-1	
+1168	Loc uncertainty read	1	6664	24	833	835	0.0009765625	0	2	-1	3	m	
+1170	NVRAM C1 read	0	6688	24	836	838	1	0	1	-1	-1	-1	
+1171	NVRAM C2 read	0	6712	24	839	841	1	0	1	-1	-1	-1	
+1172	Loc memo version write	0	6736	16	842	843	1	0	2	-1	-1	-1	
+1173	ZC area Id write	0	6752	16	844	845	1	0	2	-1	-1	-1	
+1174	Zc area version write	0	6768	16	846	847	1	0	2	-1	-1	-1	
+1179	End2 ext abscissa write	1	6784	24	848	850	0.0009765625	0	2	-1	3	m	
+1178	End2 ext block write	0	6808	16	851	852	1	0	2	-1	-1	-1	
+1192	Dist run memo location	0	6824	24	853	855	0.0009765625	0	2	-1	3	m	
+1167	End2 ext direction read	0	6848	2	856	856	1	0	0	2	-1	-1	
+1180	End2 ext direction write	0	6850	2	856	856	1	0	0	2	-1	-1	
+1186	Base unit pres. located	0	6852	1	856	856	1	0	0	0	-1	-1	
+1187	Loc memo available	0	6853	1	856	856	1	0	0	0	-1	-1	
+1188	Loc memo not read	0	6854	1	856	856	1	0	0	0	-1	-1	
+45	EBA front end absc.	0	6856	24	857	859	0.00097656250112	0	2	-1	3	m	
+30	Speed from gradient	0	6880	24	860	862	0.017578125	0	2	-1	3	km/h	
+31	Speed from traction	0	6904	24	863	865	0.017578125	0	2	-1	3	km/h	
+32	Space from gradient	0	6928	24	866	868	0.0009765625	0	2	-1	3	m	
+33	Space from traction	0	6952	24	869	871	0.0009765625	0	2	-1	3	m	
+687	EOA variant mess age	0	6976	8	872	872	0.2	0	2	-1	1	s	
+36	TFE min speed	0	6992	16	874	875	0.017578125	0	2	-1	3	km/h	
+560	BSW Cog count	0	7017	32	877	881	1	0	2	-1	-1	-1	
+1444	No_Error	0	7049	1	881	881	1	0	2	-1	-1	-1	
+1443	End_Of_Validity_Of_Diag_Message	0	7050	1	881	881	1	0	2	-1	-1	-1	
+1442	Bad_Diag_Data_Size	0	7051	1	881	881	1	0	2	-1	-1	-1	
+1441	Sc_Not_In_Expected_Window	0	7052	1	881	881	1	0	2	-1	-1	-1	
+1440	Bad_Output_Data_Size	0	7053	1	881	881	1	0	2	-1	-1	-1	
+1439	Bad_Input_Data_Size	0	7054	1	881	881	1	0	2	-1	-1	-1	
+1438	Bad_Input_Data_Crc	0	7055	1	881	881	1	0	2	-1	-1	-1	
+1437	Bad_Message_Crc	0	7056	1	882	882	1	0	2	-1	-1	-1	
+1436	Bad_Message_Size	0	7057	1	882	882	1	0	2	-1	-1	-1	
+1435	Bad_Ssr_Num_Dataver	0	7058	1	882	882	1	0	2	-1	-1	-1	
+1434	Bad_Safety_Data_Crcm2	0	7059	1	882	882	1	0	2	-1	-1	-1	
+1433	Bad_Safety_Data_Crcm1	0	7060	1	882	882	1	0	2	-1	-1	-1	
+1432	Bad_Safety_Data_Size	0	7061	1	882	882	1	0	2	-1	-1	-1	
+1431	Invalid_Destination_Address	0	7062	1	882	882	1	0	2	-1	-1	-1	
+1430	Invalid_Source_Address	0	7063	1	882	882	1	0	2	-1	-1	-1	
+1429	Invalid_Message_Type	0	7064	1	883	883	1	0	2	-1	-1	-1	
+1428	Invalid_Application_Category	0	7065	1	883	883	1	0	2	-1	-1	-1	
+1427	End_Of_Validity_Of_Safety_Message	0	7066	1	883	883	1	0	2	-1	-1	-1	
+1426	Start_Sequence_Process_Failed	0	7067	1	883	883	1	0	2	-1	-1	-1	
+1425	No_Response_To_Sse	0	7068	1	883	883	1	0	2	-1	-1	-1	
+1424	Misalignment_Detected	0	7069	1	883	883	1	0	2	-1	-1	-1	
+1423	Loss_Of_Safety_Message	0	7070	1	883	883	1	0	2	-1	-1	-1	
+1422	Sinit_Contribution_Missing	0	7071	1	883	883	1	0	2	-1	-1	-1	
+546	Inputs VIO1 Ok	0	7072	4	884	884	1	0	2	-1	-1	-1	
+547	Inputs VIO2 Ok	0	7076	4	884	884	1	0	2	-1	-1	-1	
+1493	Nb msg decompact	0	7080	16	885	886	1	0	2	-1	-1	-1	
+905	NbLCmsgdecompact	0	7096	16	887	888	1	0	2	-1	-1	-1	
+1494	Decompact_And_Code_Msg	0	7112	1	889	889	1	0	0	0	-1	-1	
+1495	Eoa_Message_Is_New	0	7113	1	889	889	1	0	0	0	-1	-1	
+1496	Eoa_Message_Is_Ready	0	7114	1	889	889	1	0	0	0	-1	-1	
+1497	Eoa_Message_Is_Safety    	0	7115	1	889	889	1	0	0	0	-1	-1	
+1498	Variant_Message_Is_New   	0	7116	1	889	889	1	0	0	0	-1	-1	
+1499	Variant_Message_Is_Ready 	0	7117	1	889	889	1	0	0	0	-1	-1	
+1500	Variant_Message_Is_Safety	0	7118	1	889	889	1	0	0	0	-1	-1	
+1491	X2MResDist	1	7120	24	890	892	0.0009765625	0	2	-1	3	m	
+181	Sensor test cont. duration	0	7144	8	893	893	0.2	0	2	-1	1	s	
+464	Loc train stopped LH	0	7152	16	894	895	1	0	2	-1	-1	-1	
+465	Loc beacon id	0	7168	16	896	897	1	0	2	-1	-1	-1	
+466	Loc beacon detection LH	0	7184	16	898	899	1	0	2	-1	-1	-1	
+467	Dist beacon id	0	7200	16	900	901	1	0	2	-1	-1	-1	
+468	Dist beacon detection LH	0	7216	16	902	903	1	0	2	-1	-1	-1	
+1506	count.F	0	7232	32	904	907	1	0	2	-1	-1	-1	
+1507	count.C.C1	0	7264	24	908	910	1	0	2	-1	-1	-1	
+1508	count.C.C2	0	7288	24	911	913	1	0	2	-1	-1	-1	
+1509	count_before_top_loc.F	0	7312	32	914	917	1	0	2	-1	-1	-1	
+1510	count_before_top_loc.C.C1	0	7344	24	918	920	1	0	2	-1	-1	-1	
+1511	count_before_top_loc.C.C2	0	7368	24	921	923	1	0	2	-1	-1	-1	
+1512	count_after_top_loc.F	0	7392	32	924	927	1	0	2	-1	-1	-1	
+1513	count_after_top_loc.C.C1	0	7424	24	928	930	1	0	2	-1	-1	-1	
+1514	count_after_top_loc.C.C2	0	7448	24	931	933	1	0	2	-1	-1	-1	
+1396	Cur. Input duration	0	7472	8	934	934	1	0	2	-1	-1	ms	
+1397	Cur. Kine duration	0	7480	8	935	935	1	0	2	-1	-1	ms	
+1398	Cur. Loc duration	0	7488	8	936	936	1	0	2	-1	-1	ms	
+1399	Cur. Over Energy duration	0	7496	8	937	937	1	0	2	-1	-1	ms	
+1400	Cur. RM Energy duration	0	7504	8	938	938	1	0	2	-1	-1	ms	
+1401	Cur. Driver Energy duration	0	7512	8	939	939	1	0	2	-1	-1	ms	
+1402	Cur. Roll Energy duration	0	7520	8	940	940	1	0	2	-1	-1	ms	
+1403	Cur. Train Door duration	0	7536	8	942	942	1	0	2	-1	-1	ms	
+1404	Cur. PSD Door duration	0	7544	8	943	943	1	0	2	-1	-1	ms	
+1405	Cur. EB duration	0	7552	8	944	944	1	0	2	-1	-1	ms	
+1406	current Time out         	0	7560	8	945	945	1	0	2	-1	-1	ms	
+1407	Cur. Output comput.	0	7568	8	946	946	1	0	2	-1	-1	ms	
+1408	Cur. Send ATP NV 	0	7576	8	947	947	1	0	2	-1	-1	ms	
+1409	Cur. Send safety out.	0	7584	8	948	948	1	0	2	-1	-1	ms	
+1410	Cur. Send mesg	0	7592	8	949	949	1	0	2	-1	-1	ms	
+1411	Cur. Schedule debug msg	0	7600	8	950	950	1	0	2	-1	-1	ms	
+1412	Cur. Acquire msg	0	7608	8	951	951	1	0	2	-1	-1	ms	
+1413	Cur. Send date synchro	0	7616	8	952	952	1	0	2	-1	-1	ms	
+1414	Cur. Send loc report	0	7624	8	953	953	1	0	2	-1	-1	ms	
+1415	Cur. Send version msg	0	7632	8	954	954	1	0	2	-1	-1	ms	
+1416	Cur. Send itama msg	0	7640	8	955	955	1	0	2	-1	-1	ms	
+1417	Cur. Send CC synchro	0	7648	8	956	956	1	0	2	-1	-1	ms	
+1418	Cur. Input reading	0	7656	8	957	957	1	0	2	-1	-1	ms	
+1419	Cur. Input writting	0	7664	8	958	958	1	0	2	-1	-1	ms	
+528	HILC SR_Hour	0	7672	8	959	959	1	0	2	-1	-1	-1	
+540	HILC SR_Hour 2	0	7680	8	960	960	1	0	2	-1	-1	-1	
+338	No dis VIO1 PSO 1	0	7688	1	961	961	1	0	0	0	-1	-1	
+339	No dis VIO1 PSO 2	0	7689	1	961	961	1	0	0	0	-1	-1	
+340	No dis VIO1 DSO1 1	0	7690	1	961	961	1	0	0	0	-1	-1	
+341	No dis VIO1 DSO1 2	0	7691	1	961	961	1	0	0	0	-1	-1	
+342	No dis VIO1 DSO1 3	0	7692	1	961	961	1	0	0	0	-1	-1	
+343	No dis VIO1 DSO1 4 	0	7693	1	961	961	1	0	0	0	-1	-1	
+344	No dis VIO1 DSO1 5	0	7694	1	961	961	1	0	0	0	-1	-1	
+345	No dis VIO1 DSO1 6	0	7695	1	961	961	1	0	0	0	-1	-1	
+346	No dis VIO1 DSO1 7	0	7696	1	962	962	1	0	0	0	-1	-1	
+347	No dis VIO1 DSO1 8 	0	7697	1	962	962	1	0	0	0	-1	-1	
+348	No dis VIO1 DSO2 1	0	7698	1	962	962	1	0	0	0	-1	-1	
+349	No dis VIO1 DSO2 2	0	7699	1	962	962	1	0	0	0	-1	-1	
+350	No dis VIO1 DSO2 3	0	7700	1	962	962	1	0	0	0	-1	-1	
+351	No dis VIO1 DSO2 4 	0	7701	1	962	962	1	0	0	0	-1	-1	
+352	No dis VIO1 DSO2 5	0	7702	1	962	962	1	0	0	0	-1	-1	
+353	No dis VIO1 DSO2 6	0	7703	1	962	962	1	0	0	0	-1	-1	
+354	No dis VIO1 DSO2 7	0	7704	1	963	963	1	0	0	0	-1	-1	
+355	No dis VIO1 DSO2 8 	0	7705	1	963	963	1	0	0	0	-1	-1	
+356	No dis VIO2 PSO 1	0	7706	1	963	963	1	0	0	0	-1	-1	
+357	No dis VIO2 PSO 2	0	7707	1	963	963	1	0	0	0	-1	-1	
+358	No dis VIO2 DSO1 1	0	7708	1	963	963	1	0	0	0	-1	-1	
+359	No dis VIO2 DSO1 2	0	7709	1	963	963	1	0	0	0	-1	-1	
+360	No dis VIO2 DSO1 3	0	7710	1	963	963	1	0	0	0	-1	-1	
+361	No dis VIO2 DSO1 4 	0	7711	1	963	963	1	0	0	0	-1	-1	
+362	No dis VIO2 DSO1 5	0	7712	1	964	964	1	0	0	0	-1	-1	
+363	No dis VIO2 DSO1 6	0	7713	1	964	964	1	0	0	0	-1	-1	
+364	No dis VIO2 DSO1 7	0	7714	1	964	964	1	0	0	0	-1	-1	
+365	No dis VIO2 DSO1 8 	0	7715	1	964	964	1	0	0	0	-1	-1	
+366	No dis VIO2 DSO2 1	0	7716	1	964	964	1	0	0	0	-1	-1	
+367	No dis VIO2 DSO2 2	0	7717	1	964	964	1	0	0	0	-1	-1	
+368	No dis VIO2 DSO2 3	0	7718	1	964	964	1	0	0	0	-1	-1	
+369	No dis VIO2 DSO2 4 	0	7719	1	964	964	1	0	0	0	-1	-1	
+370	No dis VIO2 DSO2 5	0	7720	1	965	965	1	0	0	0	-1	-1	
+371	No dis VIO2 DSO2 6	0	7721	1	965	965	1	0	0	0	-1	-1	
+372	No dis VIO2 DSO2 7	0	7722	1	965	965	1	0	0	0	-1	-1	
+373	No dis VIO2 DSO2 8 	0	7723	1	965	965	1	0	0	0	-1	-1	
+21	EVSL context id	0	7728	8	966	966	1	0	0	22	-1	-1	
+22	EVSL id	0	7736	32	967	970	1	0	2	-1	-1	-1	
+26	EVSL direction	0	7768	1	971	971	1	0	2	-1	-1	-1	
+25	EVSL block id	0	7769	31	971	974	1	0	2	-1	-1	-1	
+27	EVSL min abs in dir	0	7800	24	975	977	0.0009765625	0	2	-1	3	m	
+28	EVSL max abs in dir	0	7824	24	978	980	0.0009765625	0	2	-1	3	m	
+23	EVSL energy	0	7848	24	981	983	3.63797880709171E-10	0	2	-1	6	m2/s2	
+24	EVSL train energy	0	7872	24	984	986	3.63797880709171E-10	0	2	-1	6	m2/s2	
+800	LC16 version dtb valid	0	7896	1	987	987	1	0	0	0	-1	-1	
+799	LC15 version dtb valid	0	7897	1	987	987	1	0	0	0	-1	-1	
+798	LC14 version dtb valid	0	7898	1	987	987	1	0	0	0	-1	-1	
+797	LC13 version dtb valid	0	7899	1	987	987	1	0	0	0	-1	-1	
+796	LC12 version dtb valid	0	7900	1	987	987	1	0	0	0	-1	-1	
+795	LC11 version dtb valid	0	7901	1	987	987	1	0	0	0	-1	-1	
+794	LC10 version dtb valid	0	7902	1	987	987	1	0	0	0	-1	-1	
+793	LC09 version dtb valid	0	7903	1	987	987	1	0	0	0	-1	-1	
+792	LC08 version dtb valid	0	7904	1	988	988	1	0	0	0	-1	-1	
+791	LC07 version dtb valid	0	7905	1	988	988	1	0	0	0	-1	-1	
+790	LC06 version dtb valid	0	7906	1	988	988	1	0	0	0	-1	-1	
+789	LC05 version dtb valid	0	7907	1	988	988	1	0	0	0	-1	-1	
+788	LC04 version dtb valid	0	7908	1	988	988	1	0	0	0	-1	-1	
+787	LC03 version dtb valid	0	7909	1	988	988	1	0	0	0	-1	-1	
+786	LC02 version dtb valid	0	7910	1	988	988	1	0	0	0	-1	-1	
+785	LC01 version dtb valid	0	7911	1	988	988	1	0	0	0	-1	-1	
+803	dgd version dtb to update	0	7917	1	989	989	1	0	0	0	-1	-1	
+802	dgd version update validity	0	7918	1	989	989	1	0	0	0	-1	-1	
+801	dgd version cur other available	0	7919	1	989	989	1	0	0	0	-1	-1	
+804	Version report LC id	0	7920	16	990	991	1	0	2	-1	-1	-1	
+805	Version report LH	0	7936	16	992	993	1	0	2	-1	-1	-1	
+806	LC01 version dtb LH	0	7952	16	994	995	1	0	2	-1	-1	-1	
+807	LC02 version dtb LH	0	7968	16	996	997	1	0	2	-1	-1	-1	
+808	LC03 version dtb LH	0	7984	16	998	999	1	0	2	-1	-1	-1	
+809	LC04 version dtb LH	0	8000	16	1000	1001	1	0	2	-1	-1	-1	
+810	LC05 version dtb LH	0	8016	16	1002	1003	1	0	2	-1	-1	-1	
+811	LC06 version dtb LH	0	8032	16	1004	1005	1	0	2	-1	-1	-1	
+812	LC07 version dtb LH	0	8048	16	1006	1007	1	0	2	-1	-1	-1	
+813	LC08 version dtb LH	0	8064	16	1008	1009	1	0	2	-1	-1	-1	
+814	LC09 version dtb LH	0	8080	16	1010	1011	1	0	2	-1	-1	-1	
+815	LC10 version dtb LH	0	8096	16	1012	1013	1	0	2	-1	-1	-1	
+816	LC11 version dtb LH	0	8112	16	1014	1015	1	0	2	-1	-1	-1	
+817	LC12 version dtb LH	0	8128	16	1016	1017	1	0	2	-1	-1	-1	
+818	LC13 version dtb LH	0	8144	16	1018	1019	1	0	2	-1	-1	-1	
+819	LC14 version dtb LH	0	8160	16	1020	1021	1	0	2	-1	-1	-1	
+820	LC15 version dtb LH	0	8176	16	1022	1023	1	0	2	-1	-1	-1	
+821	LC16 version dtb LH	0	8192	16	1024	1025	1	0	2	-1	-1	-1	
+654	ATO Vital Time cycle LC1	0	8208	16	1026	1027	1	0	2	-1	-1	-1	
+655	ATO Vital Time cycle LC2	0	8224	16	1028	1029	1	0	2	-1	-1	-1	
+656	ATO Vital Time cycle LC3	0	8240	16	1030	1031	1	0	2	-1	-1	-1	
+657	ATO Vital Time ms LC1	0	8256	8	1032	1032	1	0	2	-1	-1	-1	
+658	ATO Vital Time ms LC2	0	8264	8	1033	1033	1	0	2	-1	-1	-1	
+659	ATO Vital Time ms LC3	0	8272	8	1034	1034	1	0	2	-1	-1	-1	
+666	ATO Msg sync LC 1 age	0	8280	8	1035	1035	0.2	0	2	-1	1	s	
+667	ATO Msg sync LC 2 age	0	8288	8	1036	1036	0.2	0	2	-1	1	s	
+668	ATO Msg sync LC 3 age	0	8296	8	1037	1037	0.2	0	2	-1	1	s	
+823	ATO Msg version LC 1 age	0	8304	8	1038	1038	0.2	0	2	-1	1	s	
+824	ATO Msg version LC 2 age	0	8312	8	1039	1039	0.2	0	2	-1	1	s	
+825	ATO Msg version LC 3 age	0	8320	8	1040	1040	0.2	0	2	-1	1	s	
+1198	TASE 1	0	8328	1	1041	1041	1	0	0	0	-1	-1	
+1199	TASE 2	0	8329	1	1041	1041	1	0	0	0	-1	-1	
+937	MotSpeeAvailFrODO	0	8330	1	1041	1041	1	0	0	0	-1	-1	
+506	BM Used	0	8332	1	1041	1041	1	0	0	0	-1	-1	
+960	EOA extremity	0	8333	2	1041	1041	1	0	0	18	-1	-1	
+938	Dep and not Acc usable	0	8335	1	1041	1041	1	0	0	0	-1	-1	
+1464	TopLocCogCountUsable	0	8335	1	1041	1041	1	0	0	0	-1	-1	
+963	EOA_VirtBlock	0	8336	8	1042	1042	1	0	0	18	-1	-1	
+1521	P Logical Input 1	0	8344	1	1043	1043	1	0	0	0	-1	-1	
+1522	P Logical Input 2	0	8345	1	1043	1043	1	0	0	0	-1	-1	
+1523	P Logical Input 3	0	8346	1	1043	1043	1	0	0	0	-1	-1	
+1524	P Logical Input 4	0	8347	1	1043	1043	1	0	0	0	-1	-1	
+1525	P Logical Input 5	0	8348	1	1043	1043	1	0	0	0	-1	-1	
+1527	NR Logical Input 1	0	8349	1	1043	1043	1	0	0	0	-1	-1	
+1528	NR Logical Input 2	0	8350	1	1043	1043	1	0	0	0	-1	-1	
+1529	NR Logical Input 3	0	8351	1	1043	1043	1	0	0	0	-1	-1	
+1556	l_I_dgd_end1_in_minabis_zone	0	8352	1	1044	1044	1	0	0	0	-1	-1	
+1557	l_I_dgd_end2_in_minabis_zone	0	8353	1	1044	1044	1	0	0	0	-1	-1	
+1559	NoDa MINABIS_distance_overrun1	0	8354	1	1044	1044	1	0	0	0	-1	-1	
+1560	NoSa MINABIS_distance_overrun1	0	8355	1	1044	1044	1	0	0	0	-1	-1	
+1561	NoEB MINABIS_distance_overrun1	0	8356	1	1044	1044	1	0	0	0	-1	-1	
+1565	NoDa MINABIS_overspeed1	0	8357	1	1044	1044	1	0	0	0	-1	-1	
+1566	NoSa MINABIS_overspeed1	0	8358	1	1044	1044	1	0	0	0	-1	-1	
+1567	NoEB MINABIS_overspeed1	0	8359	1	1044	1044	1	0	0	0	-1	-1	
+1568	NoEBforMINABIS1	0	8360	1	1045	1045	1	0	0	0	-1	-1	
+1569	NoEBforMINABIS2	0	8361	1	1045	1045	1	0	0	0	-1	-1	
+1562	NoDa MINABIS_distance_overrun2	0	8362	1	1045	1045	1	0	0	0	-1	-1	
+1563	NoSa MINABIS_distance_overrun2	0	8363	1	1045	1045	1	0	0	0	-1	-1	
+1564	NoEB MINABIS_distance_overrun2	0	8364	1	1045	1045	1	0	0	0	-1	-1	
+1570	NoDa MINABIS_overspeed2	0	8365	1	1045	1045	1	0	0	0	-1	-1	
+1571	NoSa MINABIS_overspeed2	0	8366	1	1045	1045	1	0	0	0	-1	-1	
+1572	NoEB MINABIS_overspeed2	0	8367	1	1045	1045	1	0	0	0	-1	-1	
+915	NoEB for MINABIS	0	8370	1	1046	1046	1	0	0	0	-1	-1	
+916	NoEB for ReverseOvSp	0	8373	1	1046	1046	1	0	0	0	-1	-1	
+1573	NoDa ForDepWithoutDCL	0	8374	1	1046	1046	1	0	0	0	-1	-1	
+1574	NoSa ForDepWithoutDCL	0	8375	1	1046	1046	1	0	0	0	-1	-1	
+1575	NoEB ForDepWithoutDCL	0	8376	1	1047	1047	1	0	0	0	-1	-1	
+479	No Immo for door opened	0	8376	1	1047	1047	1	0	0	0	-1	-1	
+1576	NoDa ForHDCTrainEnd1	0	8377	1	1047	1047	1	0	0	0	-1	-1	
+1577	NoSa ForHDCTrainEnd1	0	8378	1	1047	1047	1	0	0	0	-1	-1	
+489	No Hold door closed End1	0	8379	1	1047	1047	1	0	0	0	-1	-1	
+1578	NoEB ForHDCTrainEnd1	0	8379	1	1047	1047	1	0	0	0	-1	-1	
+1579	NoDa ForHDCTrainEnd2	0	8380	1	1047	1047	1	0	0	0	-1	-1	
+1580	NoSa ForHDCTrainEnd2	0	8381	1	1047	1047	1	0	0	0	-1	-1	
+490	No Hold door closed End2	0	8382	1	1047	1047	1	0	0	0	-1	-1	
+1581	NoEB ForHDCTrainEnd2	0	8382	1	1047	1047	1	0	0	0	-1	-1	
+1583	NoSa ForSpLmExcUpToTrainStop	0	8383	1	1047	1047	1	0	0	0	-1	-1	
+16	No EB for overenergy	0	8384	1	1048	1048	1	0	0	0	-1	-1	
+1584	NoEB ForSpLmExcUpToTrainStop	0	8384	1	1048	1048	1	0	0	0	-1	-1	
+1585	NoDa ForEvacReqTrainStpd	0	8385	1	1048	1048	1	0	0	0	-1	-1	
+1586	NoSa ForEvacReqTrainStpd	0	8386	1	1048	1048	1	0	0	0	-1	-1	
+1587	NoEB ForEvacReqTrainStpd	0	8387	1	1048	1048	1	0	0	0	-1	-1	
+985	No EvacReqTrainStopped	0	8387	1	1048	1048	1	0	0	0	-1	-1	
+1588	NoDa ForEvacReqLeavSta	0	8388	1	1048	1048	1	0	0	0	-1	-1	
+1589	NoSa ForEvacReqLeavSta	0	8389	1	1048	1048	1	0	0	0	-1	-1	
+986	No EvacReqWhileLeavingStation	0	8390	1	1048	1048	1	0	0	0	-1	-1	
+1590	NoEB ForEvacReqLeavSta	0	8390	1	1048	1048	1	0	0	0	-1	-1	
+1591	NoDa ForUnexpPSDOpening	0	8391	1	1048	1048	1	0	0	0	-1	-1	
+1592	NoSa ForUnexpPSDOpening	0	8392	1	1049	1049	1	0	0	0	-1	-1	
+492	No EB unexpec. PSD open.	0	8393	1	1049	1049	1	0	0	0	-1	-1	
+1593	NoEB ForUnexpPSDOpening	0	8393	1	1049	1049	1	0	0	0	-1	-1	
+1594	NoDa HazaMoExRouteEnd1	0	8394	1	1049	1049	1	0	0	0	-1	-1	
+1595	NoSa HazaMoExRouteEnd1	0	8395	1	1049	1049	1	0	0	0	-1	-1	
+973	No EB for moral time E1	0	8396	1	1049	1049	1	0	0	0	-1	-1	
+1596	NoEB HazaMoExRouteEnd1	0	8396	1	1049	1049	1	0	0	0	-1	-1	
+1597	NoEB HazaMoExRouteEnd2	0	8397	1	1049	1049	1	0	0	0	-1	-1	
+974	No EB for moral time E2	0	8397	1	1049	1049	1	0	0	0	-1	-1	
+1598	NoDa HazaMoExRouteEnd2	0	8398	1	1049	1049	1	0	0	0	-1	-1	
+1599	NoSa HazaMoExRouteEnd2	0	8399	1	1049	1049	1	0	0	0	-1	-1	
+13	No RM over-speed	0	8402	1	1050	1050	1	0	0	0	-1	-1	
+8	No EB for undet danger	0	8405	1	1050	1050	1	0	0	0	-1	-1	
+1600	NoDa ForMemLocSpeedLimOver	0	8409	1	1051	1051	1	0	0	0	-1	-1	
+1601	NoSa ForMemLocSpeedLimOver	0	8410	1	1051	1051	1	0	0	0	-1	-1	
+14	No loc memo over-speed	0	8411	1	1051	1051	1	0	0	0	-1	-1	
+1602	NoEB ForMemLocSpeedLimOver	0	8411	1	1051	1051	1	0	0	0	-1	-1	
+494	No EB for not PBA due to TDCL	0	8414	1	1051	1051	1	0	0	0	-1	-1	
+495	No EB for not PBA due to PSDCL	0	8417	1	1052	1052	1	0	0	0	-1	-1	
+1603	NoPB ForSpLmExcUpToTrainStop	0	8418	1	1052	1052	1	0	0	0	-1	-1	
+17	No PB for overenergy	0	8418	1	1052	1052	1	0	0	0	-1	-1	
+975	No PB for moral time	0	8419	1	1052	1052	1	0	0	0	-1	-1	
+1604	NoPB HazaMoExRouteEnd	0	8419	1	1052	1052	1	0	0	0	-1	-1	
+9	No PB for undet danger	0	8420	1	1052	1052	1	0	0	0	-1	-1	
+1605	NoPB ForTrainDoorsNotCL	0	8421	1	1052	1052	1	0	0	0	-1	-1	
+493	No PB for not TDCL	0	8421	1	1052	1052	1	0	0	0	-1	-1	
+1606	NoPB ForPSDNotCL	0	8422	1	1052	1052	1	0	0	0	-1	-1	
+1607	NoPB ForPSDOpenAndSupByATP	0	8423	1	1052	1052	1	0	0	0	-1	-1	
+999	No PB PSD Open Comm	0	8423	1	1052	1052	1	0	0	0	-1	-1	
+491	No PB safe pass. exch.	0	8423	1	1052	1052	1	0	0	0	-1	-1	
+1006	BSD status on side A	0	8431	1	1053	1053	1	0	0	0	-1	-1	
+1007	BSD cur CC loop hour A	0	8432	16	1054	1055	1	0	2	-1	-1	-1	
+1008	BSD cur Time counter A	0	8448	16	1056	1057	1	0	2	-1	-1	-1	
+1009	BSD prev CC loop hour A	0	8464	16	1058	1059	1	0	2	-1	-1	-1	
+1010	BSD prev Time counter A	0	8480	16	1060	1061	1	0	2	-1	-1	-1	
+1011	BSD status on side B	0	8503	1	1062	1062	1	0	0	0	-1	-1	
+1012	BSD cur CC loop hour B	0	8504	16	1063	1064	1	0	2	-1	-1	-1	
+1013	BSD cur Time counter B	0	8520	16	1065	1066	1	0	2	-1	-1	-1	
+1014	BSD prev CC loop hour B	0	8536	16	1067	1068	1	0	2	-1	-1	-1	
+1015	BSD prev Time counter B	0	8552	16	1069	1070	1	0	2	-1	-1	-1	
+1446	F. BSD side A status	0	8568	8	1071	1071	1	0	2	-1	-1	-1	
+1447	F. BSD side A cur LH	0	8576	16	1072	1073	1	0	2	-1	-1	-1	
+1448	F. BSD side A cur TC	0	8592	16	1074	1075	1	0	2	-1	-1	-1	
+1449	F. BSD side A prev LH	0	8608	16	1076	1077	1	0	2	-1	-1	-1	
+1450	F. BSD side A prev TC	0	8624	16	1078	1079	1	0	2	-1	-1	-1	
+1451	F. SSR side A prev LH	0	8640	16	1080	1081	1	0	2	-1	-1	-1	
+1452	F. SSR side A prev TC	0	8656	16	1082	1083	1	0	2	-1	-1	-1	
+1453	F. BSD side B status	0	8672	8	1084	1084	1	0	2	-1	-1	-1	
+1454	F. BSD side B cur LH	0	8680	16	1085	1086	1	0	2	-1	-1	-1	
+1455	F. BSD side B cur TC	0	8696	16	1087	1088	1	0	2	-1	-1	-1	
+1456	F. BSD side B prev LH	0	8712	16	1089	1090	1	0	2	-1	-1	-1	
+1457	F. BSD side B prev TC	0	8728	16	1091	1092	1	0	2	-1	-1	-1	
+1458	F. SSR side B prev LH	0	8744	16	1093	1094	1	0	2	-1	-1	-1	
+1459	F. SSR side B prev TC	0	8760	16	1095	1096	1	0	2	-1	-1	-1	
+1488	Max motion during sliding	1	8776	32	1097	1100	3.814697265625E-06	0	2	-1	3	m	
+1479	Min motion during sliding	1	8808	32	1101	1104	3.814697265625E-06	0	2	-1	3	m	
+182	Sensor C1 At Stop	0	8840	1	1105	1105	1	0	0	0	-1	-1	
+183	Sensor C2 At Stop	0	8841	1	1105	1105	1	0	0	0	-1	-1	
+184	Sensor C3 At Stop	0	8842	1	1105	1105	1	0	0	0	-1	-1	
+185	Same Sequence During 2 cycles	0	8843	1	1105	1105	1	0	0	0	-1	-1	
+175	Sensors Consistant	0	8844	1	1105	1105	1	0	0	0	-1	-1	
+149	Detected Motion Since ATP On	0	8845	1	1105	1105	1	0	0	0	-1	-1	
+1609	Stop Assured Point Overrun	0	8846	1	1105	1105	1	0	0	0	-1	-1	
+1541	LH Train in BMIZ	0	8848	16	1106	1107	1	0	2	-1	-1	-1	
+1546	TFE motion between 2 cy	0	8864	24	1108	1110	0.0009765625	0	2	-1	3	-1	
+1544	TFE BAD Location	0	8888	16	1111	1112	1	0	2	-1	-1	-1	
+1545	TFE Absc. Location	0	8904	24	1113	1115	0.0009765625	0	2	-1	3	-1	
+1554	Overlap timer	1	8928	16	1116	1117	1	0	2	-1	-1	-1	
+1535	Train Intersecting ALZ	0	8944	1	1118	1118	1	0	0	0	-1	-1	
+1536	Prev Train Intersecting ALZ 	0	8945	1	1118	1118	1	0	0	0	-1	-1	
+1537	No Train Missing Variant In ALZ	0	8946	1	1118	1118	1	0	0	0	-1	-1	
+1539	Train in BMIZ	0	8947	1	1118	1118	1	0	0	0	-1	-1	
+1540	Train in permissive BMIZ	0	8948	1	1118	1118	1	0	0	0	-1	-1	
+1543	TFE Id	0	8949	2	1118	1118	1	0	2	-1	-1	-1	
+498	BM variant source CBI	0	8951	1	1118	1118	1	0	0	0	-1	-1	
+1553	Overlap timer valid	0	8952	1	1119	1119	1	0	0	0	-1	-1	
+1552	Train not crossed res sig	0	8953	1	1119	1119	1	0	0	0	-1	-1	
+1551	Train crossed route sig	0	8954	1	1119	1119	1	0	0	0	-1	-1	
+1204	Overlap release auth.	0	8955	1	1119	1119	1	0	0	0	-1	-1	
+1205	Train in overlap zone	0	8956	1	1119	1119	1	0	0	0	-1	-1	
+123	Overlap release sendable	0	8957	1	1119	1119	1	0	0	0	-1	-1	
+124	DE bypass requested	0	8958	1	1119	1119	1	0	0	0	-1	-1	
+544	BackGroundTask_Count	0	8960	16	1120	1121	1	0	1	-1	-1	-1	
+115	Not coerce rest. 1	0	8976	1	1122	1122	1	0	0	0	-1	-1	
+116	Not coerce rest. 2	0	8977	1	1122	1122	1	0	0	0	-1	-1	
+117	Not coerce rest. 3	0	8978	1	1122	1122	1	0	0	0	-1	-1	
+118	Not coerce rest. 4	0	8979	1	1122	1122	1	0	0	0	-1	-1	
+119	Coerce perm. 1	0	8980	1	1122	1122	1	0	0	0	-1	-1	
+120	Coerce perm. 2	0	8981	1	1122	1122	1	0	0	0	-1	-1	
+121	Coerce perm. 3	0	8982	1	1122	1122	1	0	0	0	-1	-1	
+122	Coerce perm. 4	0	8983	1	1122	1122	1	0	0	0	-1	-1	
+1210	lh decompact state	0	8984	8	1123	1123	1	0	2	-1	-1	-1	
+1211	Variants decompact state	0	8992	8	1124	1124	1	0	2	-1	-1	-1	
+1244	CBI  1 full validity	0	9000	1	1125	1125	1	0	0	0	-1	-1	
+1245	CBI  2 full validity	0	9001	1	1125	1125	1	0	0	0	-1	-1	
+1246	CBI  3 full validity	0	9002	1	1125	1125	1	0	0	0	-1	-1	
+1247	CBI  4 full validity	0	9003	1	1125	1125	1	0	0	0	-1	-1	
+1248	CBI  5 full validity	0	9004	1	1125	1125	1	0	0	0	-1	-1	
+1249	CBI  6 full validity	0	9005	1	1125	1125	1	0	0	0	-1	-1	
+1250	CBI  7 full validity	0	9006	1	1125	1125	1	0	0	0	-1	-1	
+1251	CBI  8 full validity	0	9007	1	1125	1125	1	0	0	0	-1	-1	
+1252	CBI  9 full validity	0	9008	1	1126	1126	1	0	0	0	-1	-1	
+1253	CBI 10 full validity	0	9009	1	1126	1126	1	0	0	0	-1	-1	
+1254	CBI 11 full validity	0	9010	1	1126	1126	1	0	0	0	-1	-1	
+1255	CBI 12 full validity	0	9011	1	1126	1126	1	0	0	0	-1	-1	
+1256	CBI 13 full validity	0	9012	1	1126	1126	1	0	0	0	-1	-1	
+1257	CBI 14 full validity	0	9013	1	1126	1126	1	0	0	0	-1	-1	
+1258	CBI 15 full validity	0	9014	1	1126	1126	1	0	0	0	-1	-1	
+1259	CBI 16 full validity	0	9015	1	1126	1126	1	0	0	0	-1	-1	
+1260	CBI 17 full validity	0	9016	1	1127	1127	1	0	0	0	-1	-1	
+1261	CBI 18 full validity	0	9017	1	1127	1127	1	0	0	0	-1	-1	
+1262	CBI 19 full validity	0	9018	1	1127	1127	1	0	0	0	-1	-1	
+1263	CBI 20 full validity	0	9019	1	1127	1127	1	0	0	0	-1	-1	
+1264	CBI 21 full validity	0	9020	1	1127	1127	1	0	0	0	-1	-1	
+1265	CBI 22 full validity	0	9021	1	1127	1127	1	0	0	0	-1	-1	
+1266	CBI 23 full validity	0	9022	1	1127	1127	1	0	0	0	-1	-1	
+1267	CBI 24 full validity	0	9023	1	1127	1127	1	0	0	0	-1	-1	
+1268	CBI 25 full validity	0	9024	1	1128	1128	1	0	0	0	-1	-1	
+1269	CBI 26 full validity	0	9025	1	1128	1128	1	0	0	0	-1	-1	
+1270	CBI 27 full validity	0	9026	1	1128	1128	1	0	0	0	-1	-1	
+1271	CBI 28 full validity	0	9027	1	1128	1128	1	0	0	0	-1	-1	
+1272	CBI 29 full validity	0	9028	1	1128	1128	1	0	0	0	-1	-1	
+1273	CBI 30 full validity	0	9029	1	1128	1128	1	0	0	0	-1	-1	
+1274	CBI 31 full validity	0	9030	1	1128	1128	1	0	0	0	-1	-1	
+1275	CBI 32 full validity	0	9031	1	1128	1128	1	0	0	0	-1	-1	
+1276	CBI  1 low validity	0	9032	1	1129	1129	1	0	0	0	-1	-1	
+1277	CBI  2 low validity	0	9033	1	1129	1129	1	0	0	0	-1	-1	
+1278	CBI  3 low validity	0	9034	1	1129	1129	1	0	0	0	-1	-1	
+1279	CBI  4 low validity	0	9035	1	1129	1129	1	0	0	0	-1	-1	
+1280	CBI  5 low validity	0	9036	1	1129	1129	1	0	0	0	-1	-1	
+1281	CBI  6 low validity	0	9037	1	1129	1129	1	0	0	0	-1	-1	
+1282	CBI  7 low validity	0	9038	1	1129	1129	1	0	0	0	-1	-1	
+1283	CBI  8 low validity	0	9039	1	1129	1129	1	0	0	0	-1	-1	
+1284	CBI  9 low validity	0	9040	1	1130	1130	1	0	0	0	-1	-1	
+1285	CBI 10 low validity	0	9041	1	1130	1130	1	0	0	0	-1	-1	
+1286	CBI 11 low validity	0	9042	1	1130	1130	1	0	0	0	-1	-1	
+1287	CBI 12 low validity	0	9043	1	1130	1130	1	0	0	0	-1	-1	
+1288	CBI 13 low validity	0	9044	1	1130	1130	1	0	0	0	-1	-1	
+1289	CBI 14 low validity	0	9045	1	1130	1130	1	0	0	0	-1	-1	
+1290	CBI 15 low validity	0	9046	1	1130	1130	1	0	0	0	-1	-1	
+1291	CBI 16 low validity	0	9047	1	1130	1130	1	0	0	0	-1	-1	
+1292	CBI 17 low validity	0	9048	1	1131	1131	1	0	0	0	-1	-1	
+1293	CBI 18 low validity	0	9049	1	1131	1131	1	0	0	0	-1	-1	
+1294	CBI 19 low validity	0	9050	1	1131	1131	1	0	0	0	-1	-1	
+1295	CBI 20 low validity	0	9051	1	1131	1131	1	0	0	0	-1	-1	
+1296	CBI 21 low validity	0	9052	1	1131	1131	1	0	0	0	-1	-1	
+1297	CBI 22 low validity	0	9053	1	1131	1131	1	0	0	0	-1	-1	
+1298	CBI 23 low validity	0	9054	1	1131	1131	1	0	0	0	-1	-1	
+1299	CBI 24 low validity	0	9055	1	1131	1131	1	0	0	0	-1	-1	
+1300	CBI 25 low validity	0	9056	1	1132	1132	1	0	0	0	-1	-1	
+1301	CBI 26 low validity	0	9057	1	1132	1132	1	0	0	0	-1	-1	
+1302	CBI 27 low validity	0	9058	1	1132	1132	1	0	0	0	-1	-1	
+1303	CBI 28 low validity	0	9059	1	1132	1132	1	0	0	0	-1	-1	
+1304	CBI 29 low validity	0	9060	1	1132	1132	1	0	0	0	-1	-1	
+1305	CBI 30 low validity	0	9061	1	1132	1132	1	0	0	0	-1	-1	
+1306	CBI 31 low validity	0	9062	1	1132	1132	1	0	0	0	-1	-1	
+1307	CBI 32 low validity	0	9063	1	1132	1132	1	0	0	0	-1	-1	
+1308	ATO Msg LH CBI 1 LH	0	9064	8	1133	1133	1	0	2	-1	-1	-1	
+1309	ATO Msg LH CBI 2 LH	0	9072	8	1134	1134	1	0	2	-1	-1	-1	
+1310	ATO Msg LH CBI 3 LH	0	9080	8	1135	1135	1	0	2	-1	-1	-1	
+1311	ATO Msg LH CBI 1 age	0	9088	8	1136	1136	1	0	2	-1	-1	-1	
+1312	ATO Msg LH CBI 2 age	0	9096	8	1137	1137	1	0	2	-1	-1	-1	
+1313	ATO Msg LH CBI 3 age	0	9104	8	1138	1138	1	0	2	-1	-1	-1	
+1314	ATO Msg VT CBI 1 LH	0	9112	8	1139	1139	1	0	2	-1	-1	-1	
+1315	ATO Msg VT CBI 2 LH	0	9120	8	1140	1140	1	0	2	-1	-1	-1	
+1316	ATO Msg VT CBI 3 LH	0	9128	8	1141	1141	1	0	2	-1	-1	-1	
+1317	ATO Msg VT CBI 1 age	0	9136	8	1142	1142	1	0	2	-1	-1	-1	
+1318	ATO Msg VT CBI 2 age	0	9144	8	1143	1143	1	0	2	-1	-1	-1	
+1319	ATO Msg VT CBI 3 age	0	9152	8	1144	1144	1	0	2	-1	-1	-1	
+1321	Msg LH CBI emettor	0	9160	8	1145	1145	1	0	2	-1	-1	-1	
+1322	Msg LH CBI LH	0	9168	32	1146	1149	1	0	2	-1	-1	-1	
+1323	Msg LH CHK1 	0	9200	24	1150	1152	1	0	2	-1	-1	-1	
+1324	Msg LH CHK2	0	9224	24	1153	1155	1	0	2	-1	-1	-1	
+1326	CBI emettor	0	9248	8	1156	1156	1	0	2	-1	-1	-1	
+1327	Variants [  1-  8]	0	9256	8	1157	1157	1	0	3	-1	-1	-1	
+1328	Variants [  9- 16]	0	9264	8	1158	1158	1	0	3	-1	-1	-1	
+1329	Variants [ 17- 24]	0	9272	8	1159	1159	1	0	3	-1	-1	-1	
+1330	Variants [ 25- 32]	0	9280	8	1160	1160	1	0	3	-1	-1	-1	
+1331	Variants [ 33- 40]	0	9288	8	1161	1161	1	0	3	-1	-1	-1	
+1332	Variants [ 41- 48]	0	9296	8	1162	1162	1	0	3	-1	-1	-1	
+1333	Variants [ 49- 56]	0	9304	8	1163	1163	1	0	3	-1	-1	-1	
+1334	Variants [ 57- 64]	0	9312	8	1164	1164	1	0	3	-1	-1	-1	
+1335	Variants [ 65- 72]	0	9320	8	1165	1165	1	0	3	-1	-1	-1	
+1336	Variants [ 73- 80]	0	9328	8	1166	1166	1	0	3	-1	-1	-1	
+1337	Variants [ 81- 88]	0	9336	8	1167	1167	1	0	3	-1	-1	-1	
+1338	Variants [ 89- 96]	0	9344	8	1168	1168	1	0	3	-1	-1	-1	
+1339	Variants [ 97-104]	0	9352	8	1169	1169	1	0	3	-1	-1	-1	
+1340	Variants [105-112]	0	9360	8	1170	1170	1	0	3	-1	-1	-1	
+1341	Variants [113-120]	0	9368	8	1171	1171	1	0	3	-1	-1	-1	
+1342	Variants [121-128]	0	9376	8	1172	1172	1	0	3	-1	-1	-1	
+1343	Variants [129-136]	0	9384	8	1173	1173	1	0	3	-1	-1	-1	
+1344	Variants [137-144]	0	9392	8	1174	1174	1	0	3	-1	-1	-1	
+1345	Variants [145-152]	0	9400	8	1175	1175	1	0	3	-1	-1	-1	
+1346	Variants [153-160]	0	9408	8	1176	1176	1	0	3	-1	-1	-1	
+1347	Variants [161-168]	0	9416	8	1177	1177	1	0	3	-1	-1	-1	
+1348	Variants [169-176]	0	9424	8	1178	1178	1	0	3	-1	-1	-1	
+1349	Variants [177-184]	0	9432	8	1179	1179	1	0	3	-1	-1	-1	
+1350	Variants [185-192]	0	9440	8	1180	1180	1	0	3	-1	-1	-1	
+1351	Variants [193-200]	0	9448	8	1181	1181	1	0	3	-1	-1	-1	
+1352	Variants [201-208]	0	9456	8	1182	1182	1	0	3	-1	-1	-1	
+1353	Variants [209-216]	0	9464	8	1183	1183	1	0	3	-1	-1	-1	
+1354	Variants [217-224]	0	9472	8	1184	1184	1	0	3	-1	-1	-1	
+1355	Variants [225-232]	0	9480	8	1185	1185	1	0	3	-1	-1	-1	
+1356	Variants [233-240]	0	9488	8	1186	1186	1	0	3	-1	-1	-1	
+1357	Variants [241-248]	0	9496	8	1187	1187	1	0	3	-1	-1	-1	
+1358	Variants [249-256]	0	9504	8	1188	1188	1	0	3	-1	-1	-1	
+1359	Variants [257-264]	0	9512	8	1189	1189	1	0	3	-1	-1	-1	
+1360	Variants [265-272]	0	9520	8	1190	1190	1	0	3	-1	-1	-1	
+1361	Variants [273-280]	0	9528	8	1191	1191	1	0	3	-1	-1	-1	
+1362	Variants [281-288]	0	9536	8	1192	1192	1	0	3	-1	-1	-1	
+1363	Variants [289-296]	0	9544	8	1193	1193	1	0	3	-1	-1	-1	
+1364	Variants [297-304]	0	9552	8	1194	1194	1	0	3	-1	-1	-1	
+1365	Variants [305-312]	0	9560	8	1195	1195	1	0	3	-1	-1	-1	
+1366	Variants [313-320]	0	9568	8	1196	1196	1	0	3	-1	-1	-1	
+1367	Variants [321-328]	0	9576	8	1197	1197	1	0	3	-1	-1	-1	
+1368	Variants [329-336]	0	9584	8	1198	1198	1	0	3	-1	-1	-1	
+1369	Variants [337-344]	0	9592	8	1199	1199	1	0	3	-1	-1	-1	
+1370	Variants [345-352]	0	9600	8	1200	1200	1	0	3	-1	-1	-1	
+1371	Variants [353-360]	0	9608	8	1201	1201	1	0	3	-1	-1	-1	
+1372	Variants [361-368]	0	9616	8	1202	1202	1	0	3	-1	-1	-1	
+1373	Variants [369-376]	0	9624	8	1203	1203	1	0	3	-1	-1	-1	
+1374	Variants [377-384]	0	9632	8	1204	1204	1	0	3	-1	-1	-1	
+1375	Variants [385-392]	0	9640	8	1205	1205	1	0	3	-1	-1	-1	
+1376	Variants [393-400]	0	9648	8	1206	1206	1	0	3	-1	-1	-1	
+1377	Variants [401-408]	0	9656	8	1207	1207	1	0	3	-1	-1	-1	
+1378	Variants [409-416]	0	9664	8	1208	1208	1	0	3	-1	-1	-1	
+1379	Variants [417-424]	0	9672	8	1209	1209	1	0	3	-1	-1	-1	
+1380	Variants [425-432]	0	9680	8	1210	1210	1	0	3	-1	-1	-1	
+1381	Variants [433-440]	0	9688	8	1211	1211	1	0	3	-1	-1	-1	
+1382	Variants [441-448]	0	9696	8	1212	1212	1	0	3	-1	-1	-1	
+1383	Variants [449-456]	0	9704	8	1213	1213	1	0	3	-1	-1	-1	
+1384	Variants [457-464]	0	9712	8	1214	1214	1	0	3	-1	-1	-1	
+1385	Variants [465-472]	0	9720	8	1215	1215	1	0	3	-1	-1	-1	
+1386	Variants [473-480]	0	9728	8	1216	1216	1	0	3	-1	-1	-1	
+1387	Variants [481-488]	0	9736	8	1217	1217	1	0	3	-1	-1	-1	
+1388	Variants [489-496]	0	9744	8	1218	1218	1	0	3	-1	-1	-1	
+1389	Variants [497-504]	0	9752	8	1219	1219	1	0	3	-1	-1	-1	
+1390	Variants [505-512]	0	9760	8	1220	1220	1	0	3	-1	-1	-1	
+1391	CBI back LH	0	9768	16	1221	1222	1	0	2	-1	-1	-1	
+1392	Variants msg CHK 1	0	9784	24	1223	1225	1	0	2	-1	-1	-1	
+1393	Variants msg CHK 2	0	9808	24	1226	1228	1	0	2	-1	-1	-1	
+1206	CBI Id	0	9832	8	1229	1229	1	0	2	-1	-1	-1	
+1207	CBI variant	0	9840	8	1230	1230	1	0	2	-1	-1	-1	
+1547	TFE min BAD Location	0	9848	16	1231	1232	1	0	2	-1	-1	-1	
+1548	TFE min Block Location	0	9864	16	1233	1234	1	0	2	-1	-1	-1	
+1549	TFE min Absc. Loc.	0	9880	24	1235	1237	0.0009765625	0	2	-1	3	-1	
+1515	TaskFondCounter	0	9912	8	1239	1239	1	0	2	-1	-1	-1	
+1516	Msg_Idx_Output	0	9920	8	1240	1240	1	0	2	-1	-1	-1	
+1517	Msg_Idx_Input	0	9928	8	1241	1241	1	0	2	-1	-1	-1	
+1518	Index_Buffer_A	0	9936	8	1242	1242	1	0	2	-1	-1	-1	
+1519	Index_Buffer_B	0	9944	8	1243	1243	1	0	2	-1	-1	-1	
+1610	CI Loop Hour - 1	0	9952	8	1244	1244	1	0	2	-1	-1	-1	
+1611	CI Loop Hour - 2	0	9960	8	1245	1245	1	0	2	-1	-1	-1	
+1612	CI Loop Hour - 3	0	9968	8	1246	1246	1	0	2	-1	-1	-1	
+186	Cog Count at FS	0	9976	8	1247	1247	1	0	2	-1	-1	-1	
+509	Rem. Eng. Time 1	1	9984	16	1248	1249	1	0	2	-1	-1	-1	
+510	Rem. Eng. Time 2	1	10000	16	1250	1251	1	0	2	-1	-1	-1	
+511	Rem. Eng. Time 3	1	10016	16	1252	1253	1	0	2	-1	-1	-1	
+512	Rem. Eng. Time 4	1	10032	16	1254	1255	1	0	2	-1	-1	-1	
+513	Excl Output 1	0	10048	1	1256	1256	1	0	0	0	-1	-1	
+514	Excl Output 2	0	10049	1	1256	1256	1	0	0	0	-1	-1	
+515	Excl Output 3	0	10050	1	1256	1256	1	0	0	0	-1	-1	
+516	Excl Output 4	0	10051	1	1256	1256	1	0	0	0	-1	-1	
+517	Excl Globally Rest 1	0	10052	1	1256	1256	1	0	0	0	-1	-1	
+518	Excl Globally Rest 2	0	10053	1	1256	1256	1	0	0	0	-1	-1	
+519	Excl Globally Rest 3	0	10054	1	1256	1256	1	0	0	0	-1	-1	
+520	Excl Globally Rest 4	0	10055	1	1256	1256	1	0	0	0	-1	-1	
+508	VIO Exclusivity time	0	10056	8	1257	1257	1	0	2	-1	-1	-1	
+863	WZcondition1	0	10064	1	1258	1258	1	0	0	0	-1	-1	
+864	WZcondition2	0	10065	1	1258	1258	1	0	0	0	-1	-1	
+865	WZcondition3	0	10066	1	1258	1258	1	0	0	0	-1	-1	
+866	WZcondition4	0	10067	1	1258	1258	1	0	0	0	-1	-1	
+867	WZcondition5	0	10068	1	1258	1258	1	0	0	0	-1	-1	
+868	WZcondition6	0	10069	1	1258	1258	1	0	0	0	-1	-1	
+869	WZcondition7	0	10070	1	1258	1258	1	0	0	0	-1	-1	
+870	WZcondition8	0	10071	1	1258	1258	1	0	0	0	-1	-1	
+904	WZdecompstate	0	10072	8	1259	1259	1	0	0	20	-1	-1	
+872	WZ01dtbvalid	0	10080	1	1260	1260	1	0	0	0	-1	-1	
+873	WZ02dtbvalid	0	10081	1	1260	1260	1	0	0	0	-1	-1	
+874	WZ03dtbvalid	0	10082	1	1260	1260	1	0	0	0	-1	-1	
+875	WZ04dtbvalid	0	10083	1	1260	1260	1	0	0	0	-1	-1	
+876	WZ05dtbvalid	0	10084	1	1260	1260	1	0	0	0	-1	-1	
+877	WZ06dtbvalid	0	10085	1	1260	1260	1	0	0	0	-1	-1	
+878	WZ07dtbvalid	0	10086	1	1260	1260	1	0	0	0	-1	-1	
+879	WZ08dtbvalid	0	10087	1	1260	1260	1	0	0	0	-1	-1	
+880	WZ09dtbvalid	0	10088	1	1261	1261	1	0	0	0	-1	-1	
+881	WZ10dtbvalid	0	10089	1	1261	1261	1	0	0	0	-1	-1	
+882	WZ11dtbvalid	0	10090	1	1261	1261	1	0	0	0	-1	-1	
+883	WZ12dtbvalid	0	10091	1	1261	1261	1	0	0	0	-1	-1	
+884	WZ13dtbvalid	0	10092	1	1261	1261	1	0	0	0	-1	-1	
+885	WZ14dtbvalid	0	10093	1	1261	1261	1	0	0	0	-1	-1	
+886	WZ15dtbvalid	0	10094	1	1261	1261	1	0	0	0	-1	-1	
+887	WZ16dtbvalid	0	10095	1	1261	1261	1	0	0	0	-1	-1	
+888	WZ17dtbvalid	0	10096	1	1262	1262	1	0	0	0	-1	-1	
+889	WZ18dtbvalid	0	10097	1	1262	1262	1	0	0	0	-1	-1	
+890	WZ19dtbvalid	0	10098	1	1262	1262	1	0	0	0	-1	-1	
+891	WZ20dtbvalid	0	10099	1	1262	1262	1	0	0	0	-1	-1	
+892	WZ21dtbvalid	0	10100	1	1262	1262	1	0	0	0	-1	-1	
+893	WZ22dtbvalid	0	10101	1	1262	1262	1	0	0	0	-1	-1	
+894	WZ23dtbvalid	0	10102	1	1262	1262	1	0	0	0	-1	-1	
+895	WZ24dtbvalid	0	10103	1	1262	1262	1	0	0	0	-1	-1	
+896	WZ25dtbvalid	0	10104	1	1263	1263	1	0	0	0	-1	-1	
+897	WZ26dtbvalid	0	10105	1	1263	1263	1	0	0	0	-1	-1	
+898	WZ27dtbvalid	0	10106	1	1263	1263	1	0	0	0	-1	-1	
+899	WZ28dtbvalid	0	10107	1	1263	1263	1	0	0	0	-1	-1	
+900	WZ29dtbvalid	0	10108	1	1263	1263	1	0	0	0	-1	-1	
+901	WZ30dtbvalid	0	10109	1	1263	1263	1	0	0	0	-1	-1	
+902	WZ31dtbvalid	0	10110	1	1263	1263	1	0	0	0	-1	-1	
+903	WZ32dtbvalid	0	10111	1	1263	1263	1	0	0	0	-1	-1	
+906	ATOMsgLHWZ1LH	0	10112	16	1264	1265	1	0	2	-1	-1	-1	
+907	ATOMsgLHWZ2LH	0	10128	16	1266	1267	1	0	2	-1	-1	-1	
+908	ATOMsgLHWZ3LH	0	10144	16	1268	1269	1	0	2	-1	-1	-1	
+909	ATOMsgageWZ1LH	0	10160	16	1270	1271	1	0	2	-1	-1	-1	
+910	ATOMsgageWZ2LH	0	10176	16	1272	1273	1	0	2	-1	-1	-1	
+911	ATOMsgageWZ3LH	0	10192	16	1274	1275	1	0	2	-1	-1	-1	
+1613	Min Prod LH new msg	1	10208	16	1276	1277	1	0	2	-1	-1	-1	
+188	Fast sensor C1	0	10224	1	1278	1278	1	0	0	0	-1	-1	
+189	Fast sensor C2	0	10225	1	1278	1278	1	0	0	0	-1	-1	
+190	Fast sensor C3	0	10226	1	1278	1278	1	0	0	0	-1	-1	
+187	Fast Sensor Test Done	0	10227	1	1278	1278	1	0	0	0	-1	-1	
+191	Cog is present	0	10228	1	1278	1278	1	0	0	0	-1	-1	
+192	Fast sensors unconsistant	0	10229	1	1278	1278	1	0	0	0	-1	-1	
+193	Transition counter	0	10232	8	1279	1279	1	0	2	-1	-1	-1	
+1615	TF condition 1	0	10240	1	1280	1280	1	0	0	0	-1	-1	
+1616	TF condition 2	0	10241	1	1280	1280	1	0	0	0	-1	-1	
+1617	TF condition 3	0	10242	1	1280	1280	1	0	0	0	-1	-1	
+1618	TF condition 4	0	10243	1	1280	1280	1	0	0	0	-1	-1	
+1619	TF condition 5	0	10244	1	1280	1280	1	0	0	0	-1	-1	
+1620	TF Integrity	0	10245	1	1280	1280	1	0	0	0	-1	-1	
+1621	Consistent coupling	0	10246	1	1280	1280	1	0	0	0	-1	-1	
+1622	TrainUnit Active	0	10247	1	1280	1280	1	0	0	0	-1	-1	
+1631	Coupling status	0	10248	3	1281	1281	1	0	0	16	-1	-1	
+1633	Validation of TF by ZC	0	10251	1	1281	1281	1	0	0	0	-1	-1	
+1644	tf LocatedOnKnownPath	0	10252	1	1281	1281	1	0	0	0	-1	-1	
+1643	tf Located	0	10253	1	1281	1281	1	0	0	0	-1	-1	
+1623	Not Coupled by end 1	0	10254	1	1281	1281	1	0	0	0	-1	-1	
+1624	Not Coupled by end 2	0	10255	1	1281	1281	1	0	0	0	-1	-1	
+1628	Validated TF by FI	0	10256	8	1282	1282	1	0	2	-1	-1	-1	
+1629	Validated TF Id	0	10264	8	1283	1283	1	0	2	-1	-1	-1	
+1630	TF id to control	0	10272	8	1284	1284	1	0	2	-1	-1	-1	
+1649	tf ext1 Dir	0	10280	2	1285	1285	1	0	0	2	-1	-1	
+1652	tf int1 Dir	0	10282	2	1285	1285	1	0	0	2	-1	-1	
+1655	tf ext2 Dir	0	10284	2	1285	1285	1	0	0	2	-1	-1	
+1658	tf int2 Dir	0	10286	2	1285	1285	1	0	0	2	-1	-1	
+1647	tf ext1 Block	0	10288	16	1286	1287	1	0	2	-1	-1	-1	
+1648	tf ext1 Abs	0	10304	24	1288	1290	0.0009765625	0	2	-1	3	m	
+1653	tf ext2 Block	0	10328	16	1291	1292	1	0	2	-1	-1	-1	
+1654	tf ext2 Abs	0	10344	24	1293	1295	0.0009765625	0	2	-1	3	m	
+1645	Uncertainty End 1	0	10368	24	1296	1298	0.0009765625	0	2	-1	3	m	
+1646	Uncertainty End 2	0	10392	24	1299	1301	0.0009765625	0	2	-1	3	m	
+1634	TF Id loaded	0	10416	8	1302	1302	1	0	2	-1	-1	-1	
+1660	SpdLim End 1 Cond 1	0	10424	1	1303	1303	1	0	0	0	-1	-1	
+1661	SpdLim End 1 Cond 2	0	10425	1	1303	1303	1	0	0	0	-1	-1	
+1662	SpdLim End 1 Cond 3	0	10426	1	1303	1303	1	0	0	0	-1	-1	
+1663	SpdLim End 1 Cond 4	0	10427	1	1303	1303	1	0	0	0	-1	-1	
+1664	SpdLim End 1 Cond 5	0	10428	1	1303	1303	1	0	0	0	-1	-1	
+1665	SpdLim End 1 Cond 6	0	10429	1	1303	1303	1	0	0	0	-1	-1	
+1666	SpdLim End 1 Cond 7	0	10430	1	1303	1303	1	0	0	0	-1	-1	
+1667	SpdLim End 1 Inhib	0	10431	1	1303	1303	1	0	0	0	-1	-1	
+1668	Speed Limit End 1	0	10432	24	1304	1306	6.866455078125E-05	0	2	-1	3	km/h	
+1669	SpdLim End 2 Cond 1	0	10456	1	1307	1307	1	0	0	0	-1	-1	
+1670	SpdLim End 2 Cond 2	0	10457	1	1307	1307	1	0	0	0	-1	-1	
+1671	SpdLim End 2 Cond 3	0	10458	1	1307	1307	1	0	0	0	-1	-1	
+1672	SpdLim End 2 Cond 4	0	10459	1	1307	1307	1	0	0	0	-1	-1	
+1673	SpdLim End 2 Cond 5	0	10460	1	1307	1307	1	0	0	0	-1	-1	
+1674	SpdLim End 2 Cond 6	0	10461	1	1307	1307	1	0	0	0	-1	-1	
+1675	SpdLim End 2 Cond 7	0	10462	1	1307	1307	1	0	0	0	-1	-1	
+1676	SpdLim End 2 Inhib 	0	10463	1	1307	1307	1	0	0	0	-1	-1	
+1677	Speed Limit End 2	0	10464	24	1308	1310	6.866455078125E-05	0	2	-1	3	km/h	
+1679	LS1  End 1 Condtion 1	0	10488	1	1311	1311	1	0	0	0	-1	-1	
+1680	LS1  End 1 Condtion 2	0	10489	1	1311	1311	1	0	0	0	-1	-1	
+1681	LS1  End 1 Inhibition	0	10490	1	1311	1311	1	0	0	0	-1	-1	
+1683	LS1  End 2 Condtion 1	0	10491	1	1311	1311	1	0	0	0	-1	-1	
+1684	LS1  End 2 Condtion 2	0	10492	1	1311	1311	1	0	0	0	-1	-1	
+1685	LS1  End 2 Inhibition	0	10493	1	1311	1311	1	0	0	0	-1	-1	
+1692	LS2  End 1 Condtion 1	0	10496	1	1312	1312	1	0	0	0	-1	-1	
+1693	LS2 End 1 Condtion 2	0	10497	1	1312	1312	1	0	0	0	-1	-1	
+1694	LS2 End 1 Inhibition	0	10498	1	1312	1312	1	0	0	0	-1	-1	
+1696	LS2 End 2 Condtion 1	0	10499	1	1312	1312	1	0	0	0	-1	-1	
+1697	LS2 End 2 Condtion 2	0	10500	1	1312	1312	1	0	0	0	-1	-1	
+1698	LS2 End 2 Inhibition	0	10501	1	1312	1312	1	0	0	0	-1	-1	
+1705	LS3 End 1 Condtion 1	0	10504	1	1313	1313	1	0	0	0	-1	-1	
+1706	LS3 End 1 Condtion 2	0	10505	1	1313	1313	1	0	0	0	-1	-1	
+1707	LS3 End 1 Inhibition	0	10506	1	1313	1313	1	0	0	0	-1	-1	
+1709	LS3 End 2 Condtion 1	0	10507	1	1313	1313	1	0	0	0	-1	-1	
+1710	LS3 End 2 Condtion 2	0	10508	1	1313	1313	1	0	0	0	-1	-1	
+1711	LS3 End 2 Inhibition	0	10509	1	1313	1313	1	0	0	0	-1	-1	
+1682	End 1 Distance Sanction 1	0	10512	24	1314	1316	0.0009765625	0	2	-1	3	m	
+1686	End 2 Distance Sanction 1	0	10536	24	1317	1319	0.0009765625	0	2	-1	3	m	
+1695	End 1 Distance Sanction 2	0	10560	24	1320	1322	0.0009765625	0	2	-1	3	m	
+1699	End 2 Distance Sanction 2	0	10584	24	1323	1325	0.0009765625	0	2	-1	3	m	
+1708	End 1 Distance Sanction 3	0	10608	24	1326	1328	0.0009765625	0	2	-1	3	m	
+1712	End 2 Distance Sanction 3	0	10632	24	1329	1331	0.0009765625	0	2	-1	3	m	
+1687	LS1  Dist Account 1	0	10656	24	1332	1334	0.0009765625	0	2	-1	3	m	
+1689	LS1  Dist Account 2	0	10680	24	1335	1337	0.0009765625	0	2	-1	3	m	
+1700	LS2 Dist Account 1	0	10704	24	1338	1340	0.0009765625	0	2	-1	3	m	
+1702	LS2 Dist Account 2	0	10728	24	1341	1343	0.0009765625	0	2	-1	3	m	
+1713	LS3 Dist Account 1	0	10752	24	1344	1346	0.0009765625	0	2	-1	3	m	
+1715	LS3 Dist Account 2	0	10776	24	1347	1349	0.0009765625	0	2	-1	3	m	
+1688	LS1  Sat Threshold 1	0	10800	16	1350	1351	0.0009765625	0	2	-1	3	m	
+1690	LS1  Sat Threshold 2	0	10816	16	1352	1353	0.0009765625	0	2	-1	3	m	
+1701	LS2 Sat Threshold 1	0	10832	16	1354	1355	0.0009765625	0	2	-1	3	m	
+1703	LS2 Sat Threshold 2	0	10848	16	1356	1357	0.0009765625	0	2	-1	3	m	
+1714	LS3 Sat Threshold 1	0	10864	16	1358	1359	0.0009765625	0	2	-1	3	m	
+1716	LS3 Sat Threshold 2	0	10880	16	1360	1361	0.0009765625	0	2	-1	3	m	
+1717	NoDa Dist 1 End 1	0	10896	1	1362	1362	1	0	0	0	-1	-1	
+1718	NoDa Dist 1 End 2	0	10897	1	1362	1362	1	0	0	0	-1	-1	
+1719	NoDa Dist 2 End 1	0	10898	1	1362	1362	1	0	0	0	-1	-1	
+1720	NoDa Dist 2 End 2	0	10899	1	1362	1362	1	0	0	0	-1	-1	
+1721	NoDa Dist 3 End 1	0	10900	1	1362	1362	1	0	0	0	-1	-1	
+1722	NoDa Dist 3 End 2	0	10901	1	1362	1362	1	0	0	0	-1	-1	
+1723	NoSa Dist 1 End 1	0	10902	1	1362	1362	1	0	0	0	-1	-1	
+1724	NoSa Dist 1 End 2	0	10903	1	1362	1362	1	0	0	0	-1	-1	
+1725	NoSa Dist 2 End 1	0	10904	1	1363	1363	1	0	0	0	-1	-1	
+1726	NoSa Dist 2 End 2	0	10905	1	1363	1363	1	0	0	0	-1	-1	
+1727	NoSa Dist 3 End 1	0	10906	1	1363	1363	1	0	0	0	-1	-1	
+1728	NoSa Dist 3 End 2	0	10907	1	1363	1363	1	0	0	0	-1	-1	
+1729	NoEB Dist 1 End 1	0	10908	1	1363	1363	1	0	0	0	-1	-1	
+1730	NoEB Dist 1 End 2	0	10909	1	1363	1363	1	0	0	0	-1	-1	
+1731	NoEB Dist 2 End 1	0	10910	1	1363	1363	1	0	0	0	-1	-1	
+1732	NoEB Dist 2 End 2	0	10911	1	1363	1363	1	0	0	0	-1	-1	
+1733	NoEB Dist 3 End 1	0	10912	1	1364	1364	1	0	0	0	-1	-1	
+1734	NoEB Dist 3 End 2	0	10913	1	1364	1364	1	0	0	0	-1	-1	
+1735	NoPB Dist 1 End 1	0	10914	1	1364	1364	1	0	0	0	-1	-1	
+1736	NoPB Dist 1 End 2	0	10915	1	1364	1364	1	0	0	0	-1	-1	
+1737	NoPB Dist 2 End 1	0	10916	1	1364	1364	1	0	0	0	-1	-1	
+1738	NoPB Dist 2 End 2	0	10917	1	1364	1364	1	0	0	0	-1	-1	
+1739	NoPB Dist 3 End 1	0	10918	1	1364	1364	1	0	0	0	-1	-1	
+1740	NoPB Dist 3 End 2	0	10919	1	1364	1364	1	0	0	0	-1	-1	
+1741	NoDa OverSpd End 1	0	10920	1	1365	1365	1	0	0	0	-1	-1	
+1742	NoDa OverSpd End 2	0	10921	1	1365	1365	1	0	0	0	-1	-1	
+1743	NoSa OverSpd End 1	0	10922	1	1365	1365	1	0	0	0	-1	-1	
+1744	NoSa OverSpd End 2	0	10923	1	1365	1365	1	0	0	0	-1	-1	
+1745	NoEB OverSpd End 1	0	10924	1	1365	1365	1	0	0	0	-1	-1	
+1746	NoEB OverSpd End 2	0	10925	1	1365	1365	1	0	0	0	-1	-1	
+1748	NoEB NotConfTFID	0	10928	1	1366	1366	1	0	0	0	-1	-1	
+1747	NoDa NotConfTFID	0	10928	1	1366	1366	1	0	0	0	-1	-1	
+1637	Not Confirmed TF	0	10929	1	1366	1366	1	0	0	0	-1	-1	
+1750	Sweeping auth. 1	0	10930	1	1366	1366	1	0	0	0	-1	-1	
+1751	Sweeping auth. 2	0	10931	1	1366	1366	1	0	0	0	-1	-1	
+1530	NR Logical Input 4	0	10932	1	1366	1366	1	0	0	0	-1	-1	
+1531	NR Logical Input 5	0	10933	1	1366	1366	1	0	0	0	-1	-1	
+1532	NR Logical Input 6	0	10934	1	1366	1366	1	0	0	0	-1	-1	
+1533	NR Logical Input 7	0	10935	1	1366	1366	1	0	0	0	-1	-1	
+1638	TU Prj in code	0	10936	1	1367	1367	1	0	0	0	-1	-1	
+1639	Not Mand TF in code	0	10937	1	1367	1367	1	0	0	0	-1	-1	
+1640	Fut Mand TF in code	0	10938	1	1367	1367	1	0	0	0	-1	-1	
+1641	All Manda TF in code	0	10939	1	1367	1367	1	0	0	0	-1	-1	
+1185	Sleeping enable	0	10940	1	1367	1367	1	0	0	0	-1	-1	
+1635	Dist w not Conf TF	0	10944	24	1368	1370	0.0009765625	0	2	-1	3	m	
+1155	CC_Session	0	10968	32	1371	1374	1	0	2	-1	-1	-1	
+1156	Other_CC_Session	0	11000	32	1375	1378	1	0	2	-1	-1	-1	
+1157	Confirmed_Synchronisation	0	11032	1	1379	1379	1	0	0	0	-1	-1	
+970	SMI requested	0	11040	1	1380	1380	1	0	0	0	-1	-1	
+1081	msg presumably valid	0	11041	1	1380	1380	1	0	0	0	-1	-1	
+1082	msg available	0	11042	1	1380	1380	1	0	0	0	-1	-1	
+69	ATC Controlled Train	0	11043	1	1380	1380	1	0	0	0	-1	-1	
+73	Loc by ZC	0	11044	1	1380	1380	1	0	0	0	-1	-1	
+70	CBTC mode	0	11048	1	1381	1381	1	0	0	0	-1	-1	
+71	Not ATC bypass	0	11049	1	1381	1381	1	0	0	0	-1	-1	
+72	NoBuffForNonActiveTU	0	11050	1	1381	1381	1	0	0	0	-1	-1	
+924	MINABIS res. Auth.	0	11051	1	1381	1381	1	0	0	0	-1	-1	
+1503	Cond. List 1	0	11052	1	1381	1381	1	0	0	0	-1	-1	
+1504	Cond. List 2	0	11053	1	1381	1381	1	0	0	0	-1	-1	
+684	ZC loc LH	0	11056	32	1382	1385	1	0	2	-1	-1	-1	
+1189	Loc memo checked	0	11088	1	1386	1386	1	0	0	0	-1	-1	
+1190	Loc memo consistent	0	11089	1	1386	1386	1	0	0	0	-1	-1	
+1191	Redon control inhibition	0	11090	1	1386	1386	1	0	0	0	-1	-1	
+1636	TF decompact state	0	11096	8	1387	1387	1	0	0	23	-1	-1	
+54	End1 int block	0	11104	16	1388	1389	1	0	2	-1	-1	-1	
+55	End1 int abscissa	1	11120	24	1390	1392	0.0009765625	0	2	-1	3	m	
+58	End2 int block	0	11144	16	1393	1394	1	0	2	-1	-1	-1	
+59	End2 int abscissa	1	11168	24	1396	1398	0.0009765625	0	2	-1	3	m	
+1100	Rep L->D Vital Setting	0	11192	16	1399	1400	1	0	2	-1	-1	-1	
+1101	Rep L->D Vital Software	0	11208	16	1401	1402	1	0	2	-1	-1	-1	
+1103	Rep L->D ZC2 version	0	11224	16	1403	1404	1	0	2	-1	-1	-1	
+1102	Rep L->D ZC1 version	0	11240	16	1405	1406	1	0	2	-1	-1	-1	
+1105	Rep L->D ZC4 version	0	11256	16	1407	1408	1	0	2	-1	-1	-1	
+1104	Rep L->D ZC3 version	0	11272	16	1409	1410	1	0	2	-1	-1	-1	
+1107	Rep L->D ZC6 version	0	11288	16	1411	1412	1	0	2	-1	-1	-1	
+1106	Rep L->D ZC5 version	0	11304	16	1413	1414	1	0	2	-1	-1	-1	
+1109	Rep L->D ZC8 version	0	11320	16	1415	1416	1	0	2	-1	-1	-1	
+1108	Rep L->D ZC7 version	0	11336	16	1417	1418	1	0	2	-1	-1	-1	
+1111	Rep L->D ZC10 version	0	11352	16	1419	1420	1	0	2	-1	-1	-1	
+1110	Rep L->D ZC9 version	0	11368	16	1421	1422	1	0	2	-1	-1	-1	
+1113	Rep L->D ZC12 version	0	11384	16	1423	1424	1	0	2	-1	-1	-1	
+1112	Rep L->D ZC11 version	0	11400	16	1425	1426	1	0	2	-1	-1	-1	
+1115	Rep L->D ZC14 version	0	11416	16	1427	1428	1	0	2	-1	-1	-1	
+1114	Rep L->D ZC13 version	0	11432	16	1429	1430	1	0	2	-1	-1	-1	
+1117	Rep L->D ZC16 version	0	11448	16	1431	1432	1	0	2	-1	-1	-1	
+1116	Rep L->D ZC15 version	0	11464	16	1433	1434	1	0	2	-1	-1	-1	
+1122	Rep L->D Loc_ext2Abs	0	11480	24	1435	1437	1	0	2	-1	-1	-1	
+1123	Rep L->D Loc_ext2Block	0	11504	16	1438	1439	1	0	2	-1	-1	-1	
+1125	Rep L->D Loc_uncertainty	0	11520	24	1440	1442	1	0	2	-1	-1	-1	
+1126	Rep L->D Loc_uncertaincy_evol	0	11544	24	1443	1445	1	0	2	-1	-1	-1	
+1132	Rep L->D Cons Delay App End 1	0	11568	16	1446	1447	1	0	2	-1	-1	-1	
+1133	Rep L->D End Eng LH 1	0	11584	16	1448	1449	1	0	2	-1	-1	-1	
+1134	Rep L->D Cons Delay App End 2	0	11600	16	1450	1451	1	0	2	-1	-1	-1	
+1135	Rep L->D End Eng LH 2	0	11616	16	1452	1453	1	0	2	-1	-1	-1	
+1136	Rep L->D Cons Delay App End 3	0	11632	16	1454	1455	1	0	2	-1	-1	-1	
+1137	Rep L->D End Eng LH 3	0	11648	16	1456	1457	1	0	2	-1	-1	-1	
+1138	Rep L->D Cons Delay App End 4	0	11664	16	1458	1459	1	0	2	-1	-1	-1	
+1139	Rep L->D End Eng LH 4	0	11680	16	1460	1461	1	0	2	-1	-1	-1	
+1141	Rep L->D Loc Memo Ext2Abs	0	11696	32	1462	1465	1	0	2	-1	-1	-1	
+1142	Rep L->D Loc Memo Ext2BAD	0	11728	32	1466	1469	1	0	2	-1	-1	-1	
+1143	Rep L->D Loc_Memo_Uncertaincy	0	11760	32	1470	1473	1	0	2	-1	-1	-1	
+1650	tf int1 Block	0	11792	16	1474	1475	1	0	2	-1	-1	-1	
+1651	tf int1 Abs	0	11808	24	1476	1478	0.0009765625	0	2	-1	3	m	
+1656	tf int2 Block	0	11832	16	1479	1480	1	0	2	-1	-1	-1	
+1657	tf int2 Abs	0	11848	24	1481	1483	0.0009765625	0	2	-1	3	m	
+1175	TrainLength write	0	11872	24	1484	1486	0.0009765625	0	2	-1	3	m	
+1176	Train unit type write	0	11896	8	1487	1487	1	0	2	-1	-1	-1	
+1177	Train unit Id write	0	11904	16	1488	1489	1	0	2	-1	-1	-1	
+1181	Loc uncertainty write	1	11920	24	1490	1492	0.0009765625	0	2	-1	3	m	
+1182	Evol uncertainty write	1	11944	24	1493	1495	0.0009765625	0	2	-1	3	m	
+1169	Evol uncertainty read	1	11968	24	1496	1498	0.0009765625	0	2	-1	3	m	
+1183	NVRAM S1 write	0	11992	24	1499	1501	1	0	1	-1	-1	-1	
+1184	NVRAM S2 write	0	12016	24	1502	1504	1	0	1	-1	-1	-1	
+1213	prev Filtered Perm HILC 1 	0	12040	1	1505	1505	1	0	0	0	-1	-1	
+1214	prev TASE1	0	12041	1	1505	1505	1	0	0	0	-1	-1	
+1215	prev Filtered Perm HILC 2 	0	12042	1	1505	1505	1	0	0	0	-1	-1	
+1216	prev TASE2	0	12043	1	1505	1505	1	0	0	0	-1	-1	
+1217	prev Filtered Stop	0	12044	1	1505	1505	1	0	0	0	-1	-1	
+1218	prev Globally Rest 1	0	12045	1	1505	1505	1	0	0	0	-1	-1	
+1219	prev Globally Rest 2	0	12046	1	1505	1505	1	0	0	0	-1	-1	
+1220	prev Globally Rest 3	0	12047	1	1505	1505	1	0	0	0	-1	-1	
+1221	prev Globally Rest 4	0	12048	1	1506	1506	1	0	0	0	-1	-1	
+1222	prev Engaged Output 1 	0	12049	1	1506	1506	1	0	0	0	-1	-1	
+1223	prev Engaged Output 2 	0	12050	1	1506	1506	1	0	0	0	-1	-1	
+1224	prev Engaged Output 3 	0	12051	1	1506	1506	1	0	0	0	-1	-1	
+1225	prev Engaged Output 4 	0	12052	1	1506	1506	1	0	0	0	-1	-1	
+1226	prev Sweeping authorized by end1	0	12053	1	1506	1506	1	0	0	0	-1	-1	
+1227	prev Sweeping authorized by end2	0	12054	1	1506	1506	1	0	0	0	-1	-1	
+1228	prev confirmed location 	0	12055	1	1506	1506	1	0	0	0	-1	-1	
+1229	prev DE bypassA	0	12056	1	1507	1507	1	0	0	0	-1	-1	
+1230	prev DE bypassB	0	12057	1	1507	1507	1	0	0	0	-1	-1	
+1231	prev EB not requested 	0	12058	1	1507	1507	1	0	0	0	-1	-1	
+1232	prev PB not requested 	0	12059	1	1507	1507	1	0	0	0	-1	-1	
+1233	prev DE on sideA	0	12060	1	1507	1507	1	0	0	0	-1	-1	
+1234	prev DE on sideB	0	12061	1	1507	1507	1	0	0	0	-1	-1	
+1235	prev HDCL sideA	0	12062	1	1507	1507	1	0	0	0	-1	-1	
+1236	prev HDCL sideB	0	12063	1	1507	1507	1	0	0	0	-1	-1	
+1237	prev HDCL end1 	0	12064	1	1508	1508	1	0	0	0	-1	-1	
+1238	prev HDCL end2 	0	12065	1	1508	1508	1	0	0	0	-1	-1	
+1239	prev Sleeping enable	0	12066	1	1508	1508	1	0	0	0	-1	-1	
+1240	prev ATC Controlled Train 	0	12067	1	1508	1508	1	0	0	0	-1	-1	
+1241	prev NoBuffForNonActiveTU	0	12068	1	1508	1508	1	0	0	0	-1	-1	
+1242	prev not EB and PB requested	0	12069	1	1508	1508	1	0	0	0	-1	-1	
+1502	Selected list	0	12072	8	1509	1509	1	0	0	25	-1	-1	
+1753	BU End1 ext block	0	12080	16	1510	1511	1	0	2	-1	-1	-1	
+1754	BU End1 ext abscissa	1	12096	24	1512	1514	0.0009765625	0	2	-1	3	m	
+1762	BU End2 ext block	0	12120	16	1515	1516	1	0	2	-1	-1	-1	
+1763	BU End2 ext abscissa	1	12136	24	1517	1519	0.0009765625	0	2	-1	3	m	
+1756	BU End1 int block	0	12160	16	1520	1521	1	0	2	-1	-1	-1	
+1757	BU End1 int abscissa	1	12176	24	1522	1524	0.0009765625	0	2	-1	3	m	
+1759	BU End2 int block	0	12200	16	1525	1526	1	0	2	-1	-1	-1	
+1760	BU End2 int abscissa	1	12216	24	1527	1529	0.0009765625	0	2	-1	3	m	
+1764	BU End2 ext direction	0	12240	2	1530	1530	1	0	0	2	-1	-1	
+1761	BU End2 int direction	0	12242	2	1530	1530	1	0	0	2	-1	-1	
+1758	BU End1 int direction	0	12244	2	1530	1530	1	0	0	2	-1	-1	
+1755	BU End1 ext direction	0	12246	2	1530	1530	1	0	0	2	-1	-1	

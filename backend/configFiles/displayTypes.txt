@@ -1,0 +1,6 @@
+0	Enumerated
+1	Hexadecimal
+2	Decimal
+3	Binary
+4	Date
+5	Time

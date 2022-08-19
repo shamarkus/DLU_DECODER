@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="utf-8">
+
+<head>
+<link rel="stylesheet" href="style.css" />
+<script async src="d3.min.js"></script>
+<script async src="NumToHeaderString_ATO.js"></script>
+<script async src="NumToHeaderString_ATP.js"></script>
+<script defer src="eventHandling.js"></script>
+</head>
+<body>
+    <p style="font-size: 30px"><b>DLU Log Decoder</b></p>
+    <div class="wrapper">
+    <hr>
+    <h2>Upload OMAP Extract</h2>
+    <div id="upload_div">
+        <br>
+        <div id="upload_buttons">
+            <button onclick="restart()">Clear All</button>
+			<br>
+			<div id="addRemove" style="margin-left=70%;">
+				<button id="add_file" onclick="add_file()" >Add File(s)</button>
+				<button id="remove_file" onclick="remove_file()" disabled>Remove File</button>
+			</div>
+            <br>
+            <div id="addedFiles" style="margin-left:0;">
+					<select id="addedFilenames" size="6" onchange="if(addedFilenames2.selectedIndex !== -1) addedFilenames2.selectedIndex = -1;" onmouseup="dragToSel(this,addedFilenames2,event)">
+					<option value=0 style="text-align: center; color:red;" disabled>Core 1</option>
+				</select>
+			</div>
+			<div id="addedFiles2" style="margin-right:35%;">
+				<select id="addedFilenames2" size="6" onchange="if(addedFilenames.selectedIndex !== -1) addedFilenames.selectedIndex = -1;" onmouseup="dragToSel(this,addedFilenames,event)">
+					<option value=0 style="text-align: center; color:red;" disabled>Core 2</option>
+				</select>			
+			</div>
+            <button id="upload" onclick="Upload(this)" style="margin-top:15px" disabled>Upload</button>
+            <p style="color:red; display:inline;">*</p>
+    </div>
+    <hr>
+    <div id="parameter_div" hidden>
+    	<h2>Parameters</h2>
+	<div id="ExternalFields">
+		<div id="ATboxes">
+			<h3 style="margin-left:0">Log Type</h3>
+			<select id="ATsel" onchange="callTables(this,true)" size=2>
+					<option value="0" title="ATO" style="text-align: center">ATO</option>
+					<option value="1" title="ATP" style="text-align: center">ATP</option>
+			</select>
+		</div>
+		<div id="StartTime">
+			<h3 style="margin-left:0">Start Time</h3>
+			<select id="start" onchange="setEndTimes(this)" size="1">
+			</select>
+		</div>
+		<div id="EndTime">
+			<h3 style="margin-left:0">End Time</h3>
+			<select id="end" onchange="setStartTimes(this)" size="1">
+			</select>
+		</div>
+	</div>
+	<div id="ParameterFields" hidden>
+		<div id="selectParameters">
+			<h3>Parameters Available</h3>
+			<select id="sel" onclick="transferRows(this,chosen)" size="10">
+			</select>
+			<input type="text" class="inp" id="paramInp" onKeyUp="showResults(this.value)" value="Enter Parameter Name" onfocus="if(this.value == 'Enter Parameter Name'){this.value = '';}" onblur="if(this.value == ''){this.value='Enter Parameter Name';}" />
+		</div>
+		<div id="chosenParameters">
+			<h3 style="color: rgba(255,0,0,1)">Parameters To Be Analyzed</h3>
+			<select id="chosen" onclick="transferRows(this,sel)" size="10">
+			</select>
+		</div>
+		<div id="presetParameters">
+			<h3>Parameter Presets</h3>
+			<select id="preset" onclick="transferPresets(this,chosen,sel)" size="10">
+			</select>
+		</div>
+	</div>
+	<div id="PresetInput" hidden>
+		<input type="text" id="presetInp" class="inp" value="Enter Preset Name" onfocus="if(this.value == 'Enter Preset Name'){this.value = '';}" onblur="if(this.value == ''){this.value='Enter Preset Name';}" />
+		<br>
+		<input type="button" id="MakePreset" value="Make" onclick="setPreset(RemovePreset,preset,presetInp.value)"/> 
+		<input type="button" id="RemovePreset" value="Remove" onclick="removePreset(this,preset,presetInp.value)" disabled/> 
+	</div>
+	<div id="Analyze" hidden>
+        <br><br><br>
+		<button id="analyze" onclick="analyze(this,Output)" disabled>Analyze</button>
+        <p style="color:red; display:inline;">*</p>
+		<input type="text" class="inp" id="outputNameInp" value="Enter Filename for Output [OPTIONAL]" onfocus="if(this.value == 'Enter Filename for Output [OPTIONAL]'){this.value = '';}" onblur="if(this.value == ''){this.value='Enter Filename for Output [OPTIONAL]';}" />
+	</div>
+   </div>
+   <hr>
+   <div id="Output">
+       	<h2>Analyze Output</h2>
+		<button id="upload" onclick="uploadCSVFile()" style="margin-top:15px;margin-right:80%;">Upload</button>
+   </div>
+   </body>
+</html>

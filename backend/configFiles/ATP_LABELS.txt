@@ -1,0 +1,26 @@
+0	Boolean	0	False	1	True	
+1	Door command	0	None	1	Opening	2	Closing	
+2	Orientation	0	Unknown	1	Increasing	2	Decreasing	3	Increas / Decreas	
+3	Title	0	------------	1	------------	
+4	EOA type	0	NA WO tf dir	1	NA W tf dir	2	End of visib	3	Ext auto prt	4	Unctrl point	5	Frontier	6	Tr dir disc	7	Lim buf zone	8	Chain break	
+5	EOA direction	0	Unknown	1	Down	2	Up	
+6	Calibration state	0	Waiting	1	Measuring	2	Validating	3	Completed	
+7	Odometer state	0	CogPosReady	1	CogBuffering	2	Initialised	3	NotInitialised	4	Invalid	
+8	Sliding state	0	Coasting	1	Braking 	2	Slipping 	3	Sliding 	4	Skidding 	5	SlidingTimeOut	
+9	Slipping state	0	Coasting	1	Motoring	2	Slipping	3	Sliding	4	Skidding	5	SlippingTimeOut	
+10	Retriction origin	0	Opened track end	1	Closed track end	2	Divergence	3	Delta energy convergence	4	BSR	5	Compensated gradient	6	Grip	7	Signal	8	Overlap end	9	PSR	10	Protection zone	11	PSD zone	
+11	NA	0	NA	1	NA	
+12	Restriction origin	0	Opened track end	1	Closed track end	2	Divergence	3	Delta energy convergence	4	BSR	5	Compensated gradient	6	Grip	7	Signal	8	Overlap end	9	PSR	10	Protection zone	11	PSD zone	
+13	Sliding fault	0	None	1	Sliding time out	2	Skidding	
+14	Slipping fault	0	None	1	Slipping time out	2	Skidding	
+15	LocRepOrientation	0	Unknown	1	Decreasing	2	Increasing	
+16	Coupling	0	Undefined	1	No coupling	2	Coupled by 1	3	Coupled by 2	4	Coupled by 1 and 2	
+17	MPC	0	Unknown	1	Decreasing	2	Increasing	3	Unknown	4	Decreasing	5	Increasing	6	Unknown	7	Decreasing	8	Increasing	
+18	MPC code	0	0	1	1	2	2	3	3	4	4	5	5	6	6	7	7	8	8	
+19	PSD alignement	0	Undefined	2	Periodic_Seq_Start	4	Seq_Start_Process	8	Misaligned	12	Aligned	
+20	WZ Decompact	0	Empty	1	Decompacting	2	Decompacted	3	Securing	4	Secured	5	Transfered	
+21	Equipment id	4	ATP major	5	ATP minor	6	ATP revision	7	ATP build	8	BSW major	9	BSW minor	10	BSW revision	11	Spare	12	Train unit type id	13	Train unit id MSB	14	Train unit id LSB	15	CC interface id	16	VES md5 1 1	17	VES md5 1 2	18	VES md5 1 3	19	VES md5 1 4	20	VES md5 2 1	21	VES md5 2 2	22	VES md5 2 3	23	VES md5 2 4	24	VES md5 3 1	25	VES md5 3 2	26	VES md5 3 3	27	VES md5 3 4	28	VES md5 4 1	29	VES md5 4 2	30	VES md5 4 3	31	VES md5 4 4	32	VES md5 5 1	33	VES md5 5 2	34	Spare	35	Spare	36	Spare	37	Spare	38	Spare	39	Spare	40	Spare	41	Spare	42	Spare	43	Spare	44	Spare	45	Spare	46	Spare	47	Spare	48	VES format 1	49	VES format 2	50	Spare	51	Spare	52	Spare	53	Spare	54	VS version	55	VESG major	56	VESG minor	57	VESG revision	58	VESG build	59	ZC 1 version 1	60	ZC 1 version 2	61	ZC 2 version 1	62	ZC 2 version 2	63	ZC 3 version 1	64	ZC 3 version 2	65	ZC 4 version 1	66	ZC 4 version 2	67	ZC 5 version 1	68	ZC 5 version 2	69	ZC 6 version 1	70	ZC 6 version 2	71	ZC 7 version 1	72	ZC 7 version 2	73	ZC 8 version 1	74	ZC 8 version 2	75	ZC 9 version 1	76	ZC 9 version 2	77	ZC 10 version 1	78	ZC 10 version 2	79	ZC 11 version 1	80	ZC 11 version 2	81	ZC 12 version 1	82	ZC 12 version 2	83	ZC 13 version 1	84	ZC 13 version 2	85	ZC 14 version 1	86	ZC 14 version 2	87	ZC 15 version 1	88	ZC 15 version 2	89	ZC 16 version 1	90	ZC 16 version 2	91	Id plug code Ok	92	VES code Ok	93	Spare	94	Spare	95	Spare	96	Spare	97	Spare	98	Spare	
+22	Speed limit context	0	None	1	Setting R	2	Setting U	3	Setting F1	4	Setting F2	5	Setting T1	6	Setting T2	7	Setting P	8	Setting D	9	WZ R	10	WZ U	12	WZ F1	11	WZ F2	14	WZ T1	13	WZ T2	15	WZ D	16	EOA found	17	EOA not found	18	Signal found	19	Signal not found	
+23	TF decompacting state	0	None	1	SMIPart	2	FSFB2 PSD Configuration	3	EBA Dep MaxTraction	4	EBA On Block	5	BAD CEBAZP	6	CEBAZP	7	BAD DeltaEnergyFromBeginToEnd	8	BAD R Speed Limit	9	R Speed Limit	10	BAD U Speed Limit	12	U Speed Limit	11	BAD F Speed Limit	14	F Speed Limit	13	BAD T Speed Limit	15	T Speed Limit	16	BAD P Speed Limit	17	P Speed Limit	18	BAD D Speed Limit	19	D Speed Limit	20	Speed Limit Variant	21	Block VPEZ Part	22	VPEZ Part	23	Not Restrictive Zone	24	Not Restrictive Zone Part	25	Block Permissive Zone	26	Permissive Zone	27	Permissive Zone Part	28	BAD MINABIS	29	MINABIS Zone	30	MINABIS Zone Part	31	Functional Inputs	32	Intermediate Inputs	33	Low Pass Filter	34	Physical Outputs	35	ZC Outputs	36	Intermediate Outputs	37	Output Low Pass Filter	38	Limit Speed Sanction	39	Limit Distance Sanction	40	Exclusivity Outputs	41	Train Formation Type Isolated	42	Minabis	43	Check MPC Datas And Closed Stream	
+24	Localization way	0	Not localized	1	Loc from 1 DB + STO	2	Loc from 2 DB	3	Loc from 1 SB + STO	4	Loc from 1 SB + STDE	5	Loc from 2 SB	6	Loc updt from motion	7	Loc updt from DB	8	Loc updt from SB	9	Loc memo	10	Loc By ZC	11	Loc By Other ATP	
+25	Selected Variant Coerced List	0	None	1	Ext1 Int2	2	Ext2 Int1	3	Int1 Int2	4	Complete	

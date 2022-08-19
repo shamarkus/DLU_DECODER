@@ -1,0 +1,149 @@
+0	ASCII_Byte	0	.	1	Error	2	Error	3	Error	4	Error	5	Error	6	Error	7	Error	8	Error	9	Error	10	Error	11	Error	12	Error	13	Error	14	Error	15	Error	16	Error	17	Error	18	Error	19	Error	20	Error	21	Error	22	Error	23	Error	24	Error	25	Error	26	Error	27	Error	28	Error	29	Error	30	Error	31	Error	32	.	33	!	34	"	35	#	36	$	37	%	38	AND	39	'	40	(	41	)	42	*	43	+	44	,	45	-	46	.	47	/	48	0	49	1	50	2	51	3	52	4	53	5	54	6	55	7	56	8	57	9	58	:	59	;	60	LT	61	=	62	GT	63	?	64	@	65	A	66	B	67	C	68	D	69	E	70	F	71	G	72	H	73	I	74	J	75	K	76	L	77	M	78	N	79	O	80	P	81	Q	82	R	83	S	84	T	85	U	86	V	87	W	88	X	89	Y	90	Z	91	[	92	\	93	]	94	^	95	_	96	`	97	a	98	b	99	c	100	d	101	e	102	f	103	g	104	h	105	i	106	j	107	k	108	l	109	m	110	n	111	o	112	p	113	q	114	r	115	s	116	t	117	u	118	v	119	w	120	x	121	y	122	z	123	{	124	|	125	}	126	~	127	Error	128	Error	129	Error	130	Error	131	Error	132	Error	133	Error	134	Error	135	Error	136	Error	137	Error	138	Error	139	Error	140	Error	141	Error	142	Error	143	Error	144	Error	145	Error	146	Error	147	Error	148	Error	149	Error	150	Error	151	Error	152	Error	153	Error	154	Error	155	Error	156	Error	157	Error	158	Error	159	Error	160	Error	161	Error	162	Error	163	Error	164	Error	165	Error	166	Error	167	Error	168	Error	169	Error	170	Error	171	Error	172	Error	173	Error	174	Error	175	Error	176	Error	177	Error	178	Error	179	Error	180	Error	181	Error	182	Error	183	Error	184	Error	185	Error	186	Error	187	Error	188	Error	189	Error	190	Error	191	Error	192	Error	193	Error	194	Error	195	Error	196	Error	197	Error	198	Error	199	Error	200	Error	201	Error	202	Error	203	Error	204	Error	205	Error	206	Error	207	Error	208	Error	209	Error	210	Error	211	Error	212	Error	213	Error	214	Error	215	Error	216	Error	217	Error	218	Error	219	Error	220	Error	221	Error	222	Error	223	Error	224	Error	225	Error	226	Error	227	Error	228	Error	229	Error	230	Error	231	Error	232	Error	233	Error	234	Error	235	Error	236	Error	237	Error	238	Error	239	Error	240	Error	241	Error	242	Error	243	Error	244	Error	245	Error	246	Error	247	Error	248	Error	249	Error	250	Error	251	Error	252	Error	253	Error	254	Error	255	Error	
+1	DMI_active_screen	0	Screen_saver_authorised	1	Active_screen_set	
+2	DMI_sound_event	0	No_sound	128	Warning	1	EB_triggered	2	New_target_speed	3	Immediate_departure	
+3	DMI_warning	0	No_display	1	Warning	2	Intervention	
+4	DMI_target_distance_num_display	0	No_display	1	Displayed	
+5	DMI_target_distance_bargraph_display	0	No_display	1	Displayed_in_grey	
+6	DMI_speed_dial_display	0	No_display	1	Partial_display	2	Full_display	
+7	DMI_speed_pointer_display	0	No_display	1	Displayed_in_white	2	Displayed_in_orange	3	Displayed_in_red	
+8	DMI_driver_event_change_of_end	0	No_display	1	Change_of_end	
+9	DMI_driver_event_skip_station	0	No_display	1	Skip_station	2	Stop_at_pre_platform	
+10	DMI_driver_event_neutral_zone	0	not displayed	1	Neutral_zone	
+11	DMI_driver_event_RM_suggested	0	No_display	1	RM_suggested	
+12	DMI_advisory_speed_display	0	No_display	1	Displayed	
+13	DMI_driving_mode_stop_display	0	No_display	1	display_selected_label	
+14	DMI_driving_mode_stop_label	1	STOP_label_selected	2	STANDBY_label_selected	
+15	DMI_driving_mode_RM	0	No_display	1	RM_selected	
+16	DMI_driving_mode_RM_available	0	No_display	1	RM_not_available	2	RM_available	
+17	DMI_driving_mode_MCS	0	No_display	1	MCS_selected	
+18	DMI_driving_mode_MCS_available	0	No_display	1	MCS_not_available	2	MCS_available	3	MCS_flashing_available	
+19	DMI_driving_mode_AMC	0	No_display	1	AMC_selected	
+20	DMI_driving_mode_AMC_available	0	No_display	1	AMC_not_available	2	AMC_available	3	AMC_flashing_available	
+21	DMI_localisation	0	No_display	2	Localised	130	Localisation_not_confirmed	3	Not_localised	
+22	DMI_rolling_stock_braking_state	0	No_display	1	EB_applied	
+23	DMI_final_destination_name	117	117 (STA_COD_1)	169	169 (STA_COD_2)	1	1 (STA_COD_3)	170	170 (STA_COD_4)	2	2 (STA_COD_5)	171	171 (STA_COD_6)	120	120 (STA_COD_7)	172	172 (STA_COD_8)	3	3 (STA_COD_9)	173	173 (STA_COD_10)	174	174 (STA_COD_11)	175	175 (STA_COD_12)	176	176 (STA_COD_13)	177	177 (STA_COD_14)	4	4 (STA_COD_15)	178	178 (STA_COD_16)	5	5 (STA_COD_17)	179	179 (STA_COD_18)	180	180 (STA_COD_19)	181	181 (STA_COD_20)	182	182 (STA_COD_23)	183	183 (STA_COD_24)	55	55 (STA_COD_25)	58	58 (STA_COD_32)	59	59 (STA_COD_33)	60	60 (STA_COD_34)	61	61 (STA_COD_35)	62	62 (STA_COD_36)	184	184 (STA_COD_37)	135	135 (STA_COD_48)	136	136 (STA_COD_49)	137	137 (STA_COD_50)	138	138 (STA_COD_51)	185	185 (STA_COD_52)	186	186 (STA_COD_53)	187	187 (STA_COD_54)	56	56 (STA_COD_55)	57	57 (STA_COD_56)	63	63 (STA_COD_60)	188	188 (STA_COD_62)	189	189 (STA_COD_63)	190	190 (STA_COD_64)	191	191 (STA_COD_381)	192	192 (STA_COD_382)	193	193 (STA_COD_383)	194	194 (STA_COD_384)	195	195 (STA_COD_401)	196	196 (STA_COD_402)	197	197 (STA_COD_403)	198	198 (STA_COD_404)	199	199 (STA_COD_421)	200	200 (STA_COD_422)	201	201 (STA_COD_423)	202	202 (STA_COD_424)	203	203 (STA_COD_44)	204	204 (STA_COD_45)	205	205 (STA_COD_46)	77	77 (STA_COD_47)	64	64 (STA_COD_26)	206	206 (STA_COD_29)	66	66 (STA_COD_30)	67	67 (STA_COD_31)	6	6 (STA_PF_SSO1)	7	7 (STA_PF_SLR2)	8	8 (STA_PF_SLR1)	10	10 (STA_PF_YSR1)	11	11 (STA_PF_HQR2)	12	12 (STA_PF_HQR1)	13	13 (STA_PF_YAR2)	14	14 (STA_PF_YAR1)	15	15 (STA_PF_ZSP2)	16	16 (STA_PF_ZSP1)	17	17 (STA_PF_JSJ2)	20	20 (STA_PF_ZTR1)	23	23 (STA_PF_BSR2)	24	24 (STA_PF_BSR1)	25	25 (STA_PF_DBX2)	26	26 (STA_PF_DBX1)	27	27 (STA_PF_HKS2)	28	28 (STA_PF_HKS1)	33	33 (STA_PF_UNS11)	34	34 (STA_PF_UNS22)	35	35 (STA_PF_UNS21)	36	36 (STA_PF_UNS32)	37	37 (STA_PF_UNS31)	38	38 (STA_PF_UNS42)	39	39 (STA_PF_UNS41)	40	40 (STA_PF_UNS52)	41	41 (STA_PF_UNS51)	42	42 (STA_PF_UNT1)	44	44 (STA_PF_SSO2)	78	78 (STA_PF_HBE1)	79	79 (STA_PF_HBE2)	80	80 (STA_PF_MBI1)	81	81 (STA_PF_MBI2)	82	82 (STA_PF_LTY1)	84	84 (STA_PF_LTY3)	86	86 (STA_PF_DKR1)	87	87 (STA_PF_DKR2)	90	90 (STA_PF_SCJ1)	91	91 (STA_PF_SCJ2)	92	92 (STA_PF_NPO1)	93	93 (STA_PF_NPO2)	94	94 (STA_PF_CZJ1)	95	95 (STA_PF_CZJ2)	96	96 (STA_PF_NKI1)	97	97 (STA_PF_NKI2)	88	88 (STA_PF_DKR3)	89	89 (STA_PF_DKR4)	207	207 (STA_PF_TT)	46	46 (STA_STL_2)	47	47 (STA_STL_3)	98	98 (STA_STL_10)	99	99 (STA_STL_11)	100	100 (STA_STL_12)	101	101 (STA_STL_13)	102	102 (STA_STL_14)	103	103 (STA_STL_15)	164	164 (STA_STL_20)	165	165 (STA_STL_21)	166	166 (STA_STL_22)	167	167 (STA_STL_23)	161	161 (STA_STL_4108)	141	141 (STA_CUA_ATC)	54	54 (STA_WSH_TLR)	142	142 (STA_TFT_B304)	146	146 (STA_TFT_Depot1_Wash)	70	70 (STA_TFT_B245)	160	160 (STA_TFT_NKI)	71	71 (STA_TFT_B479)	208	208 (STA_ISA_1)	
+24	DMI_departure_information	0	No_display	1	Dwell_time_seconds	2	Dwell_time_minutes	3	Dwell_time_negative	4	Train_hold	5	No_info	
+25	DMI_departure_order_hmi1	0	No_display	1	Open_door_order	2	Close_door_order	3	Start_order	
+26	DMI_train_docking_state	0	No_display	1	Correctly_docked	2	Short_stop	3	Long_stop	
+27	DMI_docking_distance_display	0	No_display	1	Docking_distance_displayed	
+28	DMI_train_side_door_status	0	No_display	1	Closed	2	Opening	3	Open	67	Open_wo_authorisation	4	Closing	68	Closing_timeout	5	TDCL_is_bypassed	
+29	DMI_platform_screen_door_status	0	No_display	1	Closed	2	Opening	3	Open	4	Closing	68	Closing_timeout	5	Unknown	
+30	DMI_train_end_door_status	0	No_display	1	Closed_and_locked	2	Open	
+31	DMI_radio_status	0	No_DCS_problem	1	Radio_communication_interrupted	
+32	DMI_reduced_adherence	0	No_display	1	Reduced_adherence	
+33	DMI_signaling_area_hmi1	0	No_display	1	Exit_SIG_area	
+34	DMI_MNT_needed	0	MNT_not_needed	1	MNT_needed	
+35	DMI_notification_message_priority	0	Low_prio_message	1	High_prio_message_managed_by_DMI	2	High_prio_message_managed_by_CC	
+36	DMI_driving_mode_selected	0	No_display	1	AMC_or_ATB_selected	2	MCS_selected	3	RMF_or_RMR_selected	4	ATC_bypassed	
+37	DMI_departure_order_hmi2	0	No_order	1	Close_door	2	Departure_requested	3	Train_hold	
+38	DMI_signaling_area_and_driver_events_hmi2	0	No_display	1	Enter_the_depot	2	Operate_in_depot	3	Skip_station	4	Stop_at_pre_platform	
+39	DMI_departure_hour_title_display	0	No_display	1	Displayed	
+40	DMI_departure_hour_title_label	1	constant label	
+41	DMI_departure_hour_display	0	No_display	1	Displayed	
+42	DMI_menu_button_enable	0	Disabled	1	Enabled	
+43	DMI_crew_number_value_button_enable	0	Disabled	1	Enabled	
+44	DMI_service_number_value_button_enable	0	Disabled	1	Enabled	
+45	DMI_final_destination_name_button_enable	0	Disabled	1	Enabled	
+46	DMI_operation_mode_CBTC	0	No_display	1	CBTC_selected	
+47	dmi_operation_mode_selected	0	No_mode_or_bypass	1	BM_selected	2	CBTC_selected	3	RM_selected	4	BM_available	
+48	DMI_operation_mode_limit	1	BM_forced	2	No_limitation	3	BM_forced_TBC_by_driver	
+49	DMI_acknowledgeable_message_priority	0	Not_answered	3	ACK_only	4	ACK_or_UNACK	
+50	DMI_CC_acknowledgeable_message_answer	0	No_display	1	ACK_text_displayed_wo_answer	2	ACK_text_acknowledged	3	ACK_text_unacknowledged	
+51	SSP_reference_speed_source	0	Service stopping	1	Signal	2	Radio spacing	3	Non stopping	7	Error Value undefined	
+52	RP type	0	Vital limit	1	Limit	2	Precise	3	Kinematics	
+53	RP source	0	None	1	BSR	2	Vital PSR	3	Signal	4	Route exclusivity	5	Overlap end	6	Door opened	7	PSD com zone	8	PSD zone	9	Close track end	10	Open track end	11	No drv mode	12	No start after EB	13	EOA	14	Horn activation	15	NUDE	16	Protect zone	17	No dist to restart	18	No dist leave SSA	19	ATS train hold	20	Switch point	21	V train limit speed	22	Work zone	23	ATB no mvt author	24	RMF limit speed	25	Spacing monit inhibit	26	Signal open beacon	27	BM limit speed	28	Mem loc limit speed	29	NV PSR	30	Service stop point	31	Skip	32	Neutral zone	33	Time regulation	34	NV train limit speed	35	ATS limit speed	36	Light braking	37	Overlap begin	38	RMR limit speed	39	MINABIS	40	EOA Without Spacing	41	Non constant RP	42	Danger	43	NCC immo releasable	44	NCC immo not releas	45	VitalZone	46	ADL	47	SMI app limit speed	48	Speed deviation	49	Door MinDstWoDanger	50	PSDCZ MinDstWoD	51	WZ MinDstWoDanger	52	WZ SwManAutoDrv	53	Non stopping zone	54	Nconf TF type lim sp	
+54	ATS Criterion	0	Not set	1	Sleeping	2	Pass. Exchange	3	Change of end	4	Other	
+55	Active screen	0	No cmd	1	Screen act	
+56	ATS Criterion	0	Not set	1	Sleeping	2	Pass. Exchange	3	Change of end	4	Other	
+57	ATC status	0	Not operat	1	Part operat	2	Full operat	
+58	ATP orientation	1	Down	2	Up	
+59	ATS area state	0	Unknown	1	Reached	2	Missed	
+60	ATS coupling status	0	Not coupled	1	Extremity 1	2	Extremity 2	3	Both extremity	
+61	ATS detrainment door state	0	Unknown	1	Opened	2	Failure in opening	3	Closed	4	No detrainment door	
+62	ATS detrainment state	0	Unknown	1	Not requested	2	Requested	
+63	ATS direction	0	Unknown	1	Up	2	Down	
+64	ATS doors train control	0	Unknown	1	Maintened closed	2	Default state	3	Only on left side	4	Only on right side	
+65	ATS EB status	0	Unknown	1	No EB applied	2	EB applied	
+66	ATS emergency handle	0	Unknown	1	No alarm	2	Activated	
+67	ATS hold train control	0	Requested	1	Not request	
+68	ATS ITAMA status	0	Unknown	1	Not granted	2	Granted	
+69	ATS localisation status	0	Not localised	1	Localised	
+70	ATS integrity management	0	Unknown	1	Proven	2	Not proven	
+71	ATS mode status	0	Not defined	1	OFF	2	RMF	3	RMR	4	MCS	5	AMC	6	ATB	7	AM	8	MCS block	9	AMC block	
+72	ATS parking braking fault	0	No fault	1	Cannot be applied	
+73	ATS platform door status	0	Unknown	1	Opened	2	Failure in opening	3	Closed	4	Failure in closing	5	No PSD	
+74	ATS train door status	0	Unknown	1	Opened	2	Failure in opening	3	Closed	4	Failure in closing	5	Not used	
+75	ATS train in motion	0	Train in motion	1	Train not in motion	
+76	ATS train motion context	0	Nominal condition	1	Reduced adherence	
+77	ATS train unit orientation	0	No head	1	Head Is 1	2	Head Is 2	
+78	ATS trainborne ATC availability status	0	Unavailable	1	Partially available	2	Fully available	
+79	ATS CC reset state	0	None	1	Prevent reset start	2	Curative reset warn	
+80	Available mode	0	No display	1	DSP no avail	2	DSP avail	
+81	Boolean	0	False	1	True	
+82	Boolean32	0	False	4294967295	True	
+83	Brake	0	No display	1	EB	2	FSB	3	FSBACK	
+84	Button	0	Disable	1	Enable	
+85	Data plug status	0	Opening error	1	Reading error	2	OK	
+86	Defined boolean	0	Undefined	1	Undefined	2	False	3	True	
+87	Depart info	0	No display	1	Dwell time	2	Train hold	3	No info	4	Start in BM	129	Dwell time yellow	
+88	Depart order	0	No display	1	Open doors	2	Close door	3	Start train	
+89	Detrainment doors	0	No display	1	Closed	2	Opened	
+90	Dial display	0	No display	1	Part display	2	Full display	
+91	Display	0	No display	1	Display	
+92	DMI ack text status	0	No ack txt displayed	1	Ack txt displayed	2	Ack txt ack	3	Ack txt nack	
+93	DMI ack text cmd	0	No ack txt display	3	Ack txt display	4	Ack Nack txt display	
+94	Door command	0	None	1	Opening	2	Closing	
+95	Door order	0	None	1	Open	2	Close	
+96	Door state	0	Unknown	1	Opened	2	Closed	
+97	Dwell time command	0	No action	1	Set count	2	Free count	
+98	EOA direction	0	Unknown	1	Down	2	Up	
+99	EOA type	0	NA WO tf dir	1	NA W tf dir	2	End of visib	3	Ext auto prt	4	Unctrl point	5	Frontier	6	Tr dir disc	7	Lim buf zone	8	Chain break	9	End of overlap	10	Opposite EOA	11	Restrictive UZ	12	Lim alloc route	
+100	Function max duration item index	0	MCS notification	1	Odometer updt	2	LPF updt	3	HPF updt	4	CT for act seq step	5	Comd seq updt	6	Exch mem input	7	Socket input	8	TRS input	9	TU msg input	10	MCS updt	11	OMAP input	12	Time serv updt	13	Min Dist rest updt RP	14	PPZ updt RP	15	Drv ref updt RP	16	Start updt RP	17	EBDef brak updt RP	18	NoEBDefBk updt RP	19	No sanct ref updt RP	20	SfMtAd updt RP	21	MDWD updt RP	22	ATP msg input	23	CBI msg input	24	Non V msg input	25	ZC msg updt	26	LC msg input	27	DMI msg input	28	TIMS msg input	29	ATS msg input	30	Sec stream updt	31	TF select updt	32	Drv mode input	33	Block updt	34	Variant updt	35	Point updt	36	Zone updt	37	Calibration updt	38	Kinematics updt	39	ATP locat updt	40	Vital locat updt	41	Drv vital locat updt	42	Location updt	43	Beacon updt	44	Man superv updt	45	NUDE updt	46	SSA input	47	Front end updt	48	Driving kin updt	49	Gradient updt	50	EB acc updt	51	Max Grad EBA updt	52	BM variant updt	53	Spac monitor updt	54	Cls tck end updt	55	Op tck end updt	56	Switch pt updt	57	EOA updt	58	ADL updt	59	Signal updt	60	Overlap end updt	61	Prot zone updt	62	PSD zone updt	63	Vital zone updt	64	NV zone updt	65	Sig op bea updt	66	Vital lim sanc updt	67	RM lim spd updt	68	T lim speed updt	69	Vital PSR updt	70	BSR updt	71	Workzone updt	72	NonCst RP updt	73	Min Dist rest updt	74	ATS Tr Hold updt	75	PPZ updt	76	SSA output	77	Non Cst Immo Updt	78	Neutral z updt	79	Sleep zone updt	80	NVPSR updt	81	Man time reg updt	82	Time reg updt	83	MINABIS updt	84	MINRS updt	85	EB updt	86	Door updt	87	Horn act z updt	88	Speed dev updt	89	MDWD updt input	90	NZ updt	91	MDWD updt output	92	Curve updt	93	Tr load est updt	94	Ref point updt	95	Vital limit RP updt	96	limit RP updt	97	Precise RP updt	98	LightBrk updt	99	RefAcc updt	100	Driving ref updt	101	Comp accel updt	102	Driving cmd updt	103	Drv smchgcmd updt	104	EB output	105	NoEB Def brak updt	106	Park brake updt	107	Drv mode output	108	Start updt	109	No sanct ref updt	110	Sw  Man To A  updt 	111	Drv info updt	112	Immo behav updt	113	DMI msg output	114	LC mess output	115	CBI msg output	116	ATP msg output	117	Version updt	118	NV msg output	119	ATS msg output	120	UNIVIC updt	121	TRS output	122	OEG updt input	123	Mnt updt	124	CC context updt	125	Sw grp updt	126	LRU grp updt	127	OEG updt output	128	Rmon counter updt	129	Rmon gauge updt	130	State grp updt	131	snmp check	132	ATS interf out	133	DMI interf out	134	TIMS msg output	135	Exch mem output	136	TU msg output	137	OMAP output	138	Socket output	139	Reset updt	140	CT Trig and nxt step	141	NCC updt	142	TF select next updt	
+101	Identification item index	0	ATO major	1	ATO minor	2	ATO revision	3	ATO build	4	Id plug available	5	Id plug TU type id	6	Id plug TU id B0	7	Id plug TU id B1	8	Id plug CC core int id	9	NVES status	10	NVES fmt major B0	11	NVES fmt major B1	12	NVES fmt build	13	NVESG major	14	NVESG minor	15	NVESG revision	16	NVESG build	17	Train unit type id	18	Vital setting B0	19	Vital setting B1	20	Non vital setting B0	21	Non vital setting B1	22	SRD B0	23	SRD B1	24	Drv cmd seq B0	25	Drv cmd seq B1	26	MD5 read B0	27	MD5 read B1	28	MD5 read B2	29	MD5 read B3	30	MD5 read B4	31	MD5 read B5	32	MD5 read B6	33	MD5 read B7	34	MD5 read B8	35	MD5 read B9	36	MD5 read B10	37	MD5 read B11	38	MD5 read B12	39	MD5 read B13	40	MD5 read B14	41	MD5 read B15	42	MD5 cpt B0	43	MD5 cpt B1	44	MD5 cpt B2	45	MD5 cpt B3	46	MD5 cpt B4	47	MD5 cpt B5	48	MD5 cpt B6	49	MD5 cpt B7	50	MD5 cpt B8	51	MD5 cpt B9	52	MD5 cpt B10	53	MD5 cpt B11	54	MD5 cpt B12	55	MD5 cpt B13	56	MD5 cpt B14	57	MD5 cpt B15	58	VIO sign OK	59	VIO sign B0	60	VIO sign B1	61	VIO sign B2	62	VIO sign B3	63	ZC1 SGD B0	64	ZC1 SGD B1	65	ZC2 SGD B0	66	ZC2 SGD B1	67	ZC3 SGD B0	68	ZC3 SGD B1	69	ZC4 SGD B0	70	ZC4 SGD B1	71	ZC5 SGD B0	72	ZC5 SGD B1	73	ZC6 SGD B0	74	ZC6 SGD B1	75	ZC7 SGD B0	76	ZC7 SGD B1	77	ZC8 SGD B0	78	ZC8 SGD B1	79	ZC9 SGD B0	80	ZC9 SGD B1	81	ZC10 SGD B0	82	ZC10 SGD B1	83	ZC11 SGD B0	84	ZC11 SGD B1	85	ZC12 SGD B0	86	ZC12 SGD B1	87	ZC13 SGD B0	88	ZC13 SGD B1	89	ZC14 SGD B0	90	ZC14 SGD B1	91	ZC15 SGD B0	92	ZC15 SGD B1	93	ZC16 SGD B0	94	ZC16 SGD B1	
+102	Mode 1	0	No display	1	Icon stop 1	2	Icon RM	
+103	Mode 2	0	No display	1	Icon stop 2	2	Icon MCS	
+104	Mode 3	0	No display	1	Icon stop 3	2	Icon AM	3	Icon AMC	
+105	Mode 4	0	No display	1	Icon stop 4	2	Icon ATB	
+106	Mode 5	0	No display	1	Init in prog	2	Localized	3	Not localiz	130	Localized yellow	
+107	Mode request	0	Passive	1	Active	
+108	NVES status	0	Opening error	1	Reading error	2	Checksum error	3	Format error	4	Train unit type Id error	5	OK	
+109	Orientation	0	Up	1	Down	
+110	Pointer display	0	No display	1	Point normal	2	Point warn	3	Point emerg	
+111	Real stop area id origin	0	None	1	Match one ATS TM	2	Match one O ATS TM	3	Match Cdock def SSA Id	4	Match 1st def SSA Id 	5	Match 1st SSA Id	
+112	Real stop change origin	0	None	1	Act SSP zone reach	2	Inters CDZ match ATS TM	3	Includ in CDZ	4	Inters CDZ ATM end req	5	Not in CDZ	6	ATM missed	
+113	RP source	0	None	1	BSR	2	Vital PSR	3	Signal	4	Route exclusivity	5	Overlap end	6	Door opened	7	PSD com zone	8	PSD zone	9	Close track end	10	Open track end	11	No drv mode	12	No start after EB	13	EOA	14	Horn activation	15	NUDE	16	Protect zone	17	No dist to restart	18	No dist leave SSA	19	ATS train hold	20	Switch point	21	V train limit speed	22	Work zone	23	ATB no mvt author	24	RMF limit speed	25	Spacing monit inhibit	26	Signal open beacon	27	BM limit speed	28	Mem loc limit speed	29	NV PSR	30	Service stop point	31	Skip	32	Neutral zone	33	Time regulation	34	NV train limit speed	35	ATS limit speed	36	Light braking	37	Overlap begin	38	RMR limit speed	39	MINABIS	40	EOA Without Spacing	41	Non constant RP	42	Danger	43	NCC immo releasable	44	NCC immo not releas	45	VitalZone	46	ADL	47	SMI app limit speed	48	Speed deviation	49	Door MinDstWoDanger	50	PSDCZ MinDstWoD	51	WZ MinDstWoDanger	52	WZ SwManAutoDrv	53	Non stopping zone	54	Nconf TF type lim sp	
+114	MasterCoreSelection criteria	0	None	1	1_Basic sw	2	2_Basic sw	5	5_Basic sw	8	8_Basic sw	9	9_Basic sw	10	10_Basic sw	30	Application	250	250_Basic sw	255	255_Basic sw	
+115	MIB item status	0	Unknown	1	Available	2	Unavailable	
+116	MIB availability	0	Unavailable	1	Available	
+117	TM source	0	None	1	Default	2	ATS1	3	ATS2	
+118	RP type	0	Vital limit	1	Limit	2	Precise	3	Kinematics	
+119	Text command	0	No display	1	DSP cmd	2	Remove cmd	
+120	Text priority	0	Low	1	High dmi duration	2	High cc state	3	Ack only	4	Ack nack	
+121	TIMS Clock validity	0	Invalid	1	Valid	
+122	TIMS Demand relay	0	Not commanded	1	Commanded	
+123	TIMS Door side	0	No side	1	Left side	2	Right side	3	Both sides	
+124	TIMS Origin	0	Normal	1	Back-up	
+125	TIMS Slip / Side	0	Not detected	1	Detected	
+126	TIMS Status	0	Out of operation	1	In operation	
+127	TIMS Train hold	0	Not activated	1	activated	
+128	Title	0	------------	1	------------	
+129	Train docked	0	No display	1	Correctly	2	Short stop	3	Long stop	4	Next stop	
+130	Doors	0	No display	1	Closed	2	Opening	3	Opened	4	Closing	5	Unknown	67	Opened flashing	68	Closing flashing	
+131	Platform doors	0	No display	1	Closed	2	Opening	3	Opened	4	Closing	5	Unknown	68	Closing flashing frame	
+132	Train front end	0	None	1	End 1	2	End 2	
+133	Train line	0	Braking	1	Coasting	2	Motoring	
+134	WZS message rejected cause	0	None	1	WZS future LH	2	WZS older than LIM	3	WZS content error	
+135	Version message rejected cause	0	None	1	Ver future LH	2	Ver older than LIM	3	Version content error	
+136	CBI message rejected cause	0	None	1	CBI future LH	2	Ver older than LIM	3	CBI mess error	
+137	Version not authorised cause	0	None	1	DMI setting	2	DMI application	3	Non vital setting	4	ATO application	5	Vital setting	6	ATP application	7	SGD	8	SRD	
+138	Deviation authorization	0	Not authorized	1	Authorized	2	Forced	
+139	Warning	0	No display	1	Fixed dsp	
+140	ZC message rejected cause	0	None	1	Bad EOA count	2	Too many variants	3	EOA Future loop hour	4	EOA older than LIM	5	T report F loop hour	6	T report older than LIM	
+141	ATPOdometerState	0	Not initialised	1	Invalid	2	Initialising	3	Initialised	4	Disconnected	
+142	NVES status	0	Opening error	1	Reading error	2	Checksum error	3	Format error	4	Train unit type Id error	5	OK	
+143	MIB item status	0	Unknown	1	Available	2	Unavailable	
+144	LocalisationDirection	0	Unknown	1	Up	2	Down	
+145	ATCStatus	0	NOK	1	Partial	2	OK	
+146	DoubleSpacingLevel	0	No intersection	1	Restrictive zone	2	Warning zone	
+147	Coerce interval	0	None	1	Int1 Int2	2	Ext1 Int2	3	Ext2 Int1	4	Ext1 Ext2	
+148	NonStoppingZoneType	0	Non stopping	1	Spacing	2	Double spacing	3	None	

@@ -1,0 +1,236 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	-webkit-box-sizing: border-box;
+}
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+}
+h3 {
+	font-size: 22px;
+	margin: 5px;
+	padding-top: 10px;
+	color: rgb(0,0,255);
+}
+
+.line_m {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.0px;
+}
+
+.line_s {
+    fill: none;
+    stroke: brown;
+    stroke-width: 1.0px;
+}
+
+.line_s_l {
+    fill: none;
+    stroke: brown;
+    stroke-width: 1.0px;
+}
+
+.line_l {
+    fill: none;
+    stroke: green;
+    stroke-width: 1.0px;
+}
+
+.line_l_h {
+    fill: none;
+    stroke: green;
+    stroke-width: 1.0px;
+}
+
+.line_l_l {
+    fill: none;
+    stroke: green;
+    stroke-width: 1.0px;
+}
+
+.line_o {
+    fill: none;
+    stroke: tomato;
+    stroke-width: 1.0px;
+}
+
+.crossover {
+    fill: none;
+}
+hr {
+	width: 100%;
+	margin-top: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+}
+#ParameterFields {
+	float: left;
+	margin: 0 0 0 0;
+	width: 100%;
+}
+#ExternalFields {
+	width: 50%;
+}
+#PresetInput {
+	margin: 5px 0 0 35%;
+	height: auto;
+}
+#MakePreset, #RemovePreset {
+	width: 15%;
+}
+#MakePreset, #analyze {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#RemovePreset:hover, #MakePreset:hover, button:hover {
+	background-color:#4287f5;
+	transition: 0.5s;
+}
+#RemovePreset, #MakePreset, button {
+	max-height: 12%;
+	text-align: center;
+	padding: 10px 0 10px 0;
+	margin-bottom : 15px;
+	margin-right : 5px;
+	background: #dcdcdc;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 18px;
+	text-decoration: none;
+	transition: .3s;
+	cursor: pointer;
+}
+#RemovePreset:disabled, button:disabled {
+	pointer-events:none;
+}
+.wrapper { 
+	margin: 10px 50px 10px 50px;
+	padding-bottom: 2.5rem;
+	max-width: 100%;
+}
+#addedFiles {
+	width: 25%;
+}
+ #addedFiles, #addedFiles2, #selectParameters, #chosenParameters, #presetParameters {
+	float: left;
+	width: 31%;
+	margin-left: 10px;
+}
+#ATboxes {
+	float: left;
+	margin: 5px 0 5px 10px;
+	width: 18%;
+}	
+#ATsel {
+	width: 33.2%;
+}
+#StartTime, #EndTime {
+	float: left;
+	margin: 5px 0 5px 35px;
+	width: 40%;
+}
+
+select { 
+	font-size: 18px;
+	background-color: rgba(225,235,235,0.3);
+	width: 100%;
+	border: 2px solid lightslategray;
+	border-radius: 5px;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+optgroup {
+	font-size: 18px;
+}
+
+option:hover{
+	border-collapse: separate;
+	box-shadow: 0 0 10px 100px rgb(51, 152, 254) inset;
+}
+#Output p {
+	margin: 10px 0 10px 0;
+	font-style: italic;
+}
+.inp {
+	margin: 20px 0 10px 10px; 
+	font-size: 18px;
+	color: #808080;
+	width: 30%;
+	border: 5px solid rgb(209, 199, 124); 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+}
+.inp:focus {
+	border-color: #80bdff;
+	color: black;
+}
+#selectParameters input {
+	width: 100%;
+	margin-left:0;
+}
+
+table {
+	
+	table-layout: fixed;
+	border-collapse: collapse;
+	border: 3px solid black !important; 
+}
+
+.header {
+	width: 100%;
+	display: block;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+th, td {
+	padding: 10px;
+	border-collapse: collapse;
+	border: 2px solid white;
+}
+
+table tr:nth-child(odd){
+	background-color:bisque;
+}
+
+table tr:nth-child(even){
+	background-color:rgb(255, 238, 214);
+}
+
+.Flipped, .Flipped table {
+	transform: rotateX(180deg);
+}
+
+#table-wrapper {
+	direction:
+	width: inherit;
+	margin-top: 20px;
+	display: block;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+}
