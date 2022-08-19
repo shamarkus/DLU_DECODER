@@ -31,9 +31,11 @@ struct headerInfo {
 struct fileInfo {
 	char directoryPath[MAX_STRING_SIZE];
 	char fileName[MAX_STRING_SIZE];
+	char outputFileName[MAX_STRING_SIZE];
 	FILE* inputFile;
 	FILE* outputFile;
 
+	int fileType;
 	int logType;
 	int core;
 };
@@ -57,62 +59,71 @@ class parameterInfo {
     public:
         void (parameterInfo::*binaryToString)(char*, char*) = NULL;
 
-	parameterInfo(char* line,char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE],char (*stringLabels)[MAX_STRING_SIZE]);
-	~parameterInfo();
-
-	void IntToEnumeratedLabel(unsigned long long value,char* str);
-	void IntToHexadecimal(unsigned long long value, char* str);
-	void IntToInteger(long long value, char* str);
-	void IntToDecimal(long long value, char* str);
-	void IntToDecimalPrecision(long long value, char* str);
-	void IntToDate(unsigned long long value, char* str);
-	void IntToTime(unsigned long long value, char* str);
-	void IntToDecimalTime(unsigned long long value, char* str);
-
-	void unsignedBinaryToEnumeratedLabelStr(char* binaryStr,char* str);
-	void unsignedBinaryToHexadecimalStr(char* binaryStr,char* str);
-	void unsignedBinaryToIntegerStr(char* binaryStr,char* str);
-	void signedBinaryToIntegerStr(char* binaryStr,char* str);
-	void unsignedBinaryToDecimalStr(char* binaryStr,char* str);
-	void signedBinaryToDecimalStr(char* binaryStr,char* str);
-	void unsignedBinaryToDecimalPrecisionStr(char* binaryStr,char* str);
-	void signedBinaryToDecimalPrecisionStr(char* binaryStr,char* str);
-	void binaryToBinaryStr(char* binaryStr,char* str);
-	void unsignedBinaryToDateStr(char* binaryStr,char* str);
-	void unsignedBinaryToTimeStr(char* binaryStr,char* str);
-	void unsignedBinaryToDecimalTimeStr(char* binaryStr,char* str);
-
-	unsigned long long unsignedBinaryToDecimal(const char* binaryStr);
-	long long signedBinaryToDecimal(const char* binaryStr);
-
-	int getParameterID();
-	int getUnsignedInt();
-	int getFirstBitPosition();
-	int getBitCount();
-	int getDisplayType();
+		parameterInfo(char* line,char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE],char (*stringLabels)[MAX_STRING_SIZE]);
+		~parameterInfo();
+	
+		void IntToEnumeratedLabel(unsigned long long value,char* str);
+		void IntToHexadecimal(unsigned long long value, char* str);
+		void IntToInteger(long long value, char* str);
+		void IntToDecimal(long long value, char* str);
+		void IntToDecimalPrecision(long long value, char* str);
+		void IntToDate(unsigned long long value, char* str);
+		void IntToTime(unsigned long long value, char* str);
+		void IntToDecimalTime(unsigned long long value, char* str);
+	
+		void unsignedBinaryToEnumeratedLabelStr(char* binaryStr,char* str);
+		void unsignedBinaryToHexadecimalStr(char* binaryStr,char* str);
+		void unsignedBinaryToIntegerStr(char* binaryStr,char* str);
+		void signedBinaryToIntegerStr(char* binaryStr,char* str);
+		void unsignedBinaryToDecimalStr(char* binaryStr,char* str);
+		void signedBinaryToDecimalStr(char* binaryStr,char* str);
+		void unsignedBinaryToDecimalPrecisionStr(char* binaryStr,char* str);
+		void signedBinaryToDecimalPrecisionStr(char* binaryStr,char* str);
+		void binaryToBinaryStr(char* binaryStr,char* str);
+		void unsignedBinaryToDateStr(char* binaryStr,char* str);
+		void unsignedBinaryToTimeStr(char* binaryStr,char* str);
+		void unsignedBinaryToDecimalTimeStr(char* binaryStr,char* str);
+	
+		unsigned long long unsignedBinaryToDecimal(const char* binaryStr);
+		long long signedBinaryToDecimal(const char* binaryStr);
+	
+		int getParameterID();
+		int getUnsignedInt();
+		int getFirstBitPosition();
+		int getBitCount();
+		int getDisplayType();
 };
 
 class fileDecodingInfo {
-    private:
-	struct fileInfo* fileInfoStruct;
+    protected:
+		struct fileInfo* fileInfoStruct;
         struct headerInfo headerInfoStruct = (struct headerInfo) {MAX_HEADER_BIT_SIZE,
 								  MAX_HEADER_BIT_SIZE/8,
                                                                   INNER_HEADER_BIT_POS,
                                                                   HEADER_TIME_BIT_POS,
 								  HEADER_TIME_BIT_SIZE};
         std::vector<class parameterInfo*> parameterInfoVec;
-	char (*stringLabels)[MAX_STRING_SIZE];
+		char (*stringLabels)[MAX_STRING_SIZE];
         char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE];
         size_t byteNumToSkip;
-	size_t byteNumForLine;
+		size_t byteNumForLine;
     public:
         fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType);
         ~fileDecodingInfo();
 
-	void decodeFile();
-	void decodeLine(char* curHeader, char* curLine, char (*curParams)[MAX_SHORT_STRING_SIZE + 1]);
-	void printHeader(int numParameters);
-	void printLine(char (*curParams)[MAX_SHORT_STRING_SIZE + 1],int numParameters);
+		int getFileType();
+		int getLogType();
+		FILE* getOutputFile();
+		char* getDirectoryPath();
+		char* getFileName();
+		char* getOutputFileName();
+		int getCoreType();
+
+		void swapFilePointers();
+		void decodeFile();
+		void decodeLine(char* curHeader, char* curLine, char (*curParams)[MAX_SHORT_STRING_SIZE + 1]);
+		void printHeader(int numParameters);
+		void printLine(char (*curParams)[MAX_SHORT_STRING_SIZE + 1],int numParameters);
 };
 
 

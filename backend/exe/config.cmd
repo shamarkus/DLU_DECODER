@@ -1,0 +1,5 @@
+set logType="1"
+set files="22.06.2022.11h18-11h28.800280_0001447134.txt	2"
+set times="1655911125	1655911305"
+set params="4	5"
+set outputName=""

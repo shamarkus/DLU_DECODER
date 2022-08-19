@@ -1,24 +1,28 @@
 #include "globals.h"
 #include "logParser.h"
 #include "logDecoderClass.h"
+#include "helperFunctions.h"
 
 //Constructor
 //Argv written in this format 
 //DLULogDecoder.exe	ParentDir	Files	Logtype	Times	Params	Outputname
-fileParsingInfo::fileParsingInfo(struct fileInfo* fileInfoStruct, int logType, const char** argv, const int argc)
-	: fileDecodingInfo{ fileInfoStruct, logType } 
+fileParsingInfo::fileParsingInfo(struct fileInfo* fileInfoStruct, int logType,time_t startTime,time_t endTime,short *argN,int numArguments)
+	: fileDecodingInfo{ fileInfoStruct, logType } , argN( argN ), numArguments( numArguments )
 	{
-
-	//Allocate space for current record struct
-	this->curRecord = (struct recordInfo*)malloc(sizeof(struct recordInfo));
-
+	this->UTC = determineESTorEDT(startTime);
+	this->startTime = startTime + (SECS_PER_HOUR * this->UTC);
+	this->endTime = endTime + (SECS_PER_HOUR * this->UTC);
+	//Allocate space for current record struct and nullify previous record
+	this->curRecord = NULL;
 	this->prevRecord = NULL;
 }
 
-void fileParsingInfo::~fileParsingInfo(){
-	//last free not accounted for within the while loop
-	free(this->curRecord);
+fileParsingInfo::~fileParsingInfo(){
+	if(this->prevRecord != NULL){
+		free(this->prevRecord);
+	}
 	fclose(this->fileInfoStruct->inputFile);
+	fclose(this->fileInfoStruct->outputFile);
 }
 
 //Takes a line from the DLU log & finds the necessary arguments
@@ -48,14 +52,14 @@ void fileParsingInfo::tokenizeLine(){
 void fileParsingInfo::writeHeaderLine(){
 
 	for(int i = 0;i < this->numArguments; i++){
-		fprintf(this->fileInfoStruct->outputFile,",%s",this->stringLabels[this->argN[i]]);
+		fprintf(this->fileInfoStruct->outputFile,",%s",this->stringLabels[this->argN[i] - 1]);
 	}
 }
 
 //Makes a column in the output .csv file and prints the string arguments to be compared
-static void fileParsingInfo::writeHeader(FILE* outputFile,int argC,char (*stringLabels)[MAX_STRING_SIZE],short* argN){
+void fileParsingInfo::writeHeader(FILE* outputFile,int argC,char (*stringLabels)[MAX_STRING_SIZE],short* argN){
 	for(int i = 0;i <argC; i++){
-		fprintf(outputFile,",%s",stringLabels[argN[i]]);
+		fprintf(outputFile,",%s",stringLabels[argN[i] - 1]);
 	}
 }
 
@@ -65,6 +69,7 @@ static void fileParsingInfo::writeHeader(FILE* outputFile,int argC,char (*string
 //Afterwards, the current line is compared to the previous line for any differences - if so, then it is printed to the .csv file
 void fileParsingInfo::writeChangingRecords(){
 	char line[MAX_LINE_SIZE];
+	time_t firstSecond = 0;
 	int lineCount = 0;	
 	int numInitFiles = 0;
 	int incCounter = 0;
@@ -87,11 +92,13 @@ void fileParsingInfo::writeChangingRecords(){
 		char* yearDate = strtok(line,"\t");
 		char* hourDate = strtok(NULL,"\t");
 		time_t curTime = determineEpochTime(yearDate,hourDate);
+		this->curRecord = (struct recordInfo*)malloc(sizeof(struct recordInfo));
 		this->curRecord->epochTime = curTime;
 
 		//Case where the specified startTime is not yet reached
 		if(difftime(curTime,this->startTime) < 0)
 		{
+			free(this->curRecord);
 			continue;
 		}
 		else
@@ -99,8 +106,9 @@ void fileParsingInfo::writeChangingRecords(){
 			//do nothing
 		}
 		//Case where the specified endTime is reached before the EOF
-		if(difftime(curTime,this->endTime) >= 1)
+		if(difftime(curTime,this->endTime) > 0)
 		{
+			free(this->curRecord);
 			return;
 		}
 		else
@@ -108,12 +116,19 @@ void fileParsingInfo::writeChangingRecords(){
 			//do nothing
 		}
 
+		if(!firstSecond){
+			firstSecond = curTime;
+		}
+		else{
+			//do nothing
+		}
 		//Fills in logArgs
 		tokenizeLine();
 
 		//The first second of the log
-		if( 0 == difftime(this->startTime,curTime) )
+		if( 0 == difftime(curTime,firstSecond) )
 		{
+			this->startTime = curTime;
 			recordArray[numInitFiles] = this->curRecord; 
 			recordArray[numInitFiles+1] = NULL; 
 			numInitFiles++;
@@ -138,7 +153,7 @@ void fileParsingInfo::writeChangingRecords(){
 			else
 			{
 				incCounter++;
-				if(this->AT_DEF == ATP_NUM)
+				if(this->fileInfoStruct->logType == ATP_NUM)
 				{
 					incCounter++;
 				}
@@ -158,6 +173,7 @@ void fileParsingInfo::writeChangingRecords(){
 			{
 				//do nothing
 			}
+			free(this->prevRecord);
 			this->prevRecord = this->curRecord;
 		}
 		lineCount++;
@@ -168,10 +184,11 @@ void fileParsingInfo::writeChangingRecords(){
 //Writes the first record, all other records are only written if there is change between records
 //Frees all other records but the last one for reference to the general case
 void fileParsingInfo::writeFirstRecord(struct recordInfo* recordArray[],int numInitFiles){
+	struct recordInfo* curHolder = this->curRecord;
 	for(struct recordInfo** temp = recordArray;*temp != NULL;temp++){
-		numInitFiles = updateSecondFraction(*temp,numInitFiles);
-
 		this->curRecord = *temp;
+		numInitFiles = updateSecondFraction(numInitFiles);
+
 		if(*temp == recordArray[0] || changeInRecords()) 
 		{
 			writeRecordInfo();
@@ -182,10 +199,11 @@ void fileParsingInfo::writeFirstRecord(struct recordInfo* recordArray[],int numI
 		}
 		this->prevRecord = *temp;
 	}
-	for(struct recordInfo** temp = recordArray;temp != this->prevRecord;temp++){
+	for(struct recordInfo** temp = recordArray;*temp != this->prevRecord;temp++){
 		free(*temp);	
 		*temp = NULL;
 	}
+	this->curRecord = curHolder;
 }
 
 //Iterates over the array for argument values & compares each value by string index-wise
@@ -243,7 +261,7 @@ void fileParsingInfo::writeRecordInfo(){
 //ATP Logs Inc by 0.2 seconds
 int fileParsingInfo::updateSecondFraction(int numInitFiles){
 	int logInc = 1;
-	if( ATP_NUM == this->AT_DEF )
+	if( ATP_NUM == this->fileInfoStruct->logType )
 	{
 		logInc = 2;
 	}
@@ -283,12 +301,17 @@ void fileParsingInfo::parseLogFile(){
 	writeChangingRecords();
 }
 
+
+int fileParsingInfo::getNumArguments(){
+	return this->numArguments;
+}
+
 //Checks if input files are part of different cores
 //returns the core number if the cores are unanimous
 //returns 0 to signify some files are of core 1 & some are of core 2
 int checkMultCores(std::vector<fileParsingInfo*> &fileVec){
 	for(int i = 1; i <fileVec.size(); i++){
-		if(fileVec[i]->fileInfoStruct->core != fileVec[i-1]->fileInfoStruct->core)
+		if(fileVec[i]->getCoreType() != fileVec[i-1]->getCoreType())
 		{
 			return CORE_MULT;
 		}
@@ -297,7 +320,7 @@ int checkMultCores(std::vector<fileParsingInfo*> &fileVec){
 			//do nothing
 		}
 	}
-	return fileVec[0]->fileInfoStruct->core;
+	return fileVec[0]->getCoreType();
 }
 
 //Prints 'times' many commas to the output
@@ -329,16 +352,16 @@ void writeCoreHeader(FILE* outputFile, int multCores, int argC){
 //Loops over files in fileArray & prints their outputs to outputFile .csv
 //Spacing adjusted if files deal with multiple cores 
 void concatFiles(FILE* outputFile,std::vector<fileParsingInfo*> &fileVec){
-	int multCores = checkMultCores(fileVec){
-	int argC = fileVec[0]->numArguments;
+	int multCores = checkMultCores(fileVec);
+	int argC = fileVec[0]->getNumArguments();
 	char filePath[MAX_STRING_SIZE];
 
 	for(int i = 0; i < fileVec.size();i++){
 		char line[MAX_LINE_SIZE];
 		int lineCount = 0;
 
-		rewind(fileVec[i]->fileInfoStruct->outputFile);
-		while(fgets(line, sizeof(line),fileVec[i]->fileInfoStruct->outputFile) != NULL){
+		rewind(fileVec[i]->getOutputFile());
+		while(fgets(line, sizeof(line),fileVec[i]->getOutputFile()) != NULL){
 			if(!lineCount)
 			{
 				lineCount++;
@@ -346,7 +369,7 @@ void concatFiles(FILE* outputFile,std::vector<fileParsingInfo*> &fileVec){
 			}
 			else if( 1 == lineCount )
 			{
-				fprintf(outputFile,"%s,",fileVec[i]->fileInfoStruct->fileName);
+				fprintf(outputFile,"%s,",fileVec[i]->getFileName());
 			}	
 			else
 			{
@@ -354,7 +377,7 @@ void concatFiles(FILE* outputFile,std::vector<fileParsingInfo*> &fileVec){
 			}
 
 			//Dealing with multiple cores + file is part of core 2 -> spacing must be adjusted with commas
-			if(!multCores && (CORE_TWO == fileVec[i]->fileInfoStruct->core))
+			if(!multCores && (CORE_TWO == fileVec[i]->getCoreType()))
 			{
 				//Print the timestamp -- the first 21 chars
 				fprintf(outputFile,"%.21s",line);
@@ -375,26 +398,49 @@ void concatFiles(FILE* outputFile,std::vector<fileParsingInfo*> &fileVec){
 			}
 			lineCount++;
 		}
-		fclose(fileVec[i]->fileInfoStruct->outputFile);
-		sprintf(filePath,"%s%s%s",fileVec[i]->fileInfoStruct->directoryPath,fileVec[i]->fileInfoStruct->fileName,CSV_SUFFIX);
-		remove(filePath);
+		fclose(fileVec[i]->getOutputFile());
+		//sprintf(filePath,"%s%s%s",c[i]->getDirectoryPath(),OUTPUT_FILES_DIRECTORY,fileVec[i]->getOutputFileName(),CSV_SUFFIX);
+		remove(fileVec[i]->getOutputFileName());
 	}
 }
 
 //Takes the outputFileName & creates a file that will contain all other input files
 //Adjusts for spacing, core specificity, file name, and includes all changing records of all files
-void makeCombinedOutput(char* outputFileName,std::vector<fileParsingInfo*> &fileVec){
-	FILE* outputFile = fopen(outputFileName,"w");
+void makeCombinedOutput(char* parentDir,char* outputFileName,std::vector<fileParsingInfo*> &fileVec){
 	
-	int multCores = checkMultCores();
-	fprintf(outputFile,"%s,",outputFileName+strlen(fileVec[0]->fileInfoStruct->directoryPath)+OUTPUT_FILES_NUM);
-	writeCoreHeader(outputFile,multCores,fileVec[0]->numArguments);
+	char outputFilePath[MAX_STRING_SIZE];
+	FILE* outputFile;
+	if(*outputFileName != '\0'){
+		sprintf(outputFilePath,"%s%s%s%s",parentDir,OUTPUT_FILES_DIRECTORY,outputFileName,CSV_SUFFIX);
+	}
+	else{
+		sprintf(outputFilePath,"%s%s%s%s",parentDir,OUTPUT_FILES_DIRECTORY,GENERAL_OUTPUT_NAME,CSV_SUFFIX);
+	}
+	if(nonRecursiveNameCheck(outputFilePath) != NULL){
+		outputFile = fopen(outputFilePath,"w");
+		if(outputFile == NULL){
+			printf("Error -- Could not open Output file -- Terminating Program \n");
+			exit(0);
+		}
+		else{
+			//do nothing
+		}
+	}
+	else{
+		exit(0);
+	}
+
+	printf("File %s Has Been Created in ./outputFiles/ \n",outputFilePath+strlen(parentDir)+strlen(OUTPUT_FILES_DIRECTORY));
+	
+	int multCores = checkMultCores(fileVec);
+	fprintf(outputFile,"%s,",outputFilePath+strlen(parentDir)+strlen(OUTPUT_FILES_DIRECTORY));
+	writeCoreHeader(outputFile,multCores,fileVec[0]->getNumArguments());
 
 	fprintf(outputFile,",Timestamp");
-	fileParsingInfo::writeHeader(outputFile,fileVec[0]->numArguments,fileVec[0]->stringLabels,filevec[0]->argN);
+	fileParsingInfo::writeHeader(outputFile,fileVec[0]->getNumArguments(),(fileVec[0]->getLogType() == ATO_NUM) ? ATO_StringLabels : ATP_StringLabels,argN);
 	if(!multCores)
 	{
-		fileParsingInfo::writeHeader(outputFile,fileVec[0]->numArguments,fileVec[0]->stringLabels,filevec[0]->argN);
+		fileParsingInfo::writeHeader(outputFile,fileVec[0]->getNumArguments(),(fileVec[0]->getLogType() == ATO_NUM) ? ATO_StringLabels : ATP_StringLabels,argN);
 	}
 	else
 	{

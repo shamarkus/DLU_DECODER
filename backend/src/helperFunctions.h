@@ -46,7 +46,5 @@ int determineATPorATO(int directoryPathLength, char* fileName);
 
 int determineESTorEDT(time_t tm);
 
-bool checkOutputFilenames(class fileDecodingInfo* inputParams);
-
 char* nonRecursiveNameCheck(char* outputFileName);
 #endif

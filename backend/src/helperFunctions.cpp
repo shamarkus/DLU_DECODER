@@ -28,7 +28,7 @@ void parseParameterConfigFile(std::vector<class parameterInfo*> &parameterInfoVe
  //Sorted by Enumerated ID
 void parseLabelsConfigFile(char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE],int logType,char* directoryPath){
     char filePath[MAX_STRING_SIZE];
-    char line[MAX_LINE_SIZE];
+    char line[MAX_CONFIG_LINE_SIZE];
 
     sprintf(filePath,"%s%s",directoryPath, (logType == ATO_NUM) ? ATO_ENUMERATED_LABELS_FILENAME : ATP_ENUMERATED_LABELS_FILENAME);
     FILE* file = fopen(filePath,"r");
@@ -306,29 +306,6 @@ int determineESTorEDT(time_t tm){
 	}
 }
 
-//Loops through the fileArray & determines an 'open' output filename for each input file
-//Necessary to avoid overwriting files -- if a file with that name exists already, a numeric suffix
-//will be added. This is incremented until 100 is reached or a non utilized filename is found
-bool checkOutputFilenames(struct Parameters* inputParams){
-	for(int i = 0; i < inputParams->fileC;i++){
-		char outputFileName[MAX_STRING_SIZE];
-		inputParams->fileArray[i].fileName[strlen(inputParams->fileArray[i].fileName)-4] = '\0';
-		sprintf(outputFileName,"%s%s.%s",inputParams->dirPath,inputParams->fileArray[i].fileName,CSV_SUFFIX);
-
-		char* checkForNull = nonRecursiveNameCheck(outputFileName);
-		if ( NULL != checkForNull ) 
-		{
-			strcpy(outputFileName,checkForNull);
-			strcpy(inputParams->fileArray[i].filePath,outputFileName);
-			inputParams->fileArray[i].fileOutput = fopen(outputFileName,"w+");
-		}
-		else{
-			return false;
-		}
-	}
-	return true;
-}
-
 //Input is a filePath of the output file based on the input file
 //Adds numeric suffix to a name until an available filename is found
 //Returns the overwritten char array
@@ -346,7 +323,7 @@ char* nonRecursiveNameCheck(char* outputFileName){
 
 	for(int fileIncrement = 0;fileIncrement < 100;fileIncrement++){
 		char numSuffix[MAX_STRING_SIZE];
-		sprintf(numSuffix,"-%02d.%s",fileIncrement,CSV_SUFFIX);
+		sprintf(numSuffix,"-%02d%s",fileIncrement,CSV_SUFFIX);
 		strcat(outputFileName,numSuffix);
 
 		if ( 0 != access(outputFileName, F_OK) ) 

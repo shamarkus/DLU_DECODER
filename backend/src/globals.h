@@ -1,6 +1,7 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+#include <iostream>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -49,7 +50,7 @@ class parameterInfo;
 #define ARG_NUM_AFTER_DATE_TIME 3
 #define CHARS_AFTER_TIMESTAMP 21
 
-#define MAX_LINE_SIZE 2700
+#define MAX_CONFIG_LINE_SIZE 2700
 #define MAX_STRING_SIZE 512
 #define MAX_SHORT_STRING_SIZE 64
 #define MAX_TIME_STRING_SIZE 25
@@ -105,7 +106,7 @@ class parameterInfo;
 #define CORE_ONE 1
 #define CORE_TWO 2
 
-#define GENERAL_OUTPUT_NAME "DLUOutputFile.csv"
+#define GENERAL_OUTPUT_NAME "DLUOutputFile"
 
 #define ARGV_PARENT_DIR 1
 #define ARGV_FILES 2
@@ -114,6 +115,10 @@ class parameterInfo;
 #define ARGV_PARAMS 5
 #define ARGV_OUTPUT_NAME 6 
 
+#define OMAP_FILE_TYPE 0
+#define TXT_FILE_TYPE 1
+#define CSV_FILE_TYPE 2
+
 extern std::vector<class parameterInfo*> *ATP_parameterInfo;
 extern std::vector<class parameterInfo*> *ATO_parameterInfo;
 
@@ -121,6 +126,8 @@ extern char ATP_EnumeratedLabels[MAX_ATP_LABELS][MAX_ATO_VALUES][MAX_SHORT_STRIN
 extern char ATO_EnumeratedLabels[MAX_ATO_LABELS][MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE];
 extern char ATP_StringLabels[MAX_ATP_PARAMS][MAX_STRING_SIZE];
 extern char ATO_StringLabels[MAX_ATO_PARAMS][MAX_STRING_SIZE];
+
+extern short argN[MAX_COLUMN_SIZE];
 
 extern struct tm __tm_buf;
 

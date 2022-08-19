@@ -41,12 +41,40 @@ fileDecodingInfo::fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType)
 
 //Destructor
 fileDecodingInfo::~fileDecodingInfo(){
+	char filePath[MAX_STRING_SIZE];
+	sprintf(filePath,"%s_%s%s",this->fileInfoStruct->directoryPath,this->fileInfoStruct->fileName,TXT_SUFFIX);
+	remove(filePath);
+
 	free(this->fileInfoStruct);
 }
 
 //Temporary
 unsigned long long prevDate;
 //Temporary
+
+int fileDecodingInfo::getFileType(){
+	return this->fileInfoStruct->fileType;
+}
+
+int fileDecodingInfo::getCoreType(){
+	return this->fileInfoStruct->core;
+}
+
+int fileDecodingInfo::getLogType(){
+	return this->fileInfoStruct->logType;
+}
+FILE* fileDecodingInfo::getOutputFile(){
+	return this->fileInfoStruct->outputFile;
+}
+char* fileDecodingInfo::getDirectoryPath(){
+	return this->fileInfoStruct->directoryPath;
+}
+char* fileDecodingInfo::getFileName(){
+	return this->fileInfoStruct->fileName;
+}
+char* fileDecodingInfo::getOutputFileName(){
+	return this->fileInfoStruct->outputFileName;
+}
 
 void fileDecodingInfo::decodeFile(){
 	struct headerInfo* headerStruct = &(this->headerInfoStruct);
@@ -119,8 +147,10 @@ void fileDecodingInfo::decodeFile(){
 		}
 	}
 	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+	std::cout << "Time To Decode = " << (double) std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count()/ 1000000 << "[s]" << std::endl;
 
-	std::cout << "Time To Parse = " << (double) std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count()/ 1000000 << "[s]" << std::endl;
+	//Swap FILE* pointers
+	swapFilePointers();
 }
 
 void fileDecodingInfo::decodeLine(char* curHeader, char* curLine, char (*curParams)[MAX_SHORT_STRING_SIZE + 1]){
@@ -170,6 +200,23 @@ void fileDecodingInfo::printLine(char (*curParams)[MAX_SHORT_STRING_SIZE + 1],in
 		fprintf(this->fileInfoStruct->outputFile,"%s\t",curParams[i]);
 	}
 	fprintf(this->fileInfoStruct->outputFile,"\n");
+}
+
+void fileDecodingInfo::swapFilePointers(){
+	struct fileInfo* fInfo = this->fileInfoStruct;
+	fclose(fInfo->inputFile);
+	rewind(fInfo->outputFile);
+
+	fInfo->inputFile = fInfo->outputFile;
+	sprintf(fInfo->outputFileName,"%s%s%s%s",fInfo->directoryPath,OUTPUT_FILES_DIRECTORY,fInfo->fileName,CSV_SUFFIX);
+
+	if(nonRecursiveNameCheck(fInfo->outputFileName) != NULL){
+		fInfo->outputFile = fopen(fInfo->outputFileName,"w+");
+	}
+	else{
+		printf("Error - failed to make an output file -- exiting now\n");
+		exit(0);
+	}
 }
 
 parameterInfo::parameterInfo(char* line,char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE],char (*stringLabels)[MAX_STRING_SIZE]){

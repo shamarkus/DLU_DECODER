@@ -1,5 +1,5 @@
 set currDir=%~dp0
-set parentDir="%currDir%\.."
+set parentDir="%currDir%\..\\"
 
 call "%~1"
 

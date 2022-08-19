@@ -181,7 +181,7 @@ function getStartEndTimes(){
                 epochNum -= 2208988800;
                 epochNum *= 1000;
                 startTime = new Date(epochNum);
-                endTime = new Date(epochNum + 1000*600);
+                endTime = startTime.addSeconds(600);
             }
             else{
                 lines = content[i].split('\n');
@@ -535,7 +535,7 @@ function makeConfig(){
         .concat('\t');
     }
     contents = contents.slice(0,-1).concat('\"\n');
-    contents = contents.concat(`set times=\"${selectStart.children[selectStart.selectedIndex].textContent.slice(-19).replace(/-/g,'/')}\t${selectEnd.children[selectEnd.selectedIndex].textContent.slice(-19).replace(/-/g,'/')}\"\n`);
+    contents = contents.concat(`set times=\"${Date.parse(new Date (selectStart.children[selectStart.selectedIndex].textContent.slice(-19)))/1000}\t${Date.parse(new Date(selectEnd.children[selectEnd.selectedIndex].textContent.slice(-19)))/1000}\"\n`);
     contents = contents.concat(`set params=\"${analyzeParams.map(str => str.split('\t')[1]).join("\t")}\"\n`);
     contents = contents.concat(`set outputName=\"${ document.querySelector("#outputNameInp").value === 'Enter Filename for Output [OPTIONAL]' ? "" : document.querySelector("#outputNameInp").value }\"\n`)
     return contents;
