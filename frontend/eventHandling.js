@@ -1,12 +1,17 @@
 'use strict';
 //Global variable definitions
+//AddedFiles contains the file object of every added file
+//addedFilesTXT & addedFilesOMAP contain the filename of every added file, corresponding to its file type (raw OMAP log vs processed .txt log)
 const addedFiles = new Array();
 const addedFilesTXT = new Array();
 const addedFilesOMAP = new Array();
 
+//Data structs responsible for holding Date objects, and their string equivalents
 const times = new Array();
 const timesStringArr = new Array();
 
+//analyzeParams is an array of all parameters currently in the analysis table
+//Observer is a necessary object for the sticky header
 let analyzeParams = new Array();
 let observer;
 
@@ -15,8 +20,8 @@ function restart() {
     window.location.reload(true);
 }
 
-//Open file explorer
-//Handles unique files
+//Function responsible for opening the file explorer for the user to select multiple files
+//Outputs error if file to be added is a duplicate or does not correspond to the core of files that already have been added
 function add_file() {
     let input = document.createElement('input');
     let buttonsDiv = document.querySelector('#upload_buttons');
@@ -35,40 +40,45 @@ function add_file() {
 
         for(let i=0;i<e.target.files.length;i++){
             const dups = addedFiles.filter(f => f.name === e.target.files[i].name);
-
-            
-            if(!dups.length){
+            if(!dups.length)
+            {
                 let opt = document.createElement('option');
                 addedFiles.push(e.target.files[i]);
                 opt.value = addedFiles.length;
                 opt.textContent = `${addedFiles.length}: ${e.target.files[i].name}`;
                 
-                if(e.target.files[i].name.includes(".txt")){
+                if(e.target.files[i].name.includes(".txt"))
+                {
                     addedFilesTXT.push(e.target.files[i].name);
                     document.querySelector('#addedFilenames').appendChild(opt);
                 } 
-                else{
+                else
+                {
                     addedFilesOMAP.push(e.target.files[i].name);
                     const typeATO = addedFilesOMAP.filter(f => f.includes("80_"));
                     const typeATP = addedFilesOMAP.filter(f => f.includes("c0_"));
 
                     //!XOR Operator Mimic
-                    if(!(!typeATO.length != !typeATP.length)){
+                    if(!(!typeATO.length != !typeATP.length))
+                    {
                         conflictingTypes.textContent = `${conflictingTypes.textContent} --- ${e.target.files[i].name}`;
                         buttonsDiv.insertBefore(conflictingTypes,buttonsDiv.children[7]);
                         addedFilesOMAP.pop();
                         addedFiles.pop();
                     }
-                    else if(e.target.files[i].name.includes("180_") || e.target.files[i].name.includes("1c0_")){
+                    else if(e.target.files[i].name.includes("180_") || e.target.files[i].name.includes("1c0_"))
+                    {
                         document.querySelector('#addedFilenames').appendChild(opt);
                     }
-                    else{
+                    else
+                    {
                         document.querySelector('#addedFilenames2').appendChild(opt);
                     }
                     
                 }
             }
-            else{
+            else
+            {
                 dupText.textContent = `${dupText.textContent} --- ${dups[0].name}`;
                 buttonsDiv.insertBefore(dupText,buttonsDiv.children[7]);
             }
@@ -80,48 +90,74 @@ function add_file() {
     input.remove();
 }
 
-//Removes most recently added file
-//Toggles functionality of Remove_File Button
+//Toggles functionality of the 'remove File' button
+//Removes the selected file from the display table, as well as the addedFiles array
 function remove_file() {
     let selectedFile = (document.querySelector('#addedFilenames').selectedIndex === -1) ? document.querySelector('#addedFilenames2') : document.querySelector('#addedFilenames');
-    if(selectedFile.selectedIndex !== -1){
+    if(selectedFile.selectedIndex !== -1)
+    {
         let opt = selectedFile.children[selectedFile.selectedIndex];
         const deletedFile = addedFiles.splice(addedFiles.findIndex( file => opt.textContent.includes(file.name)),1).pop();
-        if(deletedFile.name.includes(".txt")){
+        if(deletedFile.name.includes(".txt"))
+        {
             addedFilesTXT.splice(addedFilesTXT.findIndex( file => deletedFile.name === file.name),1);
         }
-        else{
+        else
+        {
             addedFilesOMAP.splice(addedFilesOMAP.findIndex( file => deletedFile.name === file.name),1);
         }
         updateFileNumbers(opt.value);
         selectedFile.removeChild(opt);
     }
-    if(!addedFiles.length){
+    else
+    {
+        //do nothing
+    }
+    if(!addedFiles.length)
+    {
         document.querySelector('#remove_file').disabled = true;
         document.querySelector('#upload').disabled = true;
         return;
     }
+    else
+    {
+        //do nothing
+    }
 }
 
+//Each file in the display table of added files is numbered based on the order of its addition
+//If a file is removed, the file numbers must be updated to reflect the new positioning
 function updateFileNumbers(val) {
     const opts = [...document.querySelector('#addedFilenames').children,...document.querySelector('#addedFilenames2').children]
     opts.forEach( opt => {
-        if(opt.value > val){
+        if(opt.value > val)
+        {
             const fileName = opt.textContent.slice(opt.textContent.indexOf(':'));
             opt.value--;
             opt.textContent = `${opt.value}${fileName}`;
         }
+        else
+        {
+            //do nothing
+        }
     });
 }
+
+//Function that enables drag & drop between .txt files of Core 1 table AND Core 2 table
 function dragToSel(transferSel,curSel,e){
-        if(transferSel.selectedIndex === -1 && curSel.selectedIndex !== -1 && curSel.children[curSel.selectedIndex].textContent.includes('.txt')){
+        if(transferSel.selectedIndex === -1 && curSel.selectedIndex !== -1 && curSel.children[curSel.selectedIndex].textContent.includes('.txt'))
+        {
             transferSel.appendChild(curSel.children[curSel.selectedIndex]);
             transferSel.selectedIndex = -1;
+        }
+        else
+        {
+            //do nothing
         }
 }
 
 //Uploads files for processing
-//Uncovers the Internal Parameter Fields
+//Uncovers the Internal Parameter Fields, and gets the appropriate time intervals of the file for user selection
 function Upload(b){
     document.querySelector('#add_file').disabled = true;
     document.querySelector('#remove_file').disabled = true;
@@ -134,22 +170,30 @@ function Upload(b){
     getStartEndTimes();
 }
 
+//Increments seconds to a date & returns the result date
 Date.prototype.addSeconds = function(seconds){
     let date = new Date(this.valueOf());
     date.setSeconds(date.getSeconds() + seconds);
     return date;
 }
 
+//Comparison function of 2 dates, to determine which one is older
 function compare(a,b){
-    if (a.time<b.time) {
+    if (a.time<b.time) 
+    {
         return -1;
     }
-    if (b.time<a.time) {
+    else if (b.time<a.time) 
+    {
         return 1;
     }
-    return 0;
+    else{
+        return 0;
+    }
 }
 
+//Async functiong that reads the text of an uploaded file
+//Returns a promise, which if consumed, returns the text content of the file
 function readFileAsText(file){
     return new Promise(function(resolve,reject){
         let fr = new FileReader();
@@ -163,16 +207,20 @@ function readFileAsText(file){
     });
 }
 
+//Initializes the start and end time intervals for the Start Time and End Time drop-down menu
 function getStartEndTimes(){
     let readers = [];
     for(let i=0;i<addedFiles.length;i++){
         readers.push(readFileAsText(addedFiles[i]));
     }
+    //waits for all files to be read asynchrounously, afterwards, parses the times accordingly
     Promise.all(readers).then((content) => {
         for(let i=0;i<content.length;i++){
             let lines, startTime, endTime;
 
-            if(!addedFiles[i].name.includes(".txt")){
+            //if file is raw OMAP log
+            if(!addedFiles[i].name.includes(".txt"))
+            {
                 let epochNum;
                 lines = content[i].slice(0,4);
                 [...lines].forEach((char,index) => {
@@ -183,6 +231,7 @@ function getStartEndTimes(){
                 startTime = new Date(epochNum);
                 endTime = startTime.addSeconds(600);
             }
+            //if file is .txt file
             else{
                 lines = content[i].split('\n');
                 startTime = `${(lines[1].split('\t'))[0]} ${(lines[1].split('\t'))[1]}`;
@@ -199,45 +248,70 @@ function getStartEndTimes(){
         getTimeIntervals();
         //Uncover Internal Parameters
         document.querySelector('#parameter_div').removeAttribute('hidden');
-        if(addedFilesOMAP.length){
+        if(addedFilesOMAP.length)
+        {
             callTables(document.querySelector("#ATsel"),true);
+        }
+        else
+        {
+            //do nothing
         }
     });
 }
 
+//Gets the time intervals and outputs them to the drop-down menus
+//The increments between start and end times are on a 1-minute basis.
 function getTimeIntervals(){
     let startEndContainer = new Array();
     let startTimes = new Array();
     let curDate = times[0].time.addSeconds(60);
 
     for(let i=0;i<times.length;i++){
-        if(i !== 0 && startEndContainer.length === 0 ){
+        if(i !== 0 && startEndContainer.length === 0 )
+        {
             curDate = times[i].time.addSeconds(60);
-            if (((times[i].time-times[i-1].time)/1000) > 1 ){
+            if (((times[i].time-times[i-1].time)/1000) > 1 )
+            {
                 startTimes.push('NON TIME-CONTINUOUS INTERVAL');
             }
-            else{
+            else
+            {
                 startTimes.push('CONTINUOUS TIME-INTERVAL');
             }
         }
+        else
+        {
+            //do nothing
+        }
+
         while(curDate < times[i].time){
-            if(times.filter(e => e.time.getTime() === curDate.getTime()).length === 0){
+            if(times.filter(e => e.time.getTime() === curDate.getTime()).length === 0)
+            {
                 startTimes.push(curDate.yyyymmdd());
+            }
+            else
+            {
+                //do nothing
             }
             curDate = curDate.addSeconds(60);
         }
 
-        if(!startEndContainer.includes(times[i].index)){
+        if(!startEndContainer.includes(times[i].index))
+        {
             startEndContainer.push(times[i].index);
             startTimes.push(`SOF ${times[i].index+1} : ${times[i].time.yyyymmdd()}`);
         }
-        else{
+        else
+        {
             startEndContainer.splice(startEndContainer.indexOf(times[i].index),1);
             startTimes.push(`EOF ${times[i].index+1} : ${times[i].time.yyyymmdd()}`);
         }
     }
     addToSelectTimeList(startTimes);
 }
+
+//Takes date object and returns a string that represents the date
+//Equivalent to C function strftime()
 Date.prototype.yyyymmdd = function() {
     let mm = this.getMonth() + 1; // getMonth() is zero-based
     let dd = this.getDate();
@@ -246,6 +320,8 @@ Date.prototype.yyyymmdd = function() {
     let SS = this.getSeconds();
     return `${this.getFullYear()}-${(mm>9 ? '' : '0')+mm}-${(dd>9 ? '' : '0')+dd} ${(hh>9 ? '' : '0')+hh}:${(MM>9 ? '' : '0')+MM}:${(SS>9 ? '' : '0')+SS}`;
 };
+
+//Appends children which represent time intervals between the Start and End times
 function addToSelectTimeList(startTimes){
     let selectStart = document.querySelector("#start");
     let selectEnd = document.querySelector("#end");
@@ -253,69 +329,97 @@ function addToSelectTimeList(startTimes){
         let opt = document.createElement('option');
         opt.value = i;
         opt.textContent = startTimes[i];
-        if(i !== startTimes.length-1){
+        if(i !== startTimes.length-1)
+        {
             selectStart.appendChild(opt);
         }
-        if(startTimes[i-1] === 'CONTINUOUS TIME-INTERVAL'){
+        else
+        {
+            //do nothing
+        }
+
+        if(startTimes[i-1] === 'CONTINUOUS TIME-INTERVAL')
+        {
             selectStart.removeChild(selectStart.children[i-1]);
             selectStart.removeChild(selectStart.children[i-2]);
             selectEnd.removeChild(selectEnd.children[i-2]);
-            continue;
         }
-        else if(startTimes[i-1] ==='NON TIME-CONTINUOUS INTERVAL'){
+        else if(startTimes[i-1] === 'NON TIME-CONTINUOUS INTERVAL')
+        {
             selectStart.children[i-1].disabled = true;
             selectEnd.children[i-2].disabled = true;
             selectStart.removeChild(selectStart.children[i-2]);
-            continue;
         }
-        if(i){
+        else if(i)
+        {
             selectEnd.appendChild(opt.cloneNode(true));
+        }
+        else
+        {
+            //do nothing
         }
     }
     selectStart.value = 0;
     selectEnd.value = selectEnd.options[selectEnd.options.length-1].value;
 }
+
+//Whenever the user selects an End-Time, the Start times will be configured (enabled VS disabled) such that you could not select an illogical Start Time
 //sel is End Time Select
 function setStartTimes(sel){
     let selectStart = document.querySelector("#start");
     for(let i = 0;i<selectStart.length;i++){
-        if(i >= (sel.selectedIndex+1)){
+        if(i >= (sel.selectedIndex+1))
+        {
             selectStart.options[i].disabled = true;
         }
-        else {
+        else 
+        {
             selectStart.options[i].textContent !=='NON TIME-CONTINUOUS INTERVAL' ? selectStart.options[i].disabled = false : 1;
         }
     }
 }
 
+//Whenever the user selects an Start-Time, the End times will be configured (enabled VS disabled) such that you could not select an illogical End Time
 //sel is Start Time Select
 function setEndTimes(sel){
     let selectEnd = document.querySelector("#end");
     for(let i = 0;i<selectEnd.length;i++){
-        if(i >= (sel.selectedIndex)){
+        if(i >= (sel.selectedIndex))
+        {
             selectEnd.options[i].textContent !=='NON TIME-CONTINUOUS INTERVAL' ? selectEnd.options[i].disabled = false : 1;
         }
-        else{
+        else
+        {
             selectEnd.options[i].disabled = true;
         }
     }
 }
 
 //Initializes all tables with the corresponding parameters
+//User selects which parameters to view (ATP vs ATO) or it is automatically configured based on the raw OMAP log(s)
+//sel refers to the HTML select object
+//clear refers to whether all tables must be wiped clean (Only during transitions between ATO vs ATP)
+//Otherwise, if !clear, then the current shown ATP/ATO parameters will be replaced will all available ATP/ATO parameters
 function callTables(sel,clear){
     let content;
-    if(!sel.selectedIndex){
+    if(!sel.selectedIndex)
+    {
         content = ATO;
     }
-    else if(sel.selectedIndex === 1){
+    else if(sel.selectedIndex === 1)
+    {
         content = ATP;
     }
-    else{
+    else
+    {
         const logTypeBool = addedFilesOMAP[0].includes("c0_");
         sel.selectedIndex = logTypeBool ? 0 : 1;
         content = logTypeBool ? ATO : ATP;
     }
-    if(clear){
+
+    //Wiping of tables, inclusive of the preset table
+    if(clear)
+    {
         let presetSel = document.querySelector('#preset');
         document.querySelector('#chosen').textContent='';
         presetSel.textContent ='';
@@ -323,26 +427,42 @@ function callTables(sel,clear){
 
         let key = 0;
         for(let keynum = 0; key = window.localStorage.key(keynum); keynum++){
-            if(key.slice(-1) == sel.selectedIndex){
+            if(key.slice(-1) == sel.selectedIndex)
+            {
                 let opt = document.createElement('option');
                 opt.textContent = key.slice(0,-1);
                 presetSel.appendChild(opt);
             }
+            else
+            {
+                //do nothing
+            }
         }
-        if(presetSel.children.length != 0){
+        if(presetSel.children.length != 0)
+        {
             document.querySelector('#RemovePreset').disabled = false;
         }
-	document.querySelector('#paramInp').value = 'Enter Parameter Name';
+        else
+        {
+            //do nothing
+        }
+        document.querySelector('#paramInp').value = 'Enter Parameter Name';
     }
+
     let paramSel = document.querySelector('#sel');
     paramSel.textContent = '';
     let lines = content.split('\n');
     lines.forEach((line) => {
-        if(!analyzeParams.includes(line)){
+        if(!analyzeParams.includes(line))
+        {
             let opt = document.createElement('option');
             opt.textContent = (line.split('\t'))[0];
             opt.value = (line.split('\t'))[1];
             paramSel.appendChild(opt);
+        }
+        else
+        {
+            //do nothing
         }
     });
     Object.values(document.querySelector('#parameter_div').children).forEach(function(child){
@@ -357,108 +477,156 @@ function showResults(val){
     let ATindex = document.querySelector('#ATsel').selectedIndex;
     res.textContent='';
     autocompleteMatch(val,ATindex).forEach(line => {
-            if(!analyzeParams.includes(line)){
+            if(!analyzeParams.includes(line))
+            {
                 let opt = document.createElement('option');
                 opt.textContent = (line.split('\t'))[0];
                 opt.value = (line.split('\t'))[1];
                 res.appendChild(opt);
             }
+            else
+            {
+                //do nothing
+            }
     });
 }
 
+//Autocomplete matching function between all existing parameters
+//Returns an array of all parameters that MATCH the input string
 function autocompleteMatch(input,ATindex) {
-    if (input == '') {
+    if (input == '') 
+    {
         callTables(document.querySelector("#ATsel"),false);
         return [];
     }
-    let content;
-    if(!ATindex){
-        content = ATO.split('\n');
-    }
-    else{
-        content = ATP.split('\n');
-    }
-    
-    let reg = new RegExp(input);
-    return content.filter(function(term) {
-        if (term.match(reg)) {
-            return term;
+    else
+    {
+        let content;
+        if(!ATindex)
+        {
+            content = ATO.split('\n');
         }
-    });
+        else
+        {
+            content = ATP.split('\n');
+        }
+        
+        let reg = new RegExp(input);
+        return content.filter(function(term) {
+            if (term.match(reg)) 
+            {
+                return term;
+            }
+            else
+            {
+                //do nothing
+            }
+        });
+    }
 }
 
 //Transfer child element from curSel to receiveSel
+//Used for selecting parameters to analyze, or likewise, to put back
 function transferRows(curSel,receiveSel){
     let opt = curSel.options[curSel.selectedIndex];
     let analyze = document.querySelector('#analyze');
 
-    if(receiveSel.id === "chosen"){
+    if(receiveSel.id === "chosen")
+    {
         analyzeParams.push(`${opt.textContent}\t${opt.value}`);
         analyzeParams.sort((a,b) => {
             let aVal = Number(a.split('\t')[1]);
             let bVal = Number(b.split('\t')[1]);
-            if(aVal < bVal){
+            if(aVal < bVal)
+            {
                 return -1;
             }
-            if(aVal > bVal){
+            else if(aVal > bVal)
+            {
                 return 1;
             }
-            return 0;
-        })
+            else
+            {
+                return 0;
+            }
+        });
         analyze.disabled = false;
     }
-    else{
+    else
+    {
         analyzeParams.splice(curSel.selectedIndex,1);
-        if(!analyzeParams.length){
+        if(!analyzeParams.length)
+        {
             analyze.disabled = true;
+        }
+        else
+        {
+            //do nothing
         }
     }
     let paramInputValue = document.querySelector('#paramInp').value;
-    if(paramInputValue==="Enter Parameter Name" || opt.textContent.match(paramInputValue)){
+    if(paramInputValue==="Enter Parameter Name" || opt.textContent.match(paramInputValue))
+    {
         receiveSel.insertChildAtIndex(opt);
     }
-    else{
+    else
+    {
         curSel.removeChild(opt);
     }
 }
 
+//Each child parameter has a value which corresponds to its internal ordering sequence
+//Therefore, in order to insert a child correctly, it must be after its smaller sibling values, and before its larger sibling values
+//E.G:  child: 4 ----> sel: 2,3,7,9 ====> sel: 2,3,4,7,9
 Element.prototype.insertChildAtIndex = function(child) {
     this.appendChild(child);
     let indexToReplace = this.options.length;
     let sortedOptions = Object.keys(this.options).sort((a,b) => {
-        if (Number(this.options[a].value) < Number(this.options[b].value)) {
+        if (Number(this.options[a].value) < Number(this.options[b].value)) 
+        {
             indexToReplace = b;
             return -1;    
         }    
-        if (Number(this.options[b].value) < Number(this.options[a].value)) {
+        else if (Number(this.options[b].value) < Number(this.options[a].value)) 
+        {
             return 1;    
         }    
-        return 0;    
+        else
+        {
+            return 0;
+        }
     });
 
-    if(indexToReplace != this.options.length){
+    if(indexToReplace != this.options.length)
+    {
         for(let i = 0;i < sortedOptions.length-1; i++){
-            if((Number(sortedOptions[i])+1)-Number(sortedOptions[i+1]) > 0){
+            if((Number(sortedOptions[i])+1)-Number(sortedOptions[i+1]) > 0)
+            {
                 this.insertBefore(child,this.options[i]);
                 return;
             }
+            else
+            {
+                //do nothing
+            }
         }
+    }
+    else
+    {
+        //do nothing
     }
 }
 
-//BASIC:
-//Creation of Unique Presets
-//Removal of Current Analysis To Correct Place
-//ADVANCED:
-//Full Overwriting 
-//Append to current
-//Duplicate from current and append
-//Conflicting names between Log Types -- fix : add logtype to end of name so unique to type always
-//Ask whether rename is necessary
+//Responsible for transfer of parameters related to a preset to the analysis table
 function transferPresets(presetSel,chosenSel,paramSel){
-    if(document.querySelector("#paramInp").value !== 'Enter Parameter Name'){
+    if(document.querySelector("#paramInp").value !== 'Enter Parameter Name')
+    {
         callTables(document.querySelector("#ATsel"),false);
         document.querySelector("#paramInp").value = 'Enter Parameter Name';
+    }
+    else
+    {
+        //do nothing
     }
 
     let logType = document.querySelector("#ATsel").selectedIndex;
@@ -475,36 +643,60 @@ function transferPresets(presetSel,chosenSel,paramSel){
     }
 }
 
+//Responsible for creation of unique presets
+//Takes all parameters that are in analysis table, and makes a preset according to the $val name
+//If preset with the name of $val exists, then it will be overwritten with the new parameter selection
 function setPreset(removeButton,presetSel,val){
     let logType = document.querySelector("#ATsel").selectedIndex;
     window.localStorage.setItem(val+logType,JSON.stringify({logType: logType, params:[...analyzeParams]}));
-    if(Object.values(presetSel.children).filter(child => child.textContent === val).length === 0){
+    if(Object.values(presetSel.children).filter(child => child.textContent === val).length === 0)
+    {
         let opt = document.createElement('option');
         opt.textContent = val;
         presetSel.appendChild(opt);
         
-        if(presetSel.children.length !== 0){
+        if(presetSel.children.length !== 0)
+        {
             removeButton.disabled = false;
         }
+        else
+        {
+            //do nothing
+        }
+    }
+    else
+    {
+        //do nothing
     }
 }
 
+//Removes the preset named $val
 function removePreset(removeButton,presetSel,val){
     let logType = document.querySelector("#ATsel").selectedIndex;
     window.localStorage.removeItem(val+logType);
     presetSel.removeChild(Object.values(presetSel.children).filter(child => {
-        if(child.textContent === val){
+        if(child.textContent === val)
+        {
             return child;
+        }
+        else
+        {
+            //do nothing
         }
     })[0]);
 
-    if(presetSel.children.length === 0){
+    if(presetSel.children.length === 0)
+    {
         removeButton.disabled = true;
+    }
+    else
+    {
+        //do nothing
     }
 }
 
+//When 'analyze parameters' button is clicked, a 'config.cmd' file is downloaded with the appropirate variables necessary for the backend
 function analyze(analyzeButton,outputDiv){
-    console.log("reached");
     analyzeButton.disabled = true;
     outputDiv.removeAttribute('hidden');
 
@@ -522,6 +714,8 @@ function analyze(analyzeButton,outputDiv){
     dlink.remove();
 }
 
+//Writes variables inside of the 'config.cmd'
+//Variables include filenames, core types, start/end times, parameters to analyze, and optional output filename
 function makeConfig(){
     let selectStart = document.querySelector("#start");
     let selectEnd = document.querySelector("#end");
@@ -541,6 +735,9 @@ function makeConfig(){
     return contents;
 }
 
+//Responsible for when a user decides to upload an output file from the backend for visual analysis, 
+//Uses d3.js to parse the .csv data to output it
+//Makes a sticky header so that the user can scroll down with a visual of what columns correspond to what variables
 function uploadCSVFile(){
     let input = document.createElement('input');
     input.type = 'file';
@@ -548,15 +745,31 @@ function uploadCSVFile(){
         readFileAsText(e.target.files[0]).then((content) => {
                 //remove any pre-existing tables 
                 const outputDiv = document.querySelector('#Output');
-                if(outputDiv.children.length > 2){
+                if(outputDiv.children.length > 2)
+                {
                     const headerToDelete = document.querySelector('.header');
-                    if(headerToDelete){
+                    if(headerToDelete)
+                    {
                         headerToDelete.remove();
                     }
-                    if(observer){
+                    else
+                    {
+                        //do nothing
+                    }
+
+                    if(observer)
+                    {
                         observer.unobserve(document.querySelector('thead'));
                     }
+                    else
+                    {
+                        //do nothing
+                    }
                     outputDiv.removeChild(outputDiv.lastChild);
+                }
+                else
+                {
+                    //do nothing
                 }
                 //Call on table & observer
                 let tableWrapper = document.createElement('div');
@@ -580,12 +793,17 @@ function uploadCSVFile(){
                 tableElement.firstElementChild.innerHTML = tableElement.firstElementChild.innerHTML.replace(/td/g,'th');
                 tableHead.append(tableElement.firstElementChild);
                 
-                if(tableElement.firstElementChild.innerHTML.includes('<td></td>')){
+                if(tableElement.firstElementChild.innerHTML.includes('<td></td>'))
+                {
                     tableElement.firstElementChild.innerHTML = tableElement.firstElementChild.innerHTML.replace(/td/g,'th');
                     tableHead.append(tableElement.firstElementChild);
                     [...tableElement.children].forEach(child => {
                         child.innerHTML = child.innerHTML.replace('td','th');
                     });
+                }
+                else
+                {
+                    //do nothing
                 }
                 tableElement.prepend(tableHead);
                 
@@ -609,10 +827,13 @@ function uploadCSVFile(){
     input.remove();
 }
 
+//Responsible for the sticky header of an outputted .csv file
+//A scrollable sticky header for .csv files that are too large to view on a fixed viewport
 const obsCallback  = function (entries) {
     const [entry] = entries;
     const tableHead = document.querySelector('#table-head');
-    if(!entry.intersectionRatio && !entry.isIntersecting){
+    if(!entry.intersectionRatio && !entry.isIntersecting)
+    {
         document.querySelector('.wrapper').append(this);
         this.classList.add('sticky','header','Flipped');
         this.style.width = tableHead.closest('div').offsetWidth + 'px';
@@ -624,7 +845,8 @@ const obsCallback  = function (entries) {
                 });
         this.scrollLeft = tableHead.closest('div').scrollLeft;
     }
-    else{
+    else
+    {
         this.classList.remove('sticky');
     }
 }
