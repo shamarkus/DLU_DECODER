@@ -20,13 +20,7 @@ int fast_atoi(const char* str);
 
 char* fast_strcat(char* dest, const char* src);
 
-int skipSeqATO(int curChar,int& skipSeqNum);
-
-int skipSeqATP(int curChar,int& skipSeqNum);
-
-int verifySeqATO(int& skipSeqNum);
-
-int verifySeqATP(int& skipSeqNum);
+int skipSeq(int curChar,unsigned int& skipSeqNum);
 
 char* epochTimeToDate(unsigned long long value, char* str,const char* fmt);
 

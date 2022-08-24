@@ -74,48 +74,26 @@ char* fast_strcat(char* dest, const char* src)
 	return --dest;
 }
 
-int skipSeqATO(int curChar,int& skipSeqNum){
+int skipSeq(int curChar,unsigned int& skipSeqNum){
 	if(!skipSeqNum && curChar == 0x1){
 		skipSeqNum = 0x1;
-		return 2;
+		return 0;
 	}
 	else if(!skipSeqNum){
 		return 0;
 	}
 	else if(skipSeqNum && curChar == 0x1){
 		skipSeqNum = 0x1;
-		return -1;
+		return 0;
 	}
 	else{
 		skipSeqNum = (skipSeqNum << 8) | curChar;
-		return 2;
-	}
-}
-
-int skipSeqATP(int curChar,int& skipSeqNum){
-	if(!curChar){
-		return 2;
-	}
-	else{
-		return 1;
-	}
-}
-
-int verifySeqATO(int& skipSeqNum){
-	if(skipSeqNum == ATO_VERIFIED_SET_1 || skipSeqNum == ATO_VERIFIED_SET_2 || skipSeqNum == ATO_VERIFIED_SET_3){
-		return 1;
-	}
-	else{
-		return 0;
-	}
-}
-
-int verifySeqATP(int& skipSeqNum){
-	if(skipSeqNum == ATP_VERIFIED_SET_1){
-		return 1;
-	}
-	else{
-		return 0;
+		if(skipSeqNum >= MIN_SET){
+			return 1;
+		}
+		else{
+			return 0;
+		}
 	}
 }
 

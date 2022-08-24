@@ -98,7 +98,7 @@ void initFileObjVec(std::vector<class fileParsingInfo*> &fileObjVec,std::vector<
 void decodeAndParse(std::vector<class fileParsingInfo*> &fileObjVec){
 	int i = 1;
 	for(auto fileObj : fileObjVec){
-		printf("File Number : %d\n",i++);
+		printf("File Number : %d -> %s\n",i++,fileObj->getFileName());
 		if(fileObj->getFileType() == OMAP_FILE_TYPE){
 			fileObj->decodeFile();
 		}
@@ -132,6 +132,9 @@ int main(int argc,char** argv){
 
 	if(fileObjVec.size() > 1){
 		makeCombinedOutput(argv[ARGV_PARENT_DIR],argv[ARGV_OUTPUT_NAME],fileObjVec);
+	}
+	else{
+		printf("File %s Has Been Created in ./outputFiles/ \n",fileObjVec[0]->getOutputFileName()+strlen(argv[ARGV_PARENT_DIR])+strlen(OUTPUT_FILES_DIRECTORY));
 	}
 
 	//Deletion of all dynamically created objects

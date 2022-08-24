@@ -43,8 +43,6 @@ fileDecodingInfo::fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType)
 fileDecodingInfo::~fileDecodingInfo(){
 	char filePath[MAX_STRING_SIZE];
 	sprintf(filePath,"%s_%s%s",this->fileInfoStruct->directoryPath,this->fileInfoStruct->fileName,TXT_SUFFIX);
-	remove(filePath);
-
 	free(this->fileInfoStruct);
 }
 
@@ -84,7 +82,7 @@ void fileDecodingInfo::decodeFile(){
 	int numLineBits = (logType == ATO_NUM) ? MAX_ATO_PARAMS_BIT_SIZE : MAX_ATP_PARAMS_BIT_SIZE;
 	int paramsCharSize = this->byteNumForLine;
 	int headerCharSize = headerStruct->headerByteSize;
-	int skipCharSize = 0;
+	int skipCharSize = 1;
 
 	char curParams[numParameters][MAX_SHORT_STRING_SIZE + 1];	
 	char curLine[numLineBits + 1];
@@ -95,10 +93,7 @@ void fileDecodingInfo::decodeFile(){
 
 	char* headerP = curHeader;
 	char* lineP = curLine;
-	int (*skipSeq)(int,int&) = (logType == ATO_NUM) ? &skipSeqATO : &skipSeqATP;
-	int (*verifySeq)(int&) = (logType == ATO_NUM) ? &verifySeqATO : &verifySeqATP;
-	int skipSeqNum = 0;
-
+	unsigned int skipSeqNum = 0;
 	int curChar;
 	
 	printHeader(numParameters);
@@ -110,16 +105,21 @@ void fileDecodingInfo::decodeFile(){
 		curChar = fgetc(this->fileInfoStruct->inputFile);
 
 		if(skipCharSize){
-			int proceed = skipSeq(curChar,skipSeqNum);
-			if(proceed == 2){
-				skipCharSize--;
-				if(!skipCharSize && !verifySeq(skipSeqNum)){
-					skipCharSize = this->byteNumToSkip;
-					skipSeqNum = 0;
+			if(skipSeq(curChar,skipSeqNum))
+			{
+				if(skipSeqNum == OMNIPOTENT_SET)
+				{
+					skipCharSize = 0;
 				}
+				else
+				{
+					skipSeqNum = 0;	
+				}
+
 			}
-			else{
-				skipCharSize = this->byteNumToSkip + proceed;
+			else
+			{
+				//do nothing
 			}
 		}
 		else if(headerCharSize){
@@ -139,9 +139,9 @@ void fileDecodingInfo::decodeFile(){
 			headerP = curHeader;
 			lineP = curLine;
 			skipSeqNum = 0;
+			skipCharSize = 1;
 
 			//Account for the current character - 1
-			skipCharSize = this->byteNumToSkip;
 			headerCharSize = headerStruct->headerByteSize;
 			paramsCharSize = this->byteNumForLine;
 		}

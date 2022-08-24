@@ -203,8 +203,7 @@ function readFileAsText(file){
         fr.onerror = function(){
             reject(fr);
         };
-        //fr.readAsText(file, 'iso-8859-1');
-        fr.readAsBinaryString(file);
+        fr.readAsText(file, 'UTF-8');
     });
 }
 
@@ -225,7 +224,9 @@ function getStartEndTimes(){
                 let epochNum;
                 lines = content[i].slice(0,4);
                 [...lines].forEach((char,index) => {
-                    epochNum = (epochNum | (char.charCodeAt(0) << ((3 - index) * 8))) >>> 0;
+		    console.log(char.charCodeAt(0));
+		    if(char.charCodeAt(0) == 381) epochNum = (epochNum | (142 << ((3 - index) * 8))) >>> 0;
+		    else epochNum = (epochNum | (char.charCodeAt(0) << ((3 - index) * 8))) >>> 0;
                 })
                 epochNum -= 2208988800;
                 epochNum *= 1000;
