@@ -60,7 +60,7 @@ void initFileVec(std::vector<fileInfo*> &fileVec,const int argc,char** argv){
 		//Input File is an OMAP input file
 		else
 		{
-			tempFileInfo->inputFile = fopen(tempStr,"rb");
+			tempFileInfo->inputFile = fopen(tempStr,"r");
 			tempFileInfo->fileType = OMAP_FILE_TYPE;
 			sprintf(tempFileInfo->outputFileName,"%s_%s%s",parentDir,fileToken,TXT_SUFFIX);
 			tempFileInfo->outputFile = fopen(tempFileInfo->outputFileName,"w");

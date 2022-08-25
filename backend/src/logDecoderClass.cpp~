@@ -15,7 +15,7 @@ fileDecodingInfo::fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType)
 
 		if(NULL != ATP_parameterInfo)
 		{
-		    this->parameterInfoVec = *ATP_parameterInfo;
+			this->parameterInfoVec = *ATP_parameterInfo;
 		}
 		else
 		{
@@ -126,6 +126,7 @@ void fileDecodingInfo::decodeFile(){
 	
 	printHeader(numParameters);
 
+	//printf("%d %d %d %d \n", fgetc(this->fileInfoStruct->inputFile),fgetc(this->fileInfoStruct->inputFile),fgetc(this->fileInfoStruct->inputFile),fgetc(this->fileInfoStruct->inputFile));
 	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 	while( EOF != curChar ){
 		curChar = fgetc(this->fileInfoStruct->inputFile);
@@ -237,10 +238,11 @@ void fileDecodingInfo::printLine(char (*curParams)[MAX_SHORT_STRING_SIZE + 1],in
 void fileDecodingInfo::swapFilePointers(){
 	struct fileInfo* fInfo = this->fileInfoStruct;
 	fclose(fInfo->inputFile);
-	rewind(fInfo->outputFile);
+	fclose(fInfo->outputFile);
 
-	fInfo->inputFile = fInfo->outputFile;
+	fInfo->inputFile = fopen(fInfo->outputFileName,"r");
 	sprintf(fInfo->outputFileName,"%s%s%s%s",fInfo->directoryPath,OUTPUT_FILES_DIRECTORY,fInfo->fileName,CSV_SUFFIX);
+	printf("%s \n", fInfo->outputFileName);
 
 	if(NULL != nonRecursiveNameCheck(fInfo->outputFileName))
 	{
