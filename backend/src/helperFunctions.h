@@ -1,6 +1,8 @@
 #ifndef HELPERFUNCTIONS_H_
 #define HELPERFUNCTIONS_H_
 
+//helperFunctions.cpp function and variable declarations for usage in other files
+
 #include "globals.h"
 
 class parameterInfo;

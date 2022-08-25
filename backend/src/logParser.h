@@ -1,6 +1,8 @@
 #ifndef LOGPARSER_H_
 #define LOGPARSER_H_
 
+//logParser function and variable declarations
+
 #include "globals.h"
 #include "logDecoderClass.h"
 
@@ -18,6 +20,7 @@ struct recordInfo {
 	char logArgs[MAX_COLUMN_SIZE][MAX_SHORT_STRING_SIZE];
 };
 
+//fileParsingInfo inherits all functions and members from fileDecodingInfo class
 class fileParsingInfo : public fileDecodingInfo{ 
 	private:
 		struct recordInfo* curRecord;

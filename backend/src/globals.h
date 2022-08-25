@@ -1,6 +1,10 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+//This is the global variables and definitions file
+//This includes all elements that are cross-referenced between all files
+//Elements are not unique to one file only
+
 #include <iostream>
 #include <stdio.h>
 #include <string.h>

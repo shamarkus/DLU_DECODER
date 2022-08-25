@@ -3,6 +3,9 @@
 
 #include "globals.h"
 
+//logDecoderClass function and variable declarations
+
+//O(1) lookup table for converting an integer (0-255) to a char* (string)
 static const char byteArray[MAX_CHARS_SIZE][MAX_BYTE_SIZE + 1] = {"00000000", "00000001", "00000010", "00000011", "00000100", "00000101", "00000110", "00000111", "00001000", "00001001", 
 "00001010", "00001011", "00001100", "00001101", "00001110", "00001111", "00010000", "00010001", "00010010", "00010011", "00010100", "00010101", "00010110", "00010111", "00011000", "00011001", 
 "00011010", "00011011", "00011100", "00011101", "00011110", "00011111", "00100000", "00100001", "00100010", "00100011", "00100100", "00100101", "00100110", "00100111", "00101000", "00101001", 
@@ -41,23 +44,23 @@ struct fileInfo {
 };
 
 class parameterInfo {
-    private:
-        int parameterID;
-        int unsignedInt;
-        int firstBitPosition;
-        int bitCount;
-        int firstByte;
-        int lastByte;
-        double quantum;
-        int offset;
-        int displayType;
-        int enumeratedLabel;
-        int decimalCount;
+	private:
+		int parameterID;
+		int unsignedInt;
+		int firstBitPosition;
+		int bitCount;
+		int firstByte;
+		int lastByte;
+		double quantum;
+		int offset;
+		int displayType;
+		int enumeratedLabel;
+		int decimalCount;
 
-        char* unit = NULL;
-        char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE];
-    public:
-        void (parameterInfo::*binaryToString)(char*, char*) = NULL;
+		char* unit;
+		char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE];
+	public:
+		void (parameterInfo::*binaryToString)(char*, char*) = NULL;
 
 		parameterInfo(char* line,char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE],char (*stringLabels)[MAX_STRING_SIZE]);
 		~parameterInfo();
@@ -95,21 +98,21 @@ class parameterInfo {
 };
 
 class fileDecodingInfo {
-    protected:
+	protected:
 		struct fileInfo* fileInfoStruct;
-        struct headerInfo headerInfoStruct = (struct headerInfo) {MAX_HEADER_BIT_SIZE,
-								  MAX_HEADER_BIT_SIZE/8,
-                                                                  INNER_HEADER_BIT_POS,
-                                                                  HEADER_TIME_BIT_POS,
-								  HEADER_TIME_BIT_SIZE};
-        std::vector<class parameterInfo*> parameterInfoVec;
+		struct headerInfo headerInfoStruct = (struct headerInfo) {MAX_HEADER_BIT_SIZE,
+									  MAX_HEADER_BIT_SIZE/8,
+									  INNER_HEADER_BIT_POS,
+									  HEADER_TIME_BIT_POS,
+									  HEADER_TIME_BIT_SIZE};
+		std::vector<class parameterInfo*> parameterInfoVec;
 		char (*stringLabels)[MAX_STRING_SIZE];
-        char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE];
-        size_t byteNumToSkip;
+		char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE];
+		size_t byteNumToSkip;
 		size_t byteNumForLine;
-    public:
-        fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType);
-        ~fileDecodingInfo();
+	public:
+		fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType);
+		~fileDecodingInfo();
 
 		int getFileType();
 		int getLogType();

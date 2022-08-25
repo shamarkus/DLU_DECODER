@@ -2,16 +2,23 @@
 #include "logDecoderClass.h"
 #include "helperFunctions.h"
 
+//logDecoderClass.h class function definitions
+
+//Constructor for fileDecodingInfo class
+//Parses ATO/ATP config files if necessary to create ATO/ATP globals, otherwise calls them by reference, and initializes them to all other files
 fileDecodingInfo::fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType) : fileInfoStruct(fileInfoStruct) {
-    //If log is of ATP type
-	if(logType == ATP_NUM){
+	//If log is of ATP type
+	if( ATP_NUM == logType )
+	{
 		this->byteNumToSkip = ATP_BYTE_NUM_TO_SKIP - 1; 
 		this->byteNumForLine = MAX_ATP_PARAMS_BIT_SIZE/8;
 
-		if(ATP_parameterInfo != NULL){
+		if(NULL != ATP_parameterInfo)
+		{
 		    this->parameterInfoVec = *ATP_parameterInfo;
 		}
-		else{
+		else
+		{
 			parseLabelsConfigFile(ATP_EnumeratedLabels,logType,fileInfoStruct->directoryPath);
 
 			parseParameterConfigFile(this->parameterInfoVec,logType,fileInfoStruct->directoryPath,ATP_EnumeratedLabels,ATP_StringLabels);
@@ -20,15 +27,18 @@ fileDecodingInfo::fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType)
 		this->stringLabels = ATP_StringLabels;
 		this->enumeratedLabels = ATP_EnumeratedLabels;
 	}
-		//if log is of ATO type
-	else{
+	//if log is of ATO type
+	else
+	{
 		this->byteNumToSkip = ATO_BYTE_NUM_TO_SKIP - 1; 
 		this->byteNumForLine = MAX_ATO_PARAMS_BIT_SIZE/8;
 
-		if(ATO_parameterInfo != NULL){
+		if(NULL != ATO_parameterInfo)
+		{
 			this->parameterInfoVec = *ATO_parameterInfo;
 		}
-		else{
+		else
+		{
 			parseLabelsConfigFile(ATO_EnumeratedLabels,logType,fileInfoStruct->directoryPath);
 
 			parseParameterConfigFile(this->parameterInfoVec,logType,fileInfoStruct->directoryPath,ATO_EnumeratedLabels,ATO_StringLabels);
@@ -39,41 +49,59 @@ fileDecodingInfo::fileDecodingInfo(struct fileInfo* fileInfoStruct, int logType)
 	}
 }
 
-//Destructor
+//Destructor for fileDecodingInfo class 
+//If file had to be decoded, then its .txt equivalent will be removed
 fileDecodingInfo::~fileDecodingInfo(){
 	char filePath[MAX_STRING_SIZE];
 	sprintf(filePath,"%s_%s%s",this->fileInfoStruct->directoryPath,this->fileInfoStruct->fileName,TXT_SUFFIX);
+	if ( 0 == access(filePath, F_OK) ) 
+	{
+		remove(filePath);
+	}
+	else
+	{
+		//do nothing
+	}
 	free(this->fileInfoStruct);
 }
 
-//Temporary
-unsigned long long prevDate;
-//Temporary
+//fileDecodingInfo getter functions:
 
+//Returns fileType (processed .txt vs raw OMAP log)
 int fileDecodingInfo::getFileType(){
 	return this->fileInfoStruct->fileType;
 }
-
+//Returns file core (1 vs 2)
 int fileDecodingInfo::getCoreType(){
 	return this->fileInfoStruct->core;
 }
-
+//Returns logtype of file (ATO vs ATP)
 int fileDecodingInfo::getLogType(){
 	return this->fileInfoStruct->logType;
 }
+//Returns FILE* pointer to output file
 FILE* fileDecodingInfo::getOutputFile(){
 	return this->fileInfoStruct->outputFile;
 }
+//Returns parent directory of file
 char* fileDecodingInfo::getDirectoryPath(){
 	return this->fileInfoStruct->directoryPath;
 }
+//Returns filename of initially uploaded file
 char* fileDecodingInfo::getFileName(){
 	return this->fileInfoStruct->fileName;
 }
+//Returns filename of output filename
 char* fileDecodingInfo::getOutputFileName(){
 	return this->fileInfoStruct->outputFileName;
 }
 
+//Takes the raw OMAP log and decodes it to a .txt version
+//3 phases : 1) SkipSequence 2) getHeaderSequence 3) getLineSequence
+// 1)Skips all characters until the OMNIPOTENT SET is found (this set is constant and the delimeter between all records)
+// 2)Gets 19 header bytes in order to write the appropriate timestamp
+// 3)Gets bytes for a full line, then decodes the concatenated line
+//Void return value because all of the output is printed to a file
 void fileDecodingInfo::decodeFile(){
 	struct headerInfo* headerStruct = &(this->headerInfoStruct);
 	int logType = this->fileInfoStruct->logType;
@@ -98,16 +126,15 @@ void fileDecodingInfo::decodeFile(){
 	
 	printHeader(numParameters);
 
-	prevDate = 0;
-
 	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
-	while(curChar != EOF){
+	while( EOF != curChar ){
 		curChar = fgetc(this->fileInfoStruct->inputFile);
 
-		if(skipCharSize){
+		if(skipCharSize)
+		{
 			if(skipSeq(curChar,skipSeqNum))
 			{
-				if(skipSeqNum == OMNIPOTENT_SET)
+				if( OMNIPOTENT_SET == skipSeqNum )
 				{
 					skipCharSize = 0;
 				}
@@ -122,15 +149,18 @@ void fileDecodingInfo::decodeFile(){
 				//do nothing
 			}
 		}
-		else if(headerCharSize){
+		else if(headerCharSize)
+		{
 			headerP = fast_strcat(headerP,byteArray[curChar]);	
 			headerCharSize--;
 		}
-		else if(paramsCharSize){
+		else if(paramsCharSize)
+		{
 			lineP = fast_strcat(lineP,byteArray[curChar]);
 			paramsCharSize--;
 		}
-		else{
+		else
+		{
 			decodeLine(curHeader,curLine,curParams);
 			printLine(curParams,numParameters);
 			//Re-initialize -- Skip over nullish sequence
@@ -141,7 +171,6 @@ void fileDecodingInfo::decodeFile(){
 			skipSeqNum = 0;
 			skipCharSize = 1;
 
-			//Account for the current character - 1
 			headerCharSize = headerStruct->headerByteSize;
 			paramsCharSize = this->byteNumForLine;
 		}
@@ -153,6 +182,10 @@ void fileDecodingInfo::decodeFile(){
 	swapFilePointers();
 }
 
+//Takes the binary strings curHeader & curLine, and parses them according to the bit-positions and bit-counts of the ATO/ATP parameters
+//After getting the truncated binary string PER parameter, a member function pointer is called to do the appropriate parsing to convert it from a binary string to ASCII text
+//Function pointer optimizes this so that no branch conditioning is needed during the ACTUAL parsing
+//Void return type because the output is directly returned to curParams array
 void fileDecodingInfo::decodeLine(char* curHeader, char* curLine, char (*curParams)[MAX_SHORT_STRING_SIZE + 1]){
 	//Get timestamp for first 2 params
 	struct headerInfo* headerStruct = &(this->headerInfoStruct);
@@ -169,14 +202,6 @@ void fileDecodingInfo::decodeLine(char* curHeader, char* curLine, char (*curPara
 	(parameterObj->*(parameterObj->binaryToString))(binaryParam,curParams[1]);
 	strcat(curParams[1],HEADER_TIME_SUFFIX);
 	
-	//Temporary
-	unsigned long long curDate = parameterObj->unsignedBinaryToDecimal(binaryParam);
-	if((curDate>>32) - prevDate > 1 && prevDate != 0){
-		printf("Gap right before %s\n",curParams[1]);
-	}
-	prevDate = curDate >> 32;
-	//Temporary
-
 	for(int i = 2; i < this->parameterInfoVec.size(); i++){
 		parameterObj = this->parameterInfoVec[i];
 
@@ -188,6 +213,8 @@ void fileDecodingInfo::decodeLine(char* curHeader, char* curLine, char (*curPara
 	}
 }
 
+//Takes ATO/ATP stringLabels and prints them to the output file in correct order
+//Void return type because output is printed to file
 void fileDecodingInfo::printHeader(int numParameters){
 	for(int i = 0; i < numParameters; i++){
 		fprintf(this->fileInfoStruct->outputFile,"%s\t",this->stringLabels[i]);
@@ -195,6 +222,8 @@ void fileDecodingInfo::printHeader(int numParameters){
 	fprintf(this->fileInfoStruct->outputFile,"\n");
 }
 
+//Takes curParams data structure obtained from the currently parsed record and prints them to the output file in correct order
+//Void return type because output is printed to file
 void fileDecodingInfo::printLine(char (*curParams)[MAX_SHORT_STRING_SIZE + 1],int numParameters){
 	for(int i = 0; i < numParameters; i++){
 		fprintf(this->fileInfoStruct->outputFile,"%s\t",curParams[i]);
@@ -202,6 +231,9 @@ void fileDecodingInfo::printLine(char (*curParams)[MAX_SHORT_STRING_SIZE + 1],in
 	fprintf(this->fileInfoStruct->outputFile,"\n");
 }
 
+//If a raw OMAP log had to be decoded, then file pointers must be swapped such that the .txt file can then be parsed
+//This is done so that the file parsing functions are consistent if a .txt log had been uploaded
+//Void return type because swapping of file pointers is internal
 void fileDecodingInfo::swapFilePointers(){
 	struct fileInfo* fInfo = this->fileInfoStruct;
 	fclose(fInfo->inputFile);
@@ -210,15 +242,21 @@ void fileDecodingInfo::swapFilePointers(){
 	fInfo->inputFile = fInfo->outputFile;
 	sprintf(fInfo->outputFileName,"%s%s%s%s",fInfo->directoryPath,OUTPUT_FILES_DIRECTORY,fInfo->fileName,CSV_SUFFIX);
 
-	if(nonRecursiveNameCheck(fInfo->outputFileName) != NULL){
+	if(NULL != nonRecursiveNameCheck(fInfo->outputFileName))
+	{
 		fInfo->outputFile = fopen(fInfo->outputFileName,"w+");
 	}
-	else{
+	else
+	{
 		printf("Error - failed to make an output file -- exiting now\n");
 		exit(0);
 	}
 }
 
+//Constructor to parameterInfo class
+//Takes the current string line of the parameter config file, and breaks it down to a paramter object with the appropriate information
+//If a value is -1 for any column, then that value is Not Applicable to that parameter
+//This value of -1 and displayType variable determines what function pointer is attributed to each parameterInfo object
 parameterInfo::parameterInfo(char* line,char (*enumeratedLabels)[MAX_ATO_VALUES][MAX_SHORT_STRING_SIZE],char (*stringLabels)[MAX_STRING_SIZE]){
 	this->parameterID = fast_atoi(strtok(line,"\t"));
 	strcpy(stringLabels[this->parameterID],strtok(NULL,"\t"));
@@ -234,157 +272,219 @@ parameterInfo::parameterInfo(char* line,char (*enumeratedLabels)[MAX_ATO_VALUES]
 	this->decimalCount = fast_atoi(strtok(NULL,"\t"));
 
 	char* unit = strtok(NULL,"\t");
-	if(unit[0] != '-' && unit[1] != '1'){
+	if(strcmp(unit,"-1"))
+	{
 		this->unit = (char*) malloc(MAX_SHORT_STRING_SIZE);
 		strcpy(this->unit,unit);
 	}
-	else{
-		//do nothing
+	else
+	{
+		this->unit = NULL;
 	}
 
-	if(this->firstBitPosition > INNER_HEADER_BIT_POS){
+	if(this->firstBitPosition > INNER_HEADER_BIT_POS)
+	{
 		this->firstBitPosition += MAX_HEADER_BIT_SIZE;
 	}
-	else{
+	else
+	{
 		//do nothing
 	}
 
 	//Function declaration based on the above variables
-	if(this->displayType == DISPLAY_TYPE_ENUMERATED){
+	if(this->displayType == DISPLAY_TYPE_ENUMERATED)
+	{
 		this->enumeratedLabels = enumeratedLabels;
 		this->binaryToString = &parameterInfo::unsignedBinaryToEnumeratedLabelStr;
 	}
-	else if(this->displayType == DISPLAY_TYPE_HEXADECIMAL){
+	else if(this->displayType == DISPLAY_TYPE_HEXADECIMAL)
+	{
 		this->binaryToString = &parameterInfo::unsignedBinaryToHexadecimalStr;
 	}
-	else if(this->displayType == DISPLAY_TYPE_HEXADECIMAL){
+	else if(this->displayType == DISPLAY_TYPE_HEXADECIMAL)
+	{
 		this->binaryToString = &parameterInfo::binaryToBinaryStr;
 	}
-	else if(this->displayType == DISPLAY_TYPE_DATE){
+	else if(this->displayType == DISPLAY_TYPE_DATE)
+	{
 		this->binaryToString = &parameterInfo::unsignedBinaryToDateStr;
 	}
-	else if(this->displayType == DISPLAY_TYPE_TIME){
-		if(this->decimalCount != -1){
+	else if(this->displayType == DISPLAY_TYPE_TIME)
+	{
+		if(-1 != this->decimalCount)
+		{
 			this->binaryToString = &parameterInfo::unsignedBinaryToDecimalTimeStr;
 		}
-		else{
+		else
+		{
 			this->binaryToString = &parameterInfo::unsignedBinaryToTimeStr;
 		}
 	}
-	else {
+	else
+	{
 		//this->displayType == DISPLAY_TYPE_DECIMAL
-		if(this->decimalCount != -1){
-			if(this->unsignedInt == SIGNED_INTEGER){
+		if(-1 != this->decimalCount)
+		{
+			if( SIGNED_INTEGER == this->unsignedInt )
+			{
 				this->binaryToString = &parameterInfo::signedBinaryToDecimalPrecisionStr;
 			}
-			else{
+			else
+			{
 				this->binaryToString = &parameterInfo::unsignedBinaryToDecimalPrecisionStr;
 			}
 		}
-		else if(this->quantum == 1){
-			if(this->unsignedInt == SIGNED_INTEGER){
+		else if( 1 == this->quantum )
+		{
+			if( SIGNED_INTEGER == this->unsignedInt )
+			{
 				this->binaryToString = &parameterInfo::signedBinaryToIntegerStr;
 			}
-			else{
+			else
+			{
 				this->binaryToString = &parameterInfo::unsignedBinaryToIntegerStr;
 			}
 		}
-		else{
-			if(this->unsignedInt == SIGNED_INTEGER){
+		else
+		{
+			if( SIGNED_INTEGER == this->unsignedInt )
+			{
 				this->binaryToString = &parameterInfo::signedBinaryToDecimalStr;
 			}
-			else{
+			else
+			{
 				this->binaryToString = &parameterInfo::unsignedBinaryToDecimalStr;
 			}
 		}
 	}
 }
 
-//Destructor
+//Destructor of parameterInfo class
+//If a unit had been dynamically allocated memory, then this memory shall be freed
 parameterInfo::~parameterInfo(){
-	if(NULL != this->unit){
+	if(NULL != this->unit)
+	{
 		free(this->unit);
+		this->unit = NULL;
+	}
+	else
+	{
+		//do nothing
 	}
 }
 
-//Accepts integer value, and gets corresponding string label
+//ParameterInfo class functions that accept a long long integer, perform the right action for the right displayType, and copies to str for printing purposes to output file
+
+//Prints the enumerated label based on the value provided
 void parameterInfo::IntToEnumeratedLabel(unsigned long long value,char* str){
-	if(value > MAX_ATO_VALUES || *this->enumeratedLabels[this->enumeratedLabel][value] == '\0'){
+	if(value > MAX_ATO_VALUES || '\0' == *this->enumeratedLabels[this->enumeratedLabel][value])
+	{
 		sprintf(str,"? key : %llu", value);
 	}
-	else{
+	else
+	{
 		strcpy(str,this->enumeratedLabels[this->enumeratedLabel][value]);
 	}
 }
+//Prints the hexadecimal equivalent of the value provided
 void parameterInfo::IntToHexadecimal(unsigned long long value, char* str){
 	sprintf(str,"%0*x",this->bitCount >> 2,value);
 }
+//Prints the integer equivalent of the value provided
 void parameterInfo::IntToInteger(long long value, char* str){
 	sprintf(str,"%d",value+this->offset);
 }
+//Prints the decimal equivalent from the quantum of the value provided
 void parameterInfo::IntToDecimal(long long value, char* str){
 	sprintf(str,"%.0f",value*this->quantum+this->offset);
 }
+//Prints the decimal equivalent with decimal points from the quantum of the value provided
 void parameterInfo::IntToDecimalPrecision(long long value, char* str){
 	sprintf(str,"%0.*f",this->decimalCount,value*this->quantum+this->offset);
 }
+//Prints the date equivalent of the 64 bit value provided
 void parameterInfo::IntToDate(unsigned long long value, char* str){
 	epochTimeToDate(value >> 32,str,"%Y/%m/%d");
 }
+//Prints the time equivalent of the 64 bit value provided
 void parameterInfo::IntToTime(unsigned long long value, char* str){
 	epochTimeToDate(value >> 32,str,"%H:%M:%S");
 }
+//Prints the time with millisecond precision of the 64 bit value provided
 void parameterInfo::IntToDecimalTime(unsigned long long value, char* str){
 	convertToMillisecond(((value & 0xFFC00000) >> 22) - 8,epochTimeToDate(value >> 32,str,"%H:%M:%S"));
 }
 
+//Returns a 64 bit unsigned long long integer from a binary string
 unsigned long long parameterInfo::unsignedBinaryToDecimal(const char* binaryStr){
 	int len = this->bitCount - 1;
 	unsigned long long val = 0;
 	while(*binaryStr){
-		if(*binaryStr++ - '0'){
+		if('1' == *binaryStr++)
+		{
 			val = val | ( (unsigned long long) 1 << len);
+		}
+		else
+		{
+			//do nothing
 		}
 		len--;
 	}
 	return val;
 }
 
+//Returns a 64 bit signed long long integer from a binary string
 long long parameterInfo::signedBinaryToDecimal(const char* binaryStr){
 	//Check if MSB is 1
-	if(*binaryStr - '0'){
+	if('1' == *binaryStr)
+	{
 		int len = this->bitCount - 1;       
 		long long val = 0;
 		while(*binaryStr){
-			if(*binaryStr++ - '1'){
+			if('0' == *binaryStr++)
+			{
 				val = val | ( (long long) 1 << len);
+			}
+			else
+			{
+				//do nothing
 			}
 			len--;
 		}
 		++val *= -1;
 		return val;
 	}
-	else{
+	else
+	{
 		return (long long) unsignedBinaryToDecimal(binaryStr);
 	}
 }
 
+//parameterInfo getter functions 
+
+//Returns parameterId ordering sequence
 int parameterInfo::getParameterID(){
 	return this->parameterID;
 }
+//Returns whether parameter is an unsigned or signed type (0 = unsigned, 1 = signed)
 int parameterInfo::getUnsignedInt(){
 	return this->unsignedInt;
 }
+//Returns bit position of parameter
 int parameterInfo::getFirstBitPosition(){
 	return this->firstBitPosition;
 }
+//Returns bit count of parameter
 int parameterInfo::getBitCount(){
 	return this->bitCount;
 }
+//Returns numeric display type
 int parameterInfo::getDisplayType(){
 	return this->displayType;
 }
 
+//parameterInfo class functions that short circuit to working with signed vs unsigned long long values
+//This helps save an extra branch condition check in the file parsing stage
 void parameterInfo::unsignedBinaryToEnumeratedLabelStr(char* binaryStr,char* str){
 	IntToEnumeratedLabel(unsignedBinaryToDecimal(binaryStr),str);
 }

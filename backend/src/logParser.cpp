@@ -3,9 +3,7 @@
 #include "logDecoderClass.h"
 #include "helperFunctions.h"
 
-//Constructor
-//Argv written in this format 
-//DLULogDecoder.exe	ParentDir	Files	Logtype	Times	Params	Outputname
+//Constructor for fileParsingInfo class
 fileParsingInfo::fileParsingInfo(struct fileInfo* fileInfoStruct, int logType,time_t startTime,time_t endTime,short *argN,int numArguments)
 	: fileDecodingInfo{ fileInfoStruct, logType } , argN( argN ), numArguments( numArguments )
 	{
@@ -17,9 +15,16 @@ fileParsingInfo::fileParsingInfo(struct fileInfo* fileInfoStruct, int logType,ti
 	this->prevRecord = NULL;
 }
 
+//Destructor for fileParsingInfo class
+//Closes all input and output files
 fileParsingInfo::~fileParsingInfo(){
-	if(this->prevRecord != NULL){
+	if(NULL != this->prevRecord)
+	{
 		free(this->prevRecord);
+	}
+	else
+	{
+		//do nothing
 	}
 	fclose(this->fileInfoStruct->inputFile);
 	fclose(this->fileInfoStruct->outputFile);
@@ -27,13 +32,14 @@ fileParsingInfo::~fileParsingInfo(){
 
 //Takes a line from the DLU log & finds the necessary arguments
 //argN holds the numeric argument -- location of where the token is delimeted by \t
+//Void return type because output is copied to the logArgs array
 void fileParsingInfo::tokenizeLine(){
 
 	int tokenCount = ARG_NUM_AFTER_DATE_TIME;	
 	char* tokenStr = strtok(NULL,"\t");
 	int argCount = 0;
 	//tokenizes the line and completes logArgs
-	while(argCount < this->numArguments || tokenStr != NULL){
+	while(argCount < this->numArguments || NULL != tokenStr){
 		if(this->argN[argCount] == tokenCount)
 		{
 			strcpy(this->curRecord->logArgs[argCount],tokenStr);
@@ -48,7 +54,7 @@ void fileParsingInfo::tokenizeLine(){
 	}
 }
 
-//Makes a column in the output .csv file and prints the string arguments to be compared
+//Writes the output parameter string labels in the correct order
 void fileParsingInfo::writeHeaderLine(){
 
 	for(int i = 0;i < this->numArguments; i++){
@@ -56,7 +62,9 @@ void fileParsingInfo::writeHeaderLine(){
 	}
 }
 
-//Makes a column in the output .csv file and prints the string arguments to be compared
+//Static function that can be used by any other function
+//Necessary for concatenating files
+//Writes the output parameter string labels in the correct order
 void fileParsingInfo::writeHeader(FILE* outputFile,int argC,char (*stringLabels)[MAX_STRING_SIZE],short* argN){
 	for(int i = 0;i <argC; i++){
 		fprintf(outputFile,",%s",stringLabels[argN[i] - 1]);
@@ -67,6 +75,7 @@ void fileParsingInfo::writeHeader(FILE* outputFile,int argC,char (*stringLabels)
 //recordArray holds the records that correspond to the first second of the fileInput
 //Necessary for accurate timestamping -- The first line from the DLU file is always printed
 //Afterwards, the current line is compared to the previous line for any differences - if so, then it is printed to the .csv file
+//Void return type because output is printed to internal output files
 void fileParsingInfo::writeChangingRecords(){
 	char line[MAX_LINE_SIZE];
 	time_t firstSecond = 0;
@@ -207,7 +216,7 @@ void fileParsingInfo::writeFirstRecord(struct recordInfo* recordArray[],int numI
 }
 
 //Iterates over the array for argument values & compares each value by string index-wise
-//returns true if there is any change AT ALL -- false if otherwise
+//Short circuits and returns true if there is any character-based difference -- false if otherwise
 bool fileParsingInfo::changeInRecords(){
 	//Any logs exhibit change
 	for(int i = 0; i < this->numArguments; i++){
@@ -226,6 +235,7 @@ bool fileParsingInfo::changeInRecords(){
 
 //uses the 'strftime()' function in 'time.h' to convert an epoch time to a string
 //Each record struct has an epoch time that must be converted to a string for human-reading
+//Returns the new string date converetd from the epoch time that was adjusted based on the timezone
 char* fileParsingInfo::convertEpochToString(char UTCTimestamp[]){
 	struct tm* curTMstruct = localtime(&(this->curRecord->epochTime));
 	curTMstruct->tm_hour -= this->UTC;
@@ -246,7 +256,6 @@ char* fileParsingInfo::convertEpochToString(char UTCTimestamp[]){
 //Writes the timestamp & the arguments of the curRecord struct
 //Only called if there is change with the previous record, or if it is the first record in the log file
 void fileParsingInfo::writeRecordInfo(){
-	//Convert epoch time to string
 	char UTCTimestamp[MAX_STRING_SIZE];
 	fprintf(this->fileInfoStruct->outputFile,"%s.%d",convertEpochToString(UTCTimestamp),this->curRecord->secondFraction);
 
@@ -257,6 +266,7 @@ void fileParsingInfo::writeRecordInfo(){
 }
 
 //updates the fraction based on the block containing the first second
+//Returns the number of how many records are LEFT to parse
 //ATO Logs Inc by 0.1 seconds 
 //ATP Logs Inc by 0.2 seconds
 int fileParsingInfo::updateSecondFraction(int numInitFiles){
@@ -301,7 +311,8 @@ void fileParsingInfo::parseLogFile(){
 	writeChangingRecords();
 }
 
-
+//fileParsingInfo getter function
+//returns number of arguments that was inputted by the user
 int fileParsingInfo::getNumArguments(){
 	return this->numArguments;
 }
@@ -361,7 +372,7 @@ void concatFiles(FILE* outputFile,std::vector<fileParsingInfo*> &fileVec){
 		int lineCount = 0;
 
 		rewind(fileVec[i]->getOutputFile());
-		while(fgets(line, sizeof(line),fileVec[i]->getOutputFile()) != NULL){
+		while(NULL != fgets(line, sizeof(line),fileVec[i]->getOutputFile())){
 			if(!lineCount)
 			{
 				lineCount++;
@@ -394,12 +405,14 @@ void concatFiles(FILE* outputFile,std::vector<fileParsingInfo*> &fileVec){
 				{
 					repeatCommas(outputFile,argC);
 				}
+				else
+				{
+					//do nothing
+				}
 				fprintf(outputFile,"\n");
 			}
 			lineCount++;
 		}
-		fclose(fileVec[i]->getOutputFile());
-		//sprintf(filePath,"%s%s%s",c[i]->getDirectoryPath(),OUTPUT_FILES_DIRECTORY,fileVec[i]->getOutputFileName(),CSV_SUFFIX);
 		remove(fileVec[i]->getOutputFileName());
 	}
 }
@@ -410,23 +423,29 @@ void makeCombinedOutput(char* parentDir,char* outputFileName,std::vector<filePar
 	
 	char outputFilePath[MAX_STRING_SIZE];
 	FILE* outputFile;
-	if(*outputFileName != '\0'){
+	if('\0' != *outputFileName)
+	{
 		sprintf(outputFilePath,"%s%s%s%s",parentDir,OUTPUT_FILES_DIRECTORY,outputFileName,CSV_SUFFIX);
 	}
-	else{
+	else
+	{
 		sprintf(outputFilePath,"%s%s%s%s",parentDir,OUTPUT_FILES_DIRECTORY,GENERAL_OUTPUT_NAME,CSV_SUFFIX);
 	}
-	if(nonRecursiveNameCheck(outputFilePath) != NULL){
+	if(NULL != nonRecursiveNameCheck(outputFilePath))
+	{
 		outputFile = fopen(outputFilePath,"w");
-		if(outputFile == NULL){
+		if( NULL == outputFile )
+		{
 			printf("Error -- Could not open Output file -- Terminating Program \n");
 			exit(0);
 		}
-		else{
+		else
+		{
 			//do nothing
 		}
 	}
-	else{
+	else
+	{
 		exit(0);
 	}
 
