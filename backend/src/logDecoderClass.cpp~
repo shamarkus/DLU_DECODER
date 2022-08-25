@@ -56,7 +56,7 @@ fileDecodingInfo::~fileDecodingInfo(){
 	sprintf(filePath,"%s_%s%s",this->fileInfoStruct->directoryPath,this->fileInfoStruct->fileName,TXT_SUFFIX);
 	if ( 0 == access(filePath, F_OK) ) 
 	{
-		remove(filePath);
+		//remove(filePath);
 	}
 	else
 	{
