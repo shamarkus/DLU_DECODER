@@ -284,7 +284,7 @@ parameterInfo::parameterInfo(char* line,char (*enumeratedLabels)[MAX_ATO_VALUES]
 
 	if(this->firstBitPosition > INNER_HEADER_BIT_POS)
 	{
-		this->firstBitPosition += MAX_HEADER_BIT_SIZE;
+		this->firstBitPosition += MAX_INNER_HEADER_BIT_SIZE;
 	}
 	else
 	{
