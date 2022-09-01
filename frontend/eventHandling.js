@@ -162,6 +162,7 @@ function Upload(b){
     document.querySelector('#add_file').disabled = true;
     document.querySelector('#remove_file').disabled = true;
     document.querySelector('#addedFilenames').disabled = true;
+    document.querySelector('#addedFilenames2').disabled = true;
     b.disabled = true;
 
     //Fork files based on OMAP vs TXT type
@@ -642,6 +643,7 @@ function transferPresets(presetSel,chosenSel,paramSel){
         let tempOpt = paramSel.children[index];
         chosenSel.insertChildAtIndex(tempOpt);
     }
+    document.querySelector('#analyze').disabled = false;
 }
 
 //Responsible for creation of unique presets

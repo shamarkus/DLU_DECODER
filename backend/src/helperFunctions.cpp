@@ -338,27 +338,26 @@ char* nonRecursiveNameCheck(char* outputFileName){
 	}
 	else
 	{
-		//do nothing
-	}
-	//memset is necessary to truncate the ending to get rid of .txt or -03.csv for a new filename to test
-	memset(outputFileName + strlen(outputFileName) - 4, 0, 4);
+		//memset is necessary to truncate the ending to get rid of .txt or -03.csv for a new filename to test
+		memset(outputFileName + strlen(outputFileName) - 4, 0, 4);
 
-	for(int fileIncrement = 0;fileIncrement < 100;fileIncrement++){
-		char numSuffix[MAX_STRING_SIZE];
-		sprintf(numSuffix,"-%02d%s",fileIncrement,CSV_SUFFIX);
-		strcat(outputFileName,numSuffix);
+		for(int fileIncrement = 0;fileIncrement < 100;fileIncrement++){
+			char numSuffix[MAX_STRING_SIZE];
+			sprintf(numSuffix,"-%02d%s",fileIncrement,CSV_SUFFIX);
+			strcat(outputFileName,numSuffix);
 
-		if ( 0 != access(outputFileName, F_OK) ) 
-		{
-			return outputFileName;	
+			if ( 0 != access(outputFileName, F_OK) ) 
+			{
+				return outputFileName;	
+			}
+			else
+			{
+				memset(outputFileName + strlen(outputFileName) - 7, 0, 7);
+			}
 		}
-		else
-		{
-			memset(outputFileName + strlen(outputFileName) - 7, 0, 7);
-		}
+		
+		printf("Error: The directory is full -- Program will be terminated\n");
+		return NULL;
 	}
-	
-	printf("Error: The directory is full -- Program will be terminated\n");
-	return NULL;
 }
 

@@ -56,7 +56,7 @@ fileDecodingInfo::~fileDecodingInfo(){
 	sprintf(filePath,"%s_%s%s",this->fileInfoStruct->directoryPath,this->fileInfoStruct->fileName,TXT_SUFFIX);
 	if ( 0 == access(filePath, F_OK) ) 
 	{
-		//remove(filePath);
+		remove(filePath);
 	}
 	else
 	{
@@ -126,7 +126,6 @@ void fileDecodingInfo::decodeFile(){
 	
 	printHeader(numParameters);
 
-	//printf("%d %d %d %d \n", fgetc(this->fileInfoStruct->inputFile),fgetc(this->fileInfoStruct->inputFile),fgetc(this->fileInfoStruct->inputFile),fgetc(this->fileInfoStruct->inputFile));
 	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 	while( EOF != curChar ){
 		curChar = fgetc(this->fileInfoStruct->inputFile);
@@ -242,7 +241,6 @@ void fileDecodingInfo::swapFilePointers(){
 
 	fInfo->inputFile = fopen(fInfo->outputFileName,"r");
 	sprintf(fInfo->outputFileName,"%s%s%s%s",fInfo->directoryPath,OUTPUT_FILES_DIRECTORY,fInfo->fileName,CSV_SUFFIX);
-	printf("%s \n", fInfo->outputFileName);
 
 	if(NULL != nonRecursiveNameCheck(fInfo->outputFileName))
 	{

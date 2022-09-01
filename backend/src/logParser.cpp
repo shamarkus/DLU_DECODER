@@ -85,7 +85,7 @@ void fileParsingInfo::writeChangingRecords(){
 
 	struct recordInfo* recordArray[MAX_INIT_TIMESTAMPS];
 	//Print First Record
-	while(fgets(line,MAX_LINE_SIZE ,this->fileInfoStruct->inputFile) != NULL){
+	while(fgets(line,MAX_LINE_SIZE ,this->fileInfoStruct->inputFile) != NULL){	
 		//Header line of log
 		if( 0 == lineCount )
 		{
