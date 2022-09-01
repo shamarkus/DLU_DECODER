@@ -394,6 +394,7 @@ void concatFiles(FILE* outputFile,std::vector<fileParsingInfo*> &fileVec){
 					repeatCommas(outputFile,argC);
 					//Print the rest of the data
 					fprintf(outputFile,"%s",line+CHARS_AFTER_TIMESTAMP);
+
 				}
 				else
 				{
